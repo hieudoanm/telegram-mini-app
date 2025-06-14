@@ -1,6 +1,14 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-	[1],
+	[315],
 	{
+		845: (e, r, t) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/store',
+				function () {
+					return t(9032);
+				},
+			]);
+		},
 		2461: (e, r, t) => {
 			'use strict';
 			t.d(r, { U: () => c });
@@ -8,40 +16,40 @@
 			let s = (e) => {
 				let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
 				return (0, l.jsx)('div', {
-					className: 'mx-auto flex h-screen w-full max-w-lg flex-col border-r border-l border-neutral-800',
+					className: 'mx-auto flex h-screen w-full max-w-lg flex-col border border-neutral-800',
 					children: r,
 				});
 			};
 			var n = t(6826),
 				i = t.n(n),
-				a = t(1238);
-			let o = (e) => {
+				o = t(1238);
+			let a = (e) => {
 					let { activeId: r } = e;
 					return (0, l.jsx)('nav', {
 						className: 'border-t border-neutral-800',
 						children: (0, l.jsx)('div', {
 							className: 'grid grid-cols-4',
 							children: [
-								{ id: 'home', href: '/', icon: (0, l.jsx)(a.cEk, {}), activeIcon: (0, l.jsx)(a.ZVi, {}), text: 'Home' },
+								{ id: 'home', href: '/', icon: (0, l.jsx)(o.cEk, {}), activeIcon: (0, l.jsx)(o.ZVi, {}), text: 'Home' },
 								{
 									id: 'games',
 									href: '/games',
-									icon: (0, l.jsx)(a.SkF, {}),
-									activeIcon: (0, l.jsx)(a.rNT, {}),
+									icon: (0, l.jsx)(o.SkF, {}),
+									activeIcon: (0, l.jsx)(o.rNT, {}),
 									text: 'Games',
 								},
 								{
 									id: 'store',
 									href: '/store',
-									icon: (0, l.jsx)(a.Qsx, {}),
-									activeIcon: (0, l.jsx)(a.XsE, {}),
+									icon: (0, l.jsx)(o.Qsx, {}),
+									activeIcon: (0, l.jsx)(o.XsE, {}),
 									text: 'Store',
 								},
 								{
 									id: 'profile',
 									href: '/profile',
-									icon: (0, l.jsx)(a.NMe, {}),
-									activeIcon: (0, l.jsx)(a.MrL, {}),
+									icon: (0, l.jsx)(o.NMe, {}),
+									activeIcon: (0, l.jsx)(o.MrL, {}),
 									text: 'Profile',
 								},
 							].map((e) => {
@@ -49,8 +57,8 @@
 										id: t = '',
 										href: s = '',
 										text: n = '',
-										icon: a = (0, l.jsx)(l.Fragment, {}),
-										activeIcon: o = (0, l.jsx)(l.Fragment, {}),
+										icon: o = (0, l.jsx)(l.Fragment, {}),
+										activeIcon: a = (0, l.jsx)(l.Fragment, {}),
 									} = e,
 									c = t === r;
 								return (0, l.jsx)(
@@ -65,8 +73,8 @@
 													(0, l.jsx)('span', {
 														className: 'text-3xl',
 														children: c
-															? (0, l.jsx)(l.Fragment, { children: o })
-															: (0, l.jsx)(l.Fragment, { children: a }),
+															? (0, l.jsx)(l.Fragment, { children: a })
+															: (0, l.jsx)(l.Fragment, { children: o }),
 													}),
 													(0, l.jsx)('span', { className: 'text-xs', children: n }),
 												],
@@ -84,19 +92,138 @@
 					return (0, l.jsxs)(s, {
 						children: [
 							(0, l.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: t }),
-							(0, l.jsx)(o, { activeId: r }),
+							(0, l.jsx)(a, { activeId: r }),
 						],
 					});
 				};
 		},
-		7082: (e, r, t) => {
+		7182: (e, r, t) => {
+			'use strict';
+			t.d(r, { k5: () => d });
+			var l = t(148),
+				s = { color: void 0, size: void 0, className: void 0, style: void 0, attr: void 0 },
+				n = l.createContext && l.createContext(s),
+				i = ['attr', 'size', 'title'];
+			function o() {
+				return (o = Object.assign
+					? Object.assign.bind()
+					: function (e) {
+							for (var r = 1; r < arguments.length; r++) {
+								var t = arguments[r];
+								for (var l in t) Object.prototype.hasOwnProperty.call(t, l) && (e[l] = t[l]);
+							}
+							return e;
+						}).apply(this, arguments);
+			}
+			function a(e, r) {
+				var t = Object.keys(e);
+				if (Object.getOwnPropertySymbols) {
+					var l = Object.getOwnPropertySymbols(e);
+					r &&
+						(l = l.filter(function (r) {
+							return Object.getOwnPropertyDescriptor(e, r).enumerable;
+						})),
+						t.push.apply(t, l);
+				}
+				return t;
+			}
+			function c(e) {
+				for (var r = 1; r < arguments.length; r++) {
+					var t = null != arguments[r] ? arguments[r] : {};
+					r % 2
+						? a(Object(t), !0).forEach(function (r) {
+								var l, s, n;
+								(l = e),
+									(s = r),
+									(n = t[r]),
+									(s = (function (e) {
+										var r = (function (e, r) {
+											if ('object' != typeof e || !e) return e;
+											var t = e[Symbol.toPrimitive];
+											if (void 0 !== t) {
+												var l = t.call(e, r || 'default');
+												if ('object' != typeof l) return l;
+												throw TypeError('@@toPrimitive must return a primitive value.');
+											}
+											return ('string' === r ? String : Number)(e);
+										})(e, 'string');
+										return 'symbol' == typeof r ? r : r + '';
+									})(s)) in l
+										? Object.defineProperty(l, s, { value: n, enumerable: !0, configurable: !0, writable: !0 })
+										: (l[s] = n);
+							})
+						: Object.getOwnPropertyDescriptors
+							? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+							: a(Object(t)).forEach(function (r) {
+									Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+								});
+				}
+				return e;
+			}
+			function d(e) {
+				return (r) =>
+					l.createElement(
+						u,
+						o({ attr: c({}, e.attr) }, r),
+						(function e(r) {
+							return r && r.map((r, t) => l.createElement(r.tag, c({ key: t }, r.attr), e(r.child)));
+						})(e.child),
+					);
+			}
+			function u(e) {
+				var r = (r) => {
+					var t,
+						{ attr: s, size: n, title: a } = e,
+						d = (function (e, r) {
+							if (null == e) return {};
+							var t,
+								l,
+								s = (function (e, r) {
+									if (null == e) return {};
+									var t = {};
+									for (var l in e)
+										if (Object.prototype.hasOwnProperty.call(e, l)) {
+											if (r.indexOf(l) >= 0) continue;
+											t[l] = e[l];
+										}
+									return t;
+								})(e, r);
+							if (Object.getOwnPropertySymbols) {
+								var n = Object.getOwnPropertySymbols(e);
+								for (l = 0; l < n.length; l++)
+									(t = n[l]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (s[t] = e[t]);
+							}
+							return s;
+						})(e, i),
+						u = n || r.size || '1em';
+					return (
+						r.className && (t = r.className),
+						e.className && (t = (t ? t + ' ' : '') + e.className),
+						l.createElement(
+							'svg',
+							o({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, r.attr, s, d, {
+								className: t,
+								style: c(c({ color: e.color || r.color }, r.style), e.style),
+								height: u,
+								width: u,
+								xmlns: 'http://www.w3.org/2000/svg',
+							}),
+							a && l.createElement('title', null, a),
+							e.children,
+						)
+					);
+				};
+				return void 0 !== n ? l.createElement(n.Consumer, null, (e) => r(e)) : r(s);
+			}
+		},
+		9032: (e, r, t) => {
 			'use strict';
 			t.r(r), t.d(r, { default: () => n });
 			var l = t(5640),
 				s = t(2461);
 			let n = () =>
 				(0, l.jsx)(s.U, {
-					activeId: 'games',
+					activeId: 'store',
 					children: (0, l.jsx)('div', {
 						className: 'flex flex-col p-8',
 						children: (0, l.jsxs)('div', {
@@ -111,19 +238,19 @@
 											(0, l.jsx)('button', {
 												className:
 													'w-full cursor-pointer rounded-full border border-neutral-800 bg-yellow-500 px-4 py-2 text-base font-semibold text-neutral-900',
-												children: 'Play Now',
+												children: 'Buy Now',
 											}),
 										],
 									}),
 								}),
-								(0, l.jsx)('h1', { className: 'text-2xl font-black', children: 'Games' }),
+								(0, l.jsx)('h1', { className: 'text-2xl font-black', children: 'Store' }),
 								[
-									{ id: '1', title: 'Game 1', description: 'Lorem ipsum dolor sit amet.' },
-									{ id: '2', title: 'Game 2', description: 'Lorem ipsum dolor sit amet.' },
-									{ id: '3', title: 'Game 3', description: 'Lorem ipsum dolor sit amet.' },
-									{ id: '4', title: 'Game 4', description: 'Lorem ipsum dolor sit amet.' },
-									{ id: '5', title: 'Game 5', description: 'Lorem ipsum dolor sit amet.' },
-									{ id: '6', title: 'Game 6', description: 'Lorem ipsum dolor sit amet.' },
+									{ id: '1', title: 'Item 1', description: 'Lorem ipsum dolor sit amet.' },
+									{ id: '2', title: 'Item 2', description: 'Lorem ipsum dolor sit amet.' },
+									{ id: '3', title: 'Item 3', description: 'Lorem ipsum dolor sit amet.' },
+									{ id: '4', title: 'Item 4', description: 'Lorem ipsum dolor sit amet.' },
+									{ id: '5', title: 'Item 5', description: 'Lorem ipsum dolor sit amet.' },
+									{ id: '6', title: 'Item 6', description: 'Lorem ipsum dolor sit amet.' },
 								].map((e) => {
 									let { id: r = '', title: t = '', description: s = '' } = e;
 									return (0, l.jsx)(
@@ -153,7 +280,7 @@
 														children: (0, l.jsx)('button', {
 															className:
 																'cursor-pointer rounded-full border border-neutral-800 bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900',
-															children: 'Play',
+															children: 'Buy',
 														}),
 													}),
 												],
@@ -167,136 +294,9 @@
 					}),
 				});
 		},
-		7182: (e, r, t) => {
-			'use strict';
-			t.d(r, { k5: () => d });
-			var l = t(148),
-				s = { color: void 0, size: void 0, className: void 0, style: void 0, attr: void 0 },
-				n = l.createContext && l.createContext(s),
-				i = ['attr', 'size', 'title'];
-			function a() {
-				return (a = Object.assign
-					? Object.assign.bind()
-					: function (e) {
-							for (var r = 1; r < arguments.length; r++) {
-								var t = arguments[r];
-								for (var l in t) Object.prototype.hasOwnProperty.call(t, l) && (e[l] = t[l]);
-							}
-							return e;
-						}).apply(this, arguments);
-			}
-			function o(e, r) {
-				var t = Object.keys(e);
-				if (Object.getOwnPropertySymbols) {
-					var l = Object.getOwnPropertySymbols(e);
-					r &&
-						(l = l.filter(function (r) {
-							return Object.getOwnPropertyDescriptor(e, r).enumerable;
-						})),
-						t.push.apply(t, l);
-				}
-				return t;
-			}
-			function c(e) {
-				for (var r = 1; r < arguments.length; r++) {
-					var t = null != arguments[r] ? arguments[r] : {};
-					r % 2
-						? o(Object(t), !0).forEach(function (r) {
-								var l, s, n;
-								(l = e),
-									(s = r),
-									(n = t[r]),
-									(s = (function (e) {
-										var r = (function (e, r) {
-											if ('object' != typeof e || !e) return e;
-											var t = e[Symbol.toPrimitive];
-											if (void 0 !== t) {
-												var l = t.call(e, r || 'default');
-												if ('object' != typeof l) return l;
-												throw TypeError('@@toPrimitive must return a primitive value.');
-											}
-											return ('string' === r ? String : Number)(e);
-										})(e, 'string');
-										return 'symbol' == typeof r ? r : r + '';
-									})(s)) in l
-										? Object.defineProperty(l, s, { value: n, enumerable: !0, configurable: !0, writable: !0 })
-										: (l[s] = n);
-							})
-						: Object.getOwnPropertyDescriptors
-							? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-							: o(Object(t)).forEach(function (r) {
-									Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-								});
-				}
-				return e;
-			}
-			function d(e) {
-				return (r) =>
-					l.createElement(
-						u,
-						a({ attr: c({}, e.attr) }, r),
-						(function e(r) {
-							return r && r.map((r, t) => l.createElement(r.tag, c({ key: t }, r.attr), e(r.child)));
-						})(e.child),
-					);
-			}
-			function u(e) {
-				var r = (r) => {
-					var t,
-						{ attr: s, size: n, title: o } = e,
-						d = (function (e, r) {
-							if (null == e) return {};
-							var t,
-								l,
-								s = (function (e, r) {
-									if (null == e) return {};
-									var t = {};
-									for (var l in e)
-										if (Object.prototype.hasOwnProperty.call(e, l)) {
-											if (r.indexOf(l) >= 0) continue;
-											t[l] = e[l];
-										}
-									return t;
-								})(e, r);
-							if (Object.getOwnPropertySymbols) {
-								var n = Object.getOwnPropertySymbols(e);
-								for (l = 0; l < n.length; l++)
-									(t = n[l]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (s[t] = e[t]);
-							}
-							return s;
-						})(e, i),
-						u = n || r.size || '1em';
-					return (
-						r.className && (t = r.className),
-						e.className && (t = (t ? t + ' ' : '') + e.className),
-						l.createElement(
-							'svg',
-							a({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, r.attr, s, d, {
-								className: t,
-								style: c(c({ color: e.color || r.color }, r.style), e.style),
-								height: u,
-								width: u,
-								xmlns: 'http://www.w3.org/2000/svg',
-							}),
-							o && l.createElement('title', null, o),
-							e.children,
-						)
-					);
-				};
-				return void 0 !== n ? l.createElement(n.Consumer, null, (e) => r(e)) : r(s);
-			}
-		},
-		8429: (e, r, t) => {
-			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/games',
-				function () {
-					return t(7082);
-				},
-			]);
-		},
 	},
 	(e) => {
 		var r = (r) => e((e.s = r));
-		e.O(0, [72, 826, 636, 593, 792], () => r(8429)), (_N_E = e.O());
+		e.O(0, [72, 826, 636, 593, 792], () => r(845)), (_N_E = e.O());
 	},
 ]);

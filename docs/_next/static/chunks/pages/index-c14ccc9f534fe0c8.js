@@ -8,7 +8,7 @@
 			let l = (e) => {
 				let { children: r = (0, n.jsx)(n.Fragment, {}) } = e;
 				return (0, n.jsx)('div', {
-					className: 'mx-auto flex h-screen w-full max-w-lg flex-col border-r border-l border-neutral-800',
+					className: 'mx-auto flex h-screen w-full max-w-lg flex-col border border-neutral-800',
 					children: r,
 				});
 			};
