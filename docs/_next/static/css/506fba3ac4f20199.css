@@ -454,14 +454,6 @@
 		border-top-style: var(--tw-border-style);
 		border-top-width: 1px;
 	}
-	.border-r {
-		border-right-style: var(--tw-border-style);
-		border-right-width: 1px;
-	}
-	.border-l {
-		border-left-style: var(--tw-border-style);
-		border-left-width: 1px;
-	}
 	.border-neutral-800 {
 		border-color: var(--color-neutral-800);
 	}
