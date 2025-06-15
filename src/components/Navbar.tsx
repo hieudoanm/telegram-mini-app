@@ -13,7 +13,7 @@ import {
 
 export const Navbar: FC<{ activeId: string }> = ({ activeId }) => {
 	return (
-		<nav className="bg-neutral-900">
+		<nav className="border-t border-neutral-900 bg-neutral-950">
 			<div className="grid grid-cols-4">
 				{[
 					{ id: 'home', href: '/', icon: <PiHouse />, activeIcon: <PiHouseFill />, text: 'Home' },
@@ -40,10 +40,11 @@ export const Navbar: FC<{ activeId: string }> = ({ activeId }) => {
 					},
 				].map(({ id = '', href = '', text = '', icon = <></>, activeIcon = <></> }) => {
 					const active: boolean = id === activeId;
+					const activeClass = active ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3';
 					return (
 						<div key={id} className="col-span-1">
 							<Link href={href}>
-								<div className="flex flex-col items-center justify-center gap-y-0.5 py-4">
+								<div className={`flex flex-col items-center justify-center gap-y-0.5 pb-2 ${activeClass}`}>
 									<span className="text-3xl">{active ? <>{activeIcon}</> : <>{icon}</>}</span>
 									<span className="text-xs">{text}</span>
 								</div>

@@ -18,7 +18,7 @@
 			let o = (e) => {
 					let { activeId: r } = e;
 					return (0, l.jsx)('nav', {
-						className: 'bg-neutral-900',
+						className: 'border-t border-neutral-900 bg-neutral-950',
 						children: (0, l.jsx)('div', {
 							className: 'grid grid-cols-4',
 							children: [
@@ -60,7 +60,9 @@
 										children: (0, l.jsx)(a(), {
 											href: s,
 											children: (0, l.jsxs)('div', {
-												className: 'flex flex-col items-center justify-center gap-y-0.5 py-4',
+												className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
+													c ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
+												),
 												children: [
 													(0, l.jsx)('span', {
 														className: 'text-3xl',
@@ -104,7 +106,7 @@
 							children: [
 								(0, l.jsx)('div', {
 									className:
-										'aspect-video w-full rounded-2xl border border-neutral-800 bg-neutral-900 shadow shadow-neutral-900',
+										'aspect-video w-full rounded-2xl border border-neutral-900 bg-neutral-950 shadow shadow-neutral-900',
 									children: (0, l.jsxs)('div', {
 										className: 'flex h-full w-full flex-col p-4',
 										children: [
@@ -130,7 +132,8 @@
 									return (0, l.jsx)(
 										'div',
 										{
-											className: 'rounded-xl border border-neutral-800 bg-neutral-900 px-4 py-3',
+											className:
+												'rounded-xl border border-neutral-900 bg-neutral-950 px-4 py-3 shadow shadow-neutral-900',
 											children: (0, l.jsxs)('div', {
 												className: 'flex w-full items-center gap-x-4',
 												children: [
@@ -138,7 +141,7 @@
 														className: 'flex grow items-center gap-x-4 truncate',
 														children: [
 															(0, l.jsx)('div', {
-																className: 'aspect-square h-12 rounded-lg border border-neutral-800',
+																className: 'aspect-square h-12 rounded-lg border border-neutral-900',
 															}),
 															(0, l.jsxs)('div', {
 																className: 'flex grow flex-col gap-y-2 truncate',
@@ -153,7 +156,7 @@
 														className: 'shrink-0',
 														children: (0, l.jsx)('button', {
 															className:
-																'cursor-pointer rounded-full border border-neutral-800 bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900',
+																'cursor-pointer rounded-full bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900',
 															children: 'Play',
 														}),
 													}),

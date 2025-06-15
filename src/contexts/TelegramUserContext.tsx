@@ -15,7 +15,10 @@ const getTelegramUser = async (): Promise<{ initData: string; user: TelegramUser
 		console.info('user', user);
 		return { user, initData: telegramWebAppInitData };
 	}
-	return { user: null, initData: '' };
+	return {
+		user: null,
+		initData: '',
+	};
 };
 
 const UserContext = createContext<{

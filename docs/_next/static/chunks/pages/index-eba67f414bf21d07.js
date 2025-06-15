@@ -12,13 +12,13 @@
 					children: r,
 				});
 			};
-			var a = t(6826),
-				o = t.n(a),
+			var o = t(6826),
+				a = t.n(o),
 				s = t(1238);
 			let i = (e) => {
 					let { activeId: r } = e;
 					return (0, n.jsx)('nav', {
-						className: 'bg-neutral-900',
+						className: 'border-t border-neutral-900 bg-neutral-950',
 						children: (0, n.jsx)('div', {
 							className: 'grid grid-cols-4',
 							children: [
@@ -48,7 +48,7 @@
 								let {
 										id: t = '',
 										href: l = '',
-										text: a = '',
+										text: o = '',
 										icon: s = (0, n.jsx)(n.Fragment, {}),
 										activeIcon: i = (0, n.jsx)(n.Fragment, {}),
 									} = e,
@@ -57,10 +57,12 @@
 									'div',
 									{
 										className: 'col-span-1',
-										children: (0, n.jsx)(o(), {
+										children: (0, n.jsx)(a(), {
 											href: l,
 											children: (0, n.jsxs)('div', {
-												className: 'flex flex-col items-center justify-center gap-y-0.5 py-4',
+												className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
+													c ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
+												),
 												children: [
 													(0, n.jsx)('span', {
 														className: 'text-3xl',
@@ -68,7 +70,7 @@
 															? (0, n.jsx)(n.Fragment, { children: i })
 															: (0, n.jsx)(n.Fragment, { children: s }),
 													}),
-													(0, n.jsx)('span', { className: 'text-xs', children: a }),
+													(0, n.jsx)('span', { className: 'text-xs', children: o }),
 												],
 											}),
 										}),
@@ -99,10 +101,10 @@
 		},
 		6310: (e, r, t) => {
 			'use strict';
-			t.r(r), t.d(r, { default: () => a });
+			t.r(r), t.d(r, { default: () => o });
 			var n = t(5640),
 				l = t(2461);
-			let a = () =>
+			let o = () =>
 				(0, n.jsx)(l.U, {
 					activeId: 'home',
 					children: (0, n.jsx)('div', {
@@ -120,7 +122,7 @@
 									'div',
 									{
 										className:
-											'aspect-video w-full rounded-2xl border border-neutral-800 bg-neutral-900 shadow shadow-neutral-900',
+											'aspect-video w-full rounded-2xl border border-neutral-900 bg-neutral-950 shadow shadow-neutral-900',
 										children: (0, n.jsxs)('div', {
 											className: 'flex h-full w-full flex-col p-4',
 											children: [
@@ -145,8 +147,8 @@
 			t.d(r, { k5: () => u });
 			var n = t(148),
 				l = { color: void 0, size: void 0, className: void 0, style: void 0, attr: void 0 },
-				a = n.createContext && n.createContext(l),
-				o = ['attr', 'size', 'title'];
+				o = n.createContext && n.createContext(l),
+				a = ['attr', 'size', 'title'];
 			function s() {
 				return (s = Object.assign
 					? Object.assign.bind()
@@ -175,10 +177,10 @@
 					var t = null != arguments[r] ? arguments[r] : {};
 					r % 2
 						? i(Object(t), !0).forEach(function (r) {
-								var n, l, a;
+								var n, l, o;
 								(n = e),
 									(l = r),
-									(a = t[r]),
+									(o = t[r]),
 									(l = (function (e) {
 										var r = (function (e, r) {
 											if ('object' != typeof e || !e) return e;
@@ -192,8 +194,8 @@
 										})(e, 'string');
 										return 'symbol' == typeof r ? r : r + '';
 									})(l)) in n
-										? Object.defineProperty(n, l, { value: a, enumerable: !0, configurable: !0, writable: !0 })
-										: (n[l] = a);
+										? Object.defineProperty(n, l, { value: o, enumerable: !0, configurable: !0, writable: !0 })
+										: (n[l] = o);
 							})
 						: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -216,7 +218,7 @@
 			function d(e) {
 				var r = (r) => {
 					var t,
-						{ attr: l, size: a, title: i } = e,
+						{ attr: l, size: o, title: i } = e,
 						u = (function (e, r) {
 							if (null == e) return {};
 							var t,
@@ -232,13 +234,13 @@
 									return t;
 								})(e, r);
 							if (Object.getOwnPropertySymbols) {
-								var a = Object.getOwnPropertySymbols(e);
-								for (n = 0; n < a.length; n++)
-									(t = a[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (l[t] = e[t]);
+								var o = Object.getOwnPropertySymbols(e);
+								for (n = 0; n < o.length; n++)
+									(t = o[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (l[t] = e[t]);
 							}
 							return l;
-						})(e, o),
-						d = a || r.size || '1em';
+						})(e, a),
+						d = o || r.size || '1em';
 					return (
 						r.className && (t = r.className),
 						e.className && (t = (t ? t + ' ' : '') + e.className),
@@ -256,7 +258,7 @@
 						)
 					);
 				};
-				return void 0 !== a ? n.createElement(a.Consumer, null, (e) => r(e)) : r(l);
+				return void 0 !== o ? n.createElement(o.Consumer, null, (e) => r(e)) : r(l);
 			}
 		},
 	},
