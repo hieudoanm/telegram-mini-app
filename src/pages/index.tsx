@@ -4,13 +4,13 @@ import { NextPage } from 'next';
 const HomePage: NextPage = () => {
 	return (
 		<PageTemplate activeId="home">
-			<div className="p-8">
+			<div className="p-4">
 				<div className="flex flex-col gap-y-8">
 					{[
 						{ id: '1', action: 'Buy Now' },
 						{ id: '2', action: 'Play Now' },
-						{ id: '2', action: 'Buy Now' },
-						{ id: '2', action: 'Play Now' },
+						{ id: '3', action: 'Buy Now' },
+						{ id: '4', action: 'Play Now' },
 					].map(({ id = '', action = 'action' }) => {
 						return (
 							<div

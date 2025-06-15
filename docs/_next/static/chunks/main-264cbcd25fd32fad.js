@@ -4537,7 +4537,7 @@
 													path: '/telegram-mini-app/_next/image/',
 													loader: 'default',
 													dangerouslyAllowSVG: !1,
-													unoptimized: !1,
+													unoptimized: !0,
 												},
 												children: r,
 											}),

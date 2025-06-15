@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
 	basePath: NODE_ENV === 'development' ? '' : `/${BASE_PATH}`,
 	output: NODE_ENV === 'development' ? 'standalone' : 'export',
 	distDir: NODE_ENV === 'development' ? '.next' : 'docs',
+	images: { unoptimized: NODE_ENV !== 'development' },
 };
 
 export default nextConfig;

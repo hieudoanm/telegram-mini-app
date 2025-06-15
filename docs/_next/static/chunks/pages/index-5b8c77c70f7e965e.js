@@ -3,45 +3,52 @@
 	{
 		2461: (e, r, t) => {
 			'use strict';
-			t.d(r, { U: () => c });
-			var n = t(5640);
-			let l = (e) => {
-				let { children: r = (0, n.jsx)(n.Fragment, {}) } = e;
+			t.d(r, { U: () => u });
+			var n = t(5640),
+				l = t(2497);
+			let o = (e) => {
+				let { children: r = (0, n.jsx)(n.Fragment, {}) } = e,
+					{ getPlatform: t } = (0, l.j)(),
+					o = t();
 				return (0, n.jsx)('div', {
-					className: 'mx-auto flex h-screen w-full max-w-lg flex-col border border-neutral-800',
-					children: r,
+					className: 'h-screen '.concat('web' !== o ? 'pt-18' : ''),
+					children: (0, n.jsx)('div', {
+						className:
+							'mx-auto flex h-full w-full max-w-lg flex-col overflow-hidden rounded-xl border border-neutral-800',
+						children: r,
+					}),
 				});
 			};
-			var o = t(6826),
-				a = t.n(o),
-				s = t(1238);
-			let i = (e) => {
+			var a = t(6826),
+				s = t.n(a),
+				i = t(1238);
+			let c = (e) => {
 					let { activeId: r } = e;
 					return (0, n.jsx)('nav', {
 						className: 'border-t border-neutral-800',
 						children: (0, n.jsx)('div', {
 							className: 'grid grid-cols-4',
 							children: [
-								{ id: 'home', href: '/', icon: (0, n.jsx)(s.cEk, {}), activeIcon: (0, n.jsx)(s.ZVi, {}), text: 'Home' },
+								{ id: 'home', href: '/', icon: (0, n.jsx)(i.cEk, {}), activeIcon: (0, n.jsx)(i.ZVi, {}), text: 'Home' },
 								{
 									id: 'games',
 									href: '/games',
-									icon: (0, n.jsx)(s.SkF, {}),
-									activeIcon: (0, n.jsx)(s.rNT, {}),
+									icon: (0, n.jsx)(i.SkF, {}),
+									activeIcon: (0, n.jsx)(i.rNT, {}),
 									text: 'Games',
 								},
 								{
 									id: 'store',
 									href: '/store',
-									icon: (0, n.jsx)(s.Qsx, {}),
-									activeIcon: (0, n.jsx)(s.XsE, {}),
+									icon: (0, n.jsx)(i.Qsx, {}),
+									activeIcon: (0, n.jsx)(i.XsE, {}),
 									text: 'Store',
 								},
 								{
 									id: 'profile',
 									href: '/profile',
-									icon: (0, n.jsx)(s.NMe, {}),
-									activeIcon: (0, n.jsx)(s.MrL, {}),
+									icon: (0, n.jsx)(i.NMe, {}),
+									activeIcon: (0, n.jsx)(i.MrL, {}),
 									text: 'Profile',
 								},
 							].map((e) => {
@@ -49,7 +56,7 @@
 										id: t = '',
 										href: l = '',
 										text: o = '',
-										icon: s = (0, n.jsx)(n.Fragment, {}),
+										icon: a = (0, n.jsx)(n.Fragment, {}),
 										activeIcon: i = (0, n.jsx)(n.Fragment, {}),
 									} = e,
 									c = t === r;
@@ -57,7 +64,7 @@
 									'div',
 									{
 										className: 'col-span-1',
-										children: (0, n.jsx)(a(), {
+										children: (0, n.jsx)(s(), {
 											href: l,
 											children: (0, n.jsxs)('div', {
 												className: 'flex flex-col items-center justify-center gap-y-0.5 py-4',
@@ -66,7 +73,7 @@
 														className: 'text-3xl',
 														children: c
 															? (0, n.jsx)(n.Fragment, { children: i })
-															: (0, n.jsx)(n.Fragment, { children: s }),
+															: (0, n.jsx)(n.Fragment, { children: a }),
 													}),
 													(0, n.jsx)('span', { className: 'text-xs', children: o }),
 												],
@@ -79,12 +86,12 @@
 						}),
 					});
 				},
-				c = (e) => {
+				u = (e) => {
 					let { activeId: r = '', children: t = (0, n.jsx)(n.Fragment, {}) } = e;
-					return (0, n.jsxs)(l, {
+					return (0, n.jsxs)(o, {
 						children: [
 							(0, n.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: t }),
-							(0, n.jsx)(i, { activeId: r }),
+							(0, n.jsx)(c, { activeId: r }),
 						],
 					});
 				};
@@ -106,14 +113,14 @@
 				(0, n.jsx)(l.U, {
 					activeId: 'home',
 					children: (0, n.jsx)('div', {
-						className: 'p-8',
+						className: 'p-4',
 						children: (0, n.jsx)('div', {
 							className: 'flex flex-col gap-y-8',
 							children: [
 								{ id: '1', action: 'Buy Now' },
 								{ id: '2', action: 'Play Now' },
-								{ id: '2', action: 'Buy Now' },
-								{ id: '2', action: 'Play Now' },
+								{ id: '3', action: 'Buy Now' },
+								{ id: '4', action: 'Play Now' },
 							].map((e) => {
 								let { id: r = '', action: t = 'action' } = e;
 								return (0, n.jsx)(

@@ -12,6 +12,7 @@
 			--tw-skew-x: initial;
 			--tw-skew-y: initial;
 			--tw-border-style: solid;
+			--tw-leading: initial;
 			--tw-font-weight: initial;
 			--tw-shadow: 0 0 #0000;
 			--tw-shadow-color: initial;
@@ -49,7 +50,10 @@
 		--font-sans:
 			ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 		--font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+		--color-red-900: oklch(39.6% 0.141 25.723);
 		--color-yellow-500: oklch(79.5% 0.184 86.047);
+		--color-green-900: oklch(39.3% 0.095 152.535);
+		--color-neutral-100: oklch(97% 0 0);
 		--color-neutral-800: oklch(26.9% 0 0);
 		--color-neutral-900: oklch(20.5% 0 0);
 		--spacing: 0.25rem;
@@ -60,6 +64,8 @@
 		--text-sm--line-height: calc(1.25 / 0.875);
 		--text-base: 1rem;
 		--text-base--line-height: calc(1.5 / 1);
+		--text-lg: 1.125rem;
+		--text-lg--line-height: calc(1.75 / 1.125);
 		--text-xl: 1.25rem;
 		--text-xl--line-height: calc(1.75 / 1.25);
 		--text-2xl: 1.5rem;
@@ -369,6 +375,9 @@
 	.w-full {
 		width: 100%;
 	}
+	.w-screen {
+		width: 100vw;
+	}
 	.max-w-lg {
 		max-width: var(--container-lg);
 	}
@@ -414,8 +423,8 @@
 	.gap-y-0\.5 {
 		row-gap: calc(var(--spacing) * 0.5);
 	}
-	.gap-y-1 {
-		row-gap: calc(var(--spacing) * 1);
+	.gap-y-2 {
+		row-gap: calc(var(--spacing) * 2);
 	}
 	.gap-y-4 {
 		row-gap: calc(var(--spacing) * 4);
@@ -457,6 +466,12 @@
 	.border-neutral-800 {
 		border-color: var(--color-neutral-800);
 	}
+	.bg-green-900 {
+		background-color: var(--color-green-900);
+	}
+	.bg-red-900 {
+		background-color: var(--color-red-900);
+	}
 	.bg-yellow-500 {
 		background-color: var(--color-yellow-500);
 	}
@@ -466,6 +481,9 @@
 	.p-8 {
 		padding: calc(var(--spacing) * 8);
 	}
+	.px-2 {
+		padding-inline: calc(var(--spacing) * 2);
+	}
 	.px-3 {
 		padding-inline: calc(var(--spacing) * 3);
 	}
@@ -474,6 +492,9 @@
 	}
 	.px-8 {
 		padding-inline: calc(var(--spacing) * 8);
+	}
+	.py-0\.5 {
+		padding-block: calc(var(--spacing) * 0.5);
 	}
 	.py-1 {
 		padding-block: calc(var(--spacing) * 1);
@@ -486,6 +507,9 @@
 	}
 	.py-4 {
 		padding-block: calc(var(--spacing) * 4);
+	}
+	.pt-18 {
+		padding-top: calc(var(--spacing) * 18);
 	}
 	.text-right {
 		text-align: right;
@@ -506,6 +530,10 @@
 		font-size: var(--text-base);
 		line-height: var(--tw-leading, var(--text-base--line-height));
 	}
+	.text-lg {
+		font-size: var(--text-lg);
+		line-height: var(--tw-leading, var(--text-lg--line-height));
+	}
 	.text-sm {
 		font-size: var(--text-sm);
 		line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -518,6 +546,10 @@
 		font-size: var(--text-xs);
 		line-height: var(--tw-leading, var(--text-xs--line-height));
 	}
+	.leading-none {
+		--tw-leading: 1;
+		line-height: 1;
+	}
 	.font-black {
 		--tw-font-weight: var(--font-weight-black);
 		font-weight: var(--font-weight-black);
@@ -529,6 +561,9 @@
 	.font-semibold {
 		--tw-font-weight: var(--font-weight-semibold);
 		font-weight: var(--font-weight-semibold);
+	}
+	.text-neutral-100 {
+		color: var(--color-neutral-100);
 	}
 	.text-neutral-900 {
 		color: var(--color-neutral-900);
@@ -612,6 +647,10 @@ body {
 	syntax: '*';
 	inherits: false;
 	initial-value: solid;
+}
+@property --tw-leading {
+	syntax: '*';
+	inherits: false;
 }
 @property --tw-font-weight {
 	syntax: '*';

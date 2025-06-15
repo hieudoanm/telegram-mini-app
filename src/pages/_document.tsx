@@ -7,6 +7,7 @@ const Document: FC = () => {
 		<Html lang="en">
 			<Head>
 				<Script src="https://telegram.org/js/telegram-web-app.js" strategy="beforeInteractive" />
+				<Script></Script>
 			</Head>
 			<body className="antialiased">
 				<Main />

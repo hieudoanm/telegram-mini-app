@@ -1,60 +1,73 @@
-import { logger } from '@telegram/log/logger';
+import { trpcClient } from '@telegram/utils/trpc';
 import { tryCatch } from '@telegram/utils/try-catch';
 import { createContext, ReactNode, useContext, useEffect, useMemo, useState } from 'react';
 
-type InitData = {
-	auth_date: string;
-	chat_instance: string;
-	chat_type: string;
-	hash: string;
-	user: string;
-};
-
-type TelegramUser = {
-	id: number;
-	first_name: string;
-	last_name: string;
-	username: string;
-	language_code: string;
-	allows_write_to_pm: boolean;
-};
-
-const getTelegramUser = async (): Promise<TelegramUser | null> => {
+const getTelegramUser = async (): Promise<{ initData: string; user: TelegramUser | null }> => {
 	if (window?.Telegram?.WebApp?.initData) {
 		const telegramWebAppInitData = window.Telegram.WebApp.initData;
 		const initData = Object.fromEntries(new URLSearchParams(telegramWebAppInitData)) as InitData;
-		logger.info('initData', JSON.stringify(initData));
 		const { user: userString } = initData;
 		const { data: user, error } = await tryCatch<TelegramUser>(JSON.parse(userString));
 		if (error) {
 			console.error(error);
-			return null;
+			return { user: null, initData: '' };
 		}
-		return user;
+		console.info('user', user);
+		return { user, initData: telegramWebAppInitData };
 	}
-	return null;
+	return { user: null, initData: '' };
 };
 
 const UserContext = createContext<{
+	isAuthenticated: boolean;
 	user: TelegramUser | null;
 }>({
+	isAuthenticated: false,
 	user: null,
 });
 
 export const TelegramUserProvider: React.FC<{ children: ReactNode }> = ({ children = <></> }) => {
-	const [{ user }, setState] = useState<{ user: TelegramUser | null }>({ user: null });
+	const [{ loading = false, isAuthenticated = false, user = null }, setState] = useState<{
+		loading: boolean;
+		isAuthenticated: boolean;
+		user: TelegramUser | null;
+	}>({
+		loading: false,
+		isAuthenticated: false,
+		user: null,
+	});
 
 	useEffect(() => {
 		const getTelegramUserAsync = async () => {
-			const user = await getTelegramUser();
-			setState((previous) => ({ ...previous, user }));
+			setState((previous) => ({ ...previous, loading: true }));
+			const { initData, user } = await getTelegramUser();
+			const { data, error } = await tryCatch(trpcClient.auth.telegram.mutate({ initData }));
+			if (error) console.error(error.message);
+			if (!data) console.error('Invalid Data');
+			const { data: authenticatedData, error: authenticatedError } = await tryCatch(
+				trpcClient.app.authenticated.query(),
+			);
+			if (authenticatedError) console.error(authenticatedError.message);
+			if (!authenticatedData) console.error('Invalid Data');
+			const { isAuthenticated } = authenticatedData ?? { isAuthenticated: false };
+			setState((previous) => ({ ...previous, loading: false, isAuthenticated, user }));
 		};
 		getTelegramUserAsync();
 	}, []);
 
-	const value = useMemo(() => ({ user }), [user]);
+	const value = useMemo(() => ({ isAuthenticated, user }), [isAuthenticated, user]);
 
-	return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+	return (
+		<UserContext.Provider value={value}>
+			{loading ? (
+				<div className="flex h-screen w-screen items-center justify-center">
+					<span className="text-xl">Loading</span>
+				</div>
+			) : (
+				<>{children}</>
+			)}
+		</UserContext.Provider>
+	);
 };
 
 export const useTelegramUser = () => {

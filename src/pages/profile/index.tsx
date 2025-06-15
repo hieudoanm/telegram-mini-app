@@ -1,29 +1,41 @@
 import { useTelegramUser } from '@telegram/contexts/TelegramUserContext';
 import { PageTemplate } from '@telegram/templates/PageTemplate';
 import { NextPage } from 'next';
+import Image from 'next/image';
 import { PiBinary, PiCurrencyCircleDollar, PiDetective, PiFileDoc, PiTranslate } from 'react-icons/pi';
 
 const ProfilePage: NextPage = () => {
-	const { user } = useTelegramUser();
+	const { isAuthenticated, user } = useTelegramUser();
+
+	const fullName = `${user?.first_name ?? ''} ${user?.last_name}`.trim();
 
 	return (
 		<PageTemplate activeId="profile">
-			<div className="p-8">
+			<div className="p-4">
 				<div className="flex flex-col gap-y-4">
 					{user && (
 						<>
 							<div className="flex gap-x-4 rounded-2xl border border-neutral-800 p-4 shadow shadow-neutral-800">
 								<div className="flex items-center">
-									<div className="aspect-square w-24 overflow-hidden rounded-full border border-neutral-800"></div>
-								</div>
-								<div className="flex grow flex-col justify-center gap-y-1 truncate">
-									<p className="truncate">@{user.username} - First Last</p>
-									<p className="text-xl font-black">$0.00</p>
-									<div>
-										<button className="cursor-pointer rounded-full bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900">
-											Deposit
-										</button>
+									<div className="aspect-square w-24 overflow-hidden rounded-full border border-neutral-800">
+										<Image src={user.photo_url} alt={user?.username ?? ''} width={96} height={96} />
 									</div>
+								</div>
+								<div className="flex grow flex-col justify-center gap-y-2 truncate">
+									<div>
+										{isAuthenticated ? (
+											<div className="inline-block rounded-full bg-green-900 px-2 py-0.5 text-xs text-neutral-100">
+												Authenticated
+											</div>
+										) : (
+											<div className="inline-block rounded-full bg-red-900 px-2 py-0.5 text-xs text-neutral-100">
+												Unauthenticated
+											</div>
+										)}
+									</div>
+									<p className="truncate text-xl leading-none font-black">{fullName}</p>
+									<p className="truncate text-sm leading-none">@{user.username}</p>
+									<p className="truncate text-xl leading-none font-semibold">$0.00</p>
 								</div>
 							</div>
 							<div className="px-4">
@@ -39,7 +51,8 @@ const ProfilePage: NextPage = () => {
 						<select
 							id="currency"
 							name="currency"
-							className="text-align-last-right appearance-none text-right text-yellow-500">
+							className="text-align-last-right appearance-none text-right text-yellow-500"
+							defaultValue="USD">
 							<optgroup label="Asia">
 								<option value="CNY">CNY</option>
 								<option value="JPY">JPY</option>
@@ -68,7 +81,7 @@ const ProfilePage: NextPage = () => {
 							id="language"
 							name="language"
 							className="text-align-last-right appearance-none text-right text-yellow-500"
-							value={user?.language_code ?? 'en'}
+							defaultValue={user?.language_code ?? 'en'}
 							disabled>
 							<option value="en">English</option>
 							<option value="de">Deutsch</option>
