@@ -13,7 +13,7 @@ import {
 
 export const Navbar: FC<{ activeId: string }> = ({ activeId }) => {
 	return (
-		<nav className="border-t border-neutral-800">
+		<nav className="bg-neutral-900">
 			<div className="grid grid-cols-4">
 				{[
 					{ id: 'home', href: '/', icon: <PiHouse />, activeIcon: <PiHouseFill />, text: 'Home' },

@@ -15,13 +15,15 @@ const ProfilePage: NextPage = () => {
 				<div className="flex flex-col gap-y-4">
 					{user && (
 						<>
-							<div className="flex gap-x-4 rounded-2xl border border-neutral-800 p-4 shadow shadow-neutral-800">
+							<div className="flex gap-x-4 rounded-2xl border border-neutral-800 bg-neutral-900 p-4 shadow shadow-neutral-900">
 								<div className="flex items-center">
-									<div className="aspect-square w-24 overflow-hidden rounded-full border border-neutral-800">
-										<Image src={user.photo_url} alt={user?.username ?? ''} width={96} height={96} />
+									<div className="aspect-square w-20 overflow-hidden rounded-full border border-neutral-800">
+										<Image src={user.photo_url} alt={user?.username ?? ''} width={128} height={128} />
 									</div>
 								</div>
 								<div className="flex grow flex-col justify-center gap-y-2 truncate">
+									<p className="truncate text-xl leading-none font-black">{fullName}</p>
+									<p className="truncate text-sm leading-none">@{user.username}</p>
 									<div>
 										{isAuthenticated ? (
 											<div className="inline-block rounded-full bg-green-900 px-2 py-0.5 text-xs text-neutral-100">
@@ -33,17 +35,14 @@ const ProfilePage: NextPage = () => {
 											</div>
 										)}
 									</div>
-									<p className="truncate text-xl leading-none font-black">{fullName}</p>
-									<p className="truncate text-sm leading-none">@{user.username}</p>
-									<p className="truncate text-xl leading-none font-semibold">$0.00</p>
 								</div>
 							</div>
 							<div className="px-4">
-								<hr className="border-neutral-800" />
+								<hr className="border-neutral-900" />
 							</div>
 						</>
 					)}
-					<div className="flex items-center justify-between rounded-full border border-neutral-800 px-4 py-2 shadow shadow-neutral-800">
+					<div className="flex items-center justify-between rounded-full border border-neutral-800 bg-neutral-900 px-4 py-2 shadow shadow-neutral-900">
 						<div className="flex items-center gap-x-2">
 							<PiCurrencyCircleDollar className="text-xl text-yellow-500" />
 							<span>Currency</span>
@@ -72,7 +71,7 @@ const ProfilePage: NextPage = () => {
 							</optgroup>
 						</select>
 					</div>
-					<div className="flex items-center justify-between rounded-full border border-neutral-800 px-4 py-2 shadow shadow-neutral-800">
+					<div className="flex items-center justify-between rounded-full border border-neutral-800 bg-neutral-900 px-4 py-2 shadow shadow-neutral-900">
 						<div className="flex items-center gap-x-2">
 							<PiTranslate className="text-xl text-yellow-500" />
 							<span>Language</span>
@@ -88,7 +87,7 @@ const ProfilePage: NextPage = () => {
 							<option value="kr">한글</option>
 						</select>
 					</div>
-					<div className="flex items-center justify-between rounded-full border border-neutral-800 px-4 py-2 shadow shadow-neutral-800">
+					<div className="flex items-center justify-between rounded-full border border-neutral-800 bg-neutral-900 px-4 py-2 shadow shadow-neutral-900">
 						<div className="flex items-center gap-x-2">
 							<PiBinary className="text-xl text-yellow-500" />
 							<span>Version</span>
@@ -96,15 +95,15 @@ const ProfilePage: NextPage = () => {
 						<span className="text-yellow-500">v0.0.1</span>
 					</div>
 					<div className="px-4">
-						<hr className="border-neutral-800" />
+						<hr className="border-neutral-900" />
 					</div>
-					<div className="flex items-center justify-between rounded-full border border-neutral-800 px-4 py-2 shadow shadow-neutral-800">
+					<div className="flex items-center justify-between rounded-full border border-neutral-800 bg-neutral-900 px-4 py-2 shadow shadow-neutral-900">
 						<div className="flex items-center gap-x-2">
 							<PiDetective className="text-xl text-yellow-500" />
 							<span>Privacy Policy</span>
 						</div>
 					</div>
-					<div className="flex items-center justify-between rounded-full border border-neutral-800 px-4 py-2 shadow shadow-neutral-800">
+					<div className="flex items-center justify-between rounded-full border border-neutral-800 bg-neutral-900 px-4 py-2 shadow shadow-neutral-900">
 						<div className="flex items-center gap-x-2">
 							<PiFileDoc className="text-xl text-yellow-500" />
 							<span>Terms of Service</span>

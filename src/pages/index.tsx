@@ -5,7 +5,7 @@ const HomePage: NextPage = () => {
 	return (
 		<PageTemplate activeId="home">
 			<div className="p-4">
-				<div className="flex flex-col gap-y-8">
+				<div className="flex flex-col gap-y-4">
 					{[
 						{ id: '1', action: 'Buy Now' },
 						{ id: '2', action: 'Play Now' },
@@ -15,7 +15,7 @@ const HomePage: NextPage = () => {
 						return (
 							<div
 								key={id}
-								className="aspect-video w-full rounded-2xl border border-neutral-800 shadow shadow-neutral-800">
+								className="aspect-video w-full rounded-2xl border border-neutral-800 bg-neutral-900 shadow shadow-neutral-900">
 								<div className="flex h-full w-full flex-col p-4">
 									<div className="grow"></div>
 									<button className="w-full cursor-pointer rounded-full border border-neutral-800 bg-yellow-500 px-4 py-2 text-base font-semibold text-neutral-900">

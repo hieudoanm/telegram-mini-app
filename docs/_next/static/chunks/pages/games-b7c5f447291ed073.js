@@ -3,52 +3,45 @@
 	{
 		2461: (e, r, t) => {
 			'use strict';
-			t.d(r, { U: () => d });
-			var l = t(5640),
-				s = t(2497);
-			let n = (e) => {
-				let { children: r = (0, l.jsx)(l.Fragment, {}) } = e,
-					{ getPlatform: t } = (0, s.j)(),
-					n = t();
+			t.d(r, { U: () => c });
+			var l = t(5640);
+			let s = (e) => {
+				let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
 				return (0, l.jsx)('div', {
-					className: 'h-screen '.concat('web' !== n ? 'pt-18' : ''),
-					children: (0, l.jsx)('div', {
-						className:
-							'mx-auto flex h-full w-full max-w-lg flex-col overflow-hidden rounded-xl border border-neutral-800',
-						children: r,
-					}),
+					className: 'mx-auto flex h-screen w-full max-w-lg flex-col overflow-hidden bg-neutral-950/10',
+					children: r,
 				});
 			};
-			var i = t(6826),
-				a = t.n(i),
-				o = t(1238);
-			let c = (e) => {
+			var n = t(6826),
+				a = t.n(n),
+				i = t(1238);
+			let o = (e) => {
 					let { activeId: r } = e;
 					return (0, l.jsx)('nav', {
-						className: 'border-t border-neutral-800',
+						className: 'bg-neutral-900',
 						children: (0, l.jsx)('div', {
 							className: 'grid grid-cols-4',
 							children: [
-								{ id: 'home', href: '/', icon: (0, l.jsx)(o.cEk, {}), activeIcon: (0, l.jsx)(o.ZVi, {}), text: 'Home' },
+								{ id: 'home', href: '/', icon: (0, l.jsx)(i.cEk, {}), activeIcon: (0, l.jsx)(i.ZVi, {}), text: 'Home' },
 								{
 									id: 'games',
 									href: '/games',
-									icon: (0, l.jsx)(o.SkF, {}),
-									activeIcon: (0, l.jsx)(o.rNT, {}),
+									icon: (0, l.jsx)(i.SkF, {}),
+									activeIcon: (0, l.jsx)(i.rNT, {}),
 									text: 'Games',
 								},
 								{
 									id: 'store',
 									href: '/store',
-									icon: (0, l.jsx)(o.Qsx, {}),
-									activeIcon: (0, l.jsx)(o.XsE, {}),
+									icon: (0, l.jsx)(i.Qsx, {}),
+									activeIcon: (0, l.jsx)(i.XsE, {}),
 									text: 'Store',
 								},
 								{
 									id: 'profile',
 									href: '/profile',
-									icon: (0, l.jsx)(o.NMe, {}),
-									activeIcon: (0, l.jsx)(o.MrL, {}),
+									icon: (0, l.jsx)(i.NMe, {}),
+									activeIcon: (0, l.jsx)(i.MrL, {}),
 									text: 'Profile',
 								},
 							].map((e) => {
@@ -86,12 +79,12 @@
 						}),
 					});
 				},
-				d = (e) => {
+				c = (e) => {
 					let { activeId: r = '', children: t = (0, l.jsx)(l.Fragment, {}) } = e;
-					return (0, l.jsxs)(n, {
+					return (0, l.jsxs)(s, {
 						children: [
 							(0, l.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: t }),
-							(0, l.jsx)(c, { activeId: r }),
+							(0, l.jsx)(o, { activeId: r }),
 						],
 					});
 				};
@@ -110,7 +103,8 @@
 							className: 'flex flex-col gap-y-4',
 							children: [
 								(0, l.jsx)('div', {
-									className: 'aspect-video w-full rounded-2xl border border-neutral-800 shadow shadow-neutral-800',
+									className:
+										'aspect-video w-full rounded-2xl border border-neutral-800 bg-neutral-900 shadow shadow-neutral-900',
 									children: (0, l.jsxs)('div', {
 										className: 'flex h-full w-full flex-col p-4',
 										children: [
@@ -136,7 +130,7 @@
 									return (0, l.jsx)(
 										'div',
 										{
-											className: 'rounded-xl border border-neutral-800 px-4 py-3',
+											className: 'rounded-xl border border-neutral-800 bg-neutral-900 px-4 py-3',
 											children: (0, l.jsxs)('div', {
 												className: 'flex w-full items-center gap-x-4',
 												children: [
@@ -180,9 +174,9 @@
 			var l = t(148),
 				s = { color: void 0, size: void 0, className: void 0, style: void 0, attr: void 0 },
 				n = l.createContext && l.createContext(s),
-				i = ['attr', 'size', 'title'];
-			function a() {
-				return (a = Object.assign
+				a = ['attr', 'size', 'title'];
+			function i() {
+				return (i = Object.assign
 					? Object.assign.bind()
 					: function (e) {
 							for (var r = 1; r < arguments.length; r++) {
@@ -241,7 +235,7 @@
 				return (r) =>
 					l.createElement(
 						u,
-						a({ attr: c({}, e.attr) }, r),
+						i({ attr: c({}, e.attr) }, r),
 						(function e(r) {
 							return r && r.map((r, t) => l.createElement(r.tag, c({ key: t }, r.attr), e(r.child)));
 						})(e.child),
@@ -271,14 +265,14 @@
 									(t = n[l]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (s[t] = e[t]);
 							}
 							return s;
-						})(e, i),
+						})(e, a),
 						u = n || r.size || '1em';
 					return (
 						r.className && (t = r.className),
 						e.className && (t = (t ? t + ' ' : '') + e.className),
 						l.createElement(
 							'svg',
-							a({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, r.attr, s, d, {
+							i({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, r.attr, s, d, {
 								className: t,
 								style: c(c({ color: e.color || r.color }, r.style), e.style),
 								height: u,

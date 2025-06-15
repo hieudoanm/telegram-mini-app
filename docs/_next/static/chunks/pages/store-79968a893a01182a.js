@@ -11,52 +11,45 @@
 		},
 		2461: (e, r, t) => {
 			'use strict';
-			t.d(r, { U: () => d });
-			var l = t(5640),
-				s = t(2497);
-			let n = (e) => {
-				let { children: r = (0, l.jsx)(l.Fragment, {}) } = e,
-					{ getPlatform: t } = (0, s.j)(),
-					n = t();
+			t.d(r, { U: () => c });
+			var l = t(5640);
+			let s = (e) => {
+				let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
 				return (0, l.jsx)('div', {
-					className: 'h-screen '.concat('web' !== n ? 'pt-18' : ''),
-					children: (0, l.jsx)('div', {
-						className:
-							'mx-auto flex h-full w-full max-w-lg flex-col overflow-hidden rounded-xl border border-neutral-800',
-						children: r,
-					}),
+					className: 'mx-auto flex h-screen w-full max-w-lg flex-col overflow-hidden bg-neutral-950/10',
+					children: r,
 				});
 			};
-			var i = t(6826),
-				o = t.n(i),
-				a = t(1238);
-			let c = (e) => {
+			var n = t(6826),
+				i = t.n(n),
+				o = t(1238);
+			let a = (e) => {
 					let { activeId: r } = e;
 					return (0, l.jsx)('nav', {
-						className: 'border-t border-neutral-800',
+						className: 'bg-neutral-900',
 						children: (0, l.jsx)('div', {
 							className: 'grid grid-cols-4',
 							children: [
-								{ id: 'home', href: '/', icon: (0, l.jsx)(a.cEk, {}), activeIcon: (0, l.jsx)(a.ZVi, {}), text: 'Home' },
+								{ id: 'home', href: '/', icon: (0, l.jsx)(o.cEk, {}), activeIcon: (0, l.jsx)(o.ZVi, {}), text: 'Home' },
 								{
 									id: 'games',
 									href: '/games',
-									icon: (0, l.jsx)(a.SkF, {}),
-									activeIcon: (0, l.jsx)(a.rNT, {}),
+									icon: (0, l.jsx)(o.SkF, {}),
+									activeIcon: (0, l.jsx)(o.rNT, {}),
 									text: 'Games',
 								},
 								{
 									id: 'store',
 									href: '/store',
-									icon: (0, l.jsx)(a.Qsx, {}),
-									activeIcon: (0, l.jsx)(a.XsE, {}),
+									icon: (0, l.jsx)(o.Qsx, {}),
+									activeIcon: (0, l.jsx)(o.XsE, {}),
 									text: 'Store',
 								},
 								{
 									id: 'profile',
 									href: '/profile',
-									icon: (0, l.jsx)(a.NMe, {}),
-									activeIcon: (0, l.jsx)(a.MrL, {}),
+									icon: (0, l.jsx)(o.NMe, {}),
+									activeIcon: (0, l.jsx)(o.MrL, {}),
 									text: 'Profile',
 								},
 							].map((e) => {
@@ -64,7 +57,7 @@
 										id: t = '',
 										href: s = '',
 										text: n = '',
-										icon: i = (0, l.jsx)(l.Fragment, {}),
+										icon: o = (0, l.jsx)(l.Fragment, {}),
 										activeIcon: a = (0, l.jsx)(l.Fragment, {}),
 									} = e,
 									c = t === r;
@@ -72,7 +65,7 @@
 									'div',
 									{
 										className: 'col-span-1',
-										children: (0, l.jsx)(o(), {
+										children: (0, l.jsx)(i(), {
 											href: s,
 											children: (0, l.jsxs)('div', {
 												className: 'flex flex-col items-center justify-center gap-y-0.5 py-4',
@@ -81,7 +74,7 @@
 														className: 'text-3xl',
 														children: c
 															? (0, l.jsx)(l.Fragment, { children: a })
-															: (0, l.jsx)(l.Fragment, { children: i }),
+															: (0, l.jsx)(l.Fragment, { children: o }),
 													}),
 													(0, l.jsx)('span', { className: 'text-xs', children: n }),
 												],
@@ -94,12 +87,12 @@
 						}),
 					});
 				},
-				d = (e) => {
+				c = (e) => {
 					let { activeId: r = '', children: t = (0, l.jsx)(l.Fragment, {}) } = e;
-					return (0, l.jsxs)(n, {
+					return (0, l.jsxs)(s, {
 						children: [
 							(0, l.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: t }),
-							(0, l.jsx)(c, { activeId: r }),
+							(0, l.jsx)(a, { activeId: r }),
 						],
 					});
 				};
@@ -237,7 +230,8 @@
 							className: 'flex flex-col gap-y-4',
 							children: [
 								(0, l.jsx)('div', {
-									className: 'aspect-video w-full rounded-2xl border border-neutral-800 shadow shadow-neutral-800',
+									className:
+										'aspect-video w-full rounded-2xl border border-neutral-800 bg-neutral-900 shadow shadow-neutral-900',
 									children: (0, l.jsxs)('div', {
 										className: 'flex h-full w-full flex-col p-4',
 										children: [
@@ -263,7 +257,7 @@
 									return (0, l.jsx)(
 										'div',
 										{
-											className: 'rounded-xl border border-neutral-800 px-4 py-3',
+											className: 'rounded-xl border border-neutral-800 bg-neutral-900 px-4 py-3',
 											children: (0, l.jsxs)('div', {
 												className: 'flex w-full items-center gap-x-4',
 												children: [
