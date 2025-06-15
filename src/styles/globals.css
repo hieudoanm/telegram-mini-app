@@ -28,3 +28,7 @@ body {
 	scrollbar-width: none; /* Firefox */
 	-ms-overflow-style: none; /* IE and Edge */
 }
+
+.text-align-last-right {
+	text-align-last: right;
+}

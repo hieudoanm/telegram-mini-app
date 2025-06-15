@@ -487,6 +487,9 @@
 	.py-4 {
 		padding-block: calc(var(--spacing) * 4);
 	}
+	.text-right {
+		text-align: right;
+	}
 	.text-2xl {
 		font-size: var(--text-2xl);
 		line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -581,6 +584,9 @@ body {
 .scrollbar-none {
 	scrollbar-width: none;
 	-ms-overflow-style: none;
+}
+.text-align-last-right {
+	text-align-last: right;
 }
 @property --tw-rotate-x {
 	syntax: '*';

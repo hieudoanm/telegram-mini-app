@@ -1,3 +1,4 @@
+import { TelegramUserProvider } from '@telegram/contexts/TelegramUserContext';
 import '@telegram/styles/globals.css';
 import { trpc } from '@telegram/utils/trpc';
 import type { AppProps } from 'next/app';
@@ -22,7 +23,9 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
 				<title>Telegram Mini App</title>
 			</Head>
 			<div className={`${geistSans.className} ${geistMono.className}`}>
-				<Component {...pageProps} />
+				<TelegramUserProvider>
+					<Component {...pageProps} />
+				</TelegramUserProvider>
 			</div>
 		</>
 	);
