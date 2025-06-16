@@ -1,19 +1,19 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-	[336],
+	[421],
 	{
-		336: (e, r, s) => {
+		95: (e, r, s) => {
 			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/404',
+				'/500',
 				function () {
-					return s(4850);
+					return s(6818);
 				},
 			]);
 		},
-		2351: (e, r, s) => {
+		1190: (e, r, s) => {
 			'use strict';
 			s.d(r, { L: () => c });
 			var t = s(5640),
-				l = s(6826),
+				l = s(5089),
 				n = s.n(l);
 			let c = (e) => {
 				let { code: r } = e;
@@ -35,16 +35,16 @@
 				});
 			};
 		},
-		4850: (e, r, s) => {
+		6818: (e, r, s) => {
 			'use strict';
 			s.r(r), s.d(r, { default: () => n });
 			var t = s(5640),
-				l = s(2351);
-			let n = () => (0, t.jsx)(l.L, { code: '404' });
+				l = s(1190);
+			let n = () => (0, t.jsx)(l.L, { code: '500' });
 		},
 	},
 	(e) => {
 		var r = (r) => e((e.s = r));
-		e.O(0, [826, 636, 593, 792], () => r(336)), (_N_E = e.O());
+		e.O(0, [89, 636, 593, 792], () => r(95)), (_N_E = e.O());
 	},
 ]);

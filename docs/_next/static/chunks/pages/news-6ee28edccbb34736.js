@@ -1,146 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[277],
 	{
-		1477: (e, t, r) => {
-			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/news',
-				function () {
-					return r(9782);
-				},
-			]);
-		},
-		2461: (e, t, r) => {
-			'use strict';
-			r.d(t, { U: () => o });
-			var n = r(5640);
-			let a = (e) => {
-				let { children: t = (0, n.jsx)(n.Fragment, {}) } = e;
-				return (0, n.jsx)('div', {
-					className: 'mx-auto flex h-screen w-full max-w-lg flex-col overflow-hidden bg-neutral-950/10',
-					children: t,
-				});
-			};
-			var s = r(6826),
-				l = r.n(s),
-				i = r(1238);
-			let c = (e) => {
-					let { activeId: t } = e;
-					return (0, n.jsx)('nav', {
-						className: 'border-t border-neutral-900 bg-neutral-950',
-						children: (0, n.jsx)('div', {
-							className: 'grid grid-cols-5',
-							children: [
-								{ id: 'home', href: '/', icon: (0, n.jsx)(i.cEk, {}), activeIcon: (0, n.jsx)(i.ZVi, {}), text: 'Home' },
-								{
-									id: 'games',
-									href: '/games',
-									icon: (0, n.jsx)(i.SkF, {}),
-									activeIcon: (0, n.jsx)(i.rNT, {}),
-									text: 'Games',
-								},
-								{
-									id: 'store',
-									href: '/store',
-									icon: (0, n.jsx)(i.Qsx, {}),
-									activeIcon: (0, n.jsx)(i.XsE, {}),
-									text: 'Store',
-								},
-								{
-									id: 'news',
-									href: '/news',
-									icon: (0, n.jsx)(i.rRm, {}),
-									activeIcon: (0, n.jsx)(i.mKO, {}),
-									text: 'News',
-								},
-								{
-									id: 'profile',
-									href: '/profile',
-									icon: (0, n.jsx)(i.NMe, {}),
-									activeIcon: (0, n.jsx)(i.MrL, {}),
-									text: 'Profile',
-								},
-							].map((e) => {
-								let {
-										id: r = '',
-										href: a = '',
-										text: s = '',
-										icon: i = (0, n.jsx)(n.Fragment, {}),
-										activeIcon: c = (0, n.jsx)(n.Fragment, {}),
-									} = e,
-									o = r === t;
-								return (0, n.jsx)(
-									'div',
-									{
-										className: 'col-span-1',
-										children: (0, n.jsx)(l(), {
-											href: a,
-											children: (0, n.jsxs)('div', {
-												className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
-													o ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
-												),
-												children: [
-													(0, n.jsx)('span', {
-														className: 'text-3xl',
-														children: o
-															? (0, n.jsx)(n.Fragment, { children: c })
-															: (0, n.jsx)(n.Fragment, { children: i }),
-													}),
-													(0, n.jsx)('span', { className: 'text-xs', children: s }),
-												],
-											}),
-										}),
-									},
-									r,
-								);
-							}),
-						}),
-					});
-				},
-				o = (e) => {
-					let { activeId: t = '', children: r = (0, n.jsx)(n.Fragment, {}) } = e;
-					return (0, n.jsxs)(a, {
-						children: [
-							(0, n.jsx)('header', {
-								className: 'border-b border-neutral-900 pt-8 pb-4',
-								children: (0, n.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
-							}),
-							(0, n.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: r }),
-							(0, n.jsx)(c, { activeId: t }),
-						],
-					});
-				};
-		},
-		4547: (e, t, r) => {
-			'use strict';
-			r.d(t, { Y: () => s });
-			let n = [
-					'January',
-					'February',
-					'March',
-					'April',
-					'May',
-					'June',
-					'July',
-					'August',
-					'September',
-					'October',
-					'November',
-					'December',
-				],
-				a = (e) => {
-					let t = e % 10,
-						r = e % 100;
-					return 1 === t && 11 !== r ? 'st' : 2 === t && 12 !== r ? 'nd' : 3 === t && 13 !== r ? 'rd' : 'th';
-				},
-				s = (e) => {
-					let t = n[e.getMonth()],
-						r = e.getDate(),
-						s = e.getFullYear(),
-						l = a(r);
-					return ''.concat(t, ' ').concat(r).concat(l, ' ').concat(s);
-				};
-		},
-		7182: (e, t, r) => {
+		812: (e, t, r) => {
 			'use strict';
 			r.d(t, { k5: () => u });
 			var n = r(148),
@@ -259,15 +120,154 @@
 				return void 0 !== s ? n.createElement(s.Consumer, null, (e) => t(e)) : t(a);
 			}
 		},
-		9782: (e, t, r) => {
+		6440: (e, t, r) => {
+			'use strict';
+			r.d(t, { U: () => o });
+			var n = r(5640);
+			let a = (e) => {
+				let { children: t = (0, n.jsx)(n.Fragment, {}) } = e;
+				return (0, n.jsx)('div', {
+					className: 'mx-auto flex h-screen w-full max-w-lg flex-col overflow-hidden bg-neutral-950/10',
+					children: t,
+				});
+			};
+			var s = r(5089),
+				l = r.n(s),
+				i = r(9695);
+			let c = (e) => {
+					let { activeId: t } = e;
+					return (0, n.jsx)('nav', {
+						className: 'border-t border-neutral-900 bg-neutral-950',
+						children: (0, n.jsx)('div', {
+							className: 'grid grid-cols-5',
+							children: [
+								{ id: 'home', href: '/', icon: (0, n.jsx)(i.cEk, {}), activeIcon: (0, n.jsx)(i.ZVi, {}), text: 'Home' },
+								{
+									id: 'games',
+									href: '/games',
+									icon: (0, n.jsx)(i.SkF, {}),
+									activeIcon: (0, n.jsx)(i.rNT, {}),
+									text: 'Games',
+								},
+								{
+									id: 'store',
+									href: '/store',
+									icon: (0, n.jsx)(i.Qsx, {}),
+									activeIcon: (0, n.jsx)(i.XsE, {}),
+									text: 'Store',
+								},
+								{
+									id: 'news',
+									href: '/news',
+									icon: (0, n.jsx)(i.rRm, {}),
+									activeIcon: (0, n.jsx)(i.mKO, {}),
+									text: 'News',
+								},
+								{
+									id: 'profile',
+									href: '/profile',
+									icon: (0, n.jsx)(i.NMe, {}),
+									activeIcon: (0, n.jsx)(i.MrL, {}),
+									text: 'Profile',
+								},
+							].map((e) => {
+								let {
+										id: r = '',
+										href: a = '',
+										text: s = '',
+										icon: i = (0, n.jsx)(n.Fragment, {}),
+										activeIcon: c = (0, n.jsx)(n.Fragment, {}),
+									} = e,
+									o = r === t;
+								return (0, n.jsx)(
+									'div',
+									{
+										className: 'col-span-1',
+										children: (0, n.jsx)(l(), {
+											href: a,
+											children: (0, n.jsxs)('div', {
+												className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
+													o ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
+												),
+												children: [
+													(0, n.jsx)('span', {
+														className: 'text-3xl',
+														children: o
+															? (0, n.jsx)(n.Fragment, { children: c })
+															: (0, n.jsx)(n.Fragment, { children: i }),
+													}),
+													(0, n.jsx)('span', { className: 'text-xs', children: s }),
+												],
+											}),
+										}),
+									},
+									r,
+								);
+							}),
+						}),
+					});
+				},
+				o = (e) => {
+					let { activeId: t = '', children: r = (0, n.jsx)(n.Fragment, {}) } = e;
+					return (0, n.jsxs)(a, {
+						children: [
+							(0, n.jsx)('header', {
+								className: 'border-b border-neutral-900 pt-8 pb-4',
+								children: (0, n.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
+							}),
+							(0, n.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: r }),
+							(0, n.jsx)(c, { activeId: t }),
+						],
+					});
+				};
+		},
+		7226: (e, t, r) => {
+			'use strict';
+			r.d(t, { Y: () => s });
+			let n = [
+					'January',
+					'February',
+					'March',
+					'April',
+					'May',
+					'June',
+					'July',
+					'August',
+					'September',
+					'October',
+					'November',
+					'December',
+				],
+				a = (e) => {
+					let t = e % 10,
+						r = e % 100;
+					return 1 === t && 11 !== r ? 'st' : 2 === t && 12 !== r ? 'nd' : 3 === t && 13 !== r ? 'rd' : 'th';
+				},
+				s = (e) => {
+					let t = n[e.getMonth()],
+						r = e.getDate(),
+						s = e.getFullYear(),
+						l = a(r);
+					return ''.concat(t, ' ').concat(r).concat(l, ' ').concat(s);
+				};
+		},
+		8134: (e, t, r) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/news',
+				function () {
+					return r(9241);
+				},
+			]);
+		},
+		9241: (e, t, r) => {
 			'use strict';
 			r.r(t), r.d(t, { default: () => u });
 			var n = r(5640),
-				a = r(2461),
-				s = r(4547),
-				l = r(6826),
+				a = r(6440),
+				s = r(7226),
+				l = r(5089),
 				i = r.n(l),
-				c = r(1238);
+				c = r(9695);
 			let o =
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet pretium enim, egestas tincidunt orci. Nullam rutrum iaculis libero id suscipit. Nullam consectetur felis a hendrerit tincidunt. Nam sodales porttitor dui, id feugiat diam pulvinar at. Morbi pulvinar metus sed nisl egestas aliquam. In rhoncus augue a cursus tristique.',
 				u = () =>
@@ -330,6 +330,6 @@
 	},
 	(e) => {
 		var t = (t) => e((e.s = t));
-		e.O(0, [72, 826, 636, 593, 792], () => t(1477)), (_N_E = e.O());
+		e.O(0, [72, 89, 636, 593, 792], () => t(8134)), (_N_E = e.O());
 	},
 ]);

@@ -1,124 +1,15 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[63],
 	{
-		2461: (e, l, s) => {
-			'use strict';
-			s.d(l, { U: () => d });
-			var r = s(5640);
-			let a = (e) => {
-				let { children: l = (0, r.jsx)(r.Fragment, {}) } = e;
-				return (0, r.jsx)('div', {
-					className: 'mx-auto flex h-screen w-full max-w-lg flex-col overflow-hidden bg-neutral-950/10',
-					children: l,
-				});
-			};
-			var n = s(6826),
-				t = s.n(n),
-				i = s(1238);
-			let c = (e) => {
-					let { activeId: l } = e;
-					return (0, r.jsx)('nav', {
-						className: 'border-t border-neutral-900 bg-neutral-950',
-						children: (0, r.jsx)('div', {
-							className: 'grid grid-cols-5',
-							children: [
-								{ id: 'home', href: '/', icon: (0, r.jsx)(i.cEk, {}), activeIcon: (0, r.jsx)(i.ZVi, {}), text: 'Home' },
-								{
-									id: 'games',
-									href: '/games',
-									icon: (0, r.jsx)(i.SkF, {}),
-									activeIcon: (0, r.jsx)(i.rNT, {}),
-									text: 'Games',
-								},
-								{
-									id: 'store',
-									href: '/store',
-									icon: (0, r.jsx)(i.Qsx, {}),
-									activeIcon: (0, r.jsx)(i.XsE, {}),
-									text: 'Store',
-								},
-								{
-									id: 'news',
-									href: '/news',
-									icon: (0, r.jsx)(i.rRm, {}),
-									activeIcon: (0, r.jsx)(i.mKO, {}),
-									text: 'News',
-								},
-								{
-									id: 'profile',
-									href: '/profile',
-									icon: (0, r.jsx)(i.NMe, {}),
-									activeIcon: (0, r.jsx)(i.MrL, {}),
-									text: 'Profile',
-								},
-							].map((e) => {
-								let {
-										id: s = '',
-										href: a = '',
-										text: n = '',
-										icon: i = (0, r.jsx)(r.Fragment, {}),
-										activeIcon: c = (0, r.jsx)(r.Fragment, {}),
-									} = e,
-									d = s === l;
-								return (0, r.jsx)(
-									'div',
-									{
-										className: 'col-span-1',
-										children: (0, r.jsx)(t(), {
-											href: a,
-											children: (0, r.jsxs)('div', {
-												className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
-													d ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
-												),
-												children: [
-													(0, r.jsx)('span', {
-														className: 'text-3xl',
-														children: d
-															? (0, r.jsx)(r.Fragment, { children: c })
-															: (0, r.jsx)(r.Fragment, { children: i }),
-													}),
-													(0, r.jsx)('span', { className: 'text-xs', children: n }),
-												],
-											}),
-										}),
-									},
-									s,
-								);
-							}),
-						}),
-					});
-				},
-				d = (e) => {
-					let { activeId: l = '', children: s = (0, r.jsx)(r.Fragment, {}) } = e;
-					return (0, r.jsxs)(a, {
-						children: [
-							(0, r.jsx)('header', {
-								className: 'border-b border-neutral-900 pt-8 pb-4',
-								children: (0, r.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
-							}),
-							(0, r.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: s }),
-							(0, r.jsx)(c, { activeId: l }),
-						],
-					});
-				};
-		},
-		7733: (e, l, s) => {
-			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/profile',
-				function () {
-					return s(9140);
-				},
-			]);
-		},
-		9140: (e, l, s) => {
+		817: (e, l, s) => {
 			'use strict';
 			s.r(l), s.d(l, { default: () => d });
 			var r = s(5640),
-				a = s(1158),
-				n = s(2461),
-				t = s(9343),
+				a = s(2803),
+				n = s(6440),
+				t = s(58),
 				i = s.n(t),
-				c = s(1238);
+				c = s(9695);
 			let d = () => {
 				var e, l, s;
 				let { isAuthenticated: t, user: d } = (0, a.O)(),
@@ -296,9 +187,118 @@
 				});
 			};
 		},
+		6440: (e, l, s) => {
+			'use strict';
+			s.d(l, { U: () => d });
+			var r = s(5640);
+			let a = (e) => {
+				let { children: l = (0, r.jsx)(r.Fragment, {}) } = e;
+				return (0, r.jsx)('div', {
+					className: 'mx-auto flex h-screen w-full max-w-lg flex-col overflow-hidden bg-neutral-950/10',
+					children: l,
+				});
+			};
+			var n = s(5089),
+				t = s.n(n),
+				i = s(9695);
+			let c = (e) => {
+					let { activeId: l } = e;
+					return (0, r.jsx)('nav', {
+						className: 'border-t border-neutral-900 bg-neutral-950',
+						children: (0, r.jsx)('div', {
+							className: 'grid grid-cols-5',
+							children: [
+								{ id: 'home', href: '/', icon: (0, r.jsx)(i.cEk, {}), activeIcon: (0, r.jsx)(i.ZVi, {}), text: 'Home' },
+								{
+									id: 'games',
+									href: '/games',
+									icon: (0, r.jsx)(i.SkF, {}),
+									activeIcon: (0, r.jsx)(i.rNT, {}),
+									text: 'Games',
+								},
+								{
+									id: 'store',
+									href: '/store',
+									icon: (0, r.jsx)(i.Qsx, {}),
+									activeIcon: (0, r.jsx)(i.XsE, {}),
+									text: 'Store',
+								},
+								{
+									id: 'news',
+									href: '/news',
+									icon: (0, r.jsx)(i.rRm, {}),
+									activeIcon: (0, r.jsx)(i.mKO, {}),
+									text: 'News',
+								},
+								{
+									id: 'profile',
+									href: '/profile',
+									icon: (0, r.jsx)(i.NMe, {}),
+									activeIcon: (0, r.jsx)(i.MrL, {}),
+									text: 'Profile',
+								},
+							].map((e) => {
+								let {
+										id: s = '',
+										href: a = '',
+										text: n = '',
+										icon: i = (0, r.jsx)(r.Fragment, {}),
+										activeIcon: c = (0, r.jsx)(r.Fragment, {}),
+									} = e,
+									d = s === l;
+								return (0, r.jsx)(
+									'div',
+									{
+										className: 'col-span-1',
+										children: (0, r.jsx)(t(), {
+											href: a,
+											children: (0, r.jsxs)('div', {
+												className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
+													d ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
+												),
+												children: [
+													(0, r.jsx)('span', {
+														className: 'text-3xl',
+														children: d
+															? (0, r.jsx)(r.Fragment, { children: c })
+															: (0, r.jsx)(r.Fragment, { children: i }),
+													}),
+													(0, r.jsx)('span', { className: 'text-xs', children: n }),
+												],
+											}),
+										}),
+									},
+									s,
+								);
+							}),
+						}),
+					});
+				},
+				d = (e) => {
+					let { activeId: l = '', children: s = (0, r.jsx)(r.Fragment, {}) } = e;
+					return (0, r.jsxs)(a, {
+						children: [
+							(0, r.jsx)('header', {
+								className: 'border-b border-neutral-900 pt-8 pb-4',
+								children: (0, r.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
+							}),
+							(0, r.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: s }),
+							(0, r.jsx)(c, { activeId: l }),
+						],
+					});
+				};
+		},
+		6678: (e, l, s) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/profile',
+				function () {
+					return s(817);
+				},
+			]);
+		},
 	},
 	(e) => {
 		var l = (l) => e((e.s = l));
-		e.O(0, [72, 826, 312, 636, 593, 792], () => l(7733)), (_N_E = e.O());
+		e.O(0, [72, 89, 503, 636, 593, 792], () => l(6678)), (_N_E = e.O());
 	},
 ]);

@@ -5,6 +5,7 @@
 - [Telegram Mini App](#telegram-mini-app)
   - [Table of Contents](#table-of-contents)
   - [Demo](#demo)
+  - [Techstack](#techstack)
   - [Screenshots](#screenshots)
     - [Home](#home)
     - [Games](#games)
@@ -18,6 +19,25 @@
 ## Demo
 
 [Hieu Doan Bot - Telegram Mini App](https://t.me/hieu_doan_bot/telegram_mini_app)
+
+## Techstack
+
+1. [TypeScript](https://www.typescriptlang.org/)
+2. [Node.js](https://nodejs.org/en)
+3. [pnpm](https://pnpm.io/)
+4. [ESLint](https://eslint.org/)
+5. [Prettier](https://prettier.io/)
+6. [Jest](https://jestjs.io/)
+7. [Next.js](https://nextjs.org/)
+8. [Tailwind CSS](https://tailwindcss.com/)
+9. [tRPC](https://trpc.io/)
+10. [Zod](https://zod.dev/)
+11. [TON](https://ton.org/)
+12. [Prisma](https://www.prisma.io/)
+13. [PostgreSQL](https://www.postgresql.org/)
+14. [Docker](https://www.docker.com/)
+15. [GitHub Actions](https://github.com/features/actions)
+16. [Vercel](https://vercel.com)
 
 ## Screenshots
 

@@ -1,32 +1,129 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-	[312],
+	[503],
 	{
-		1066: (e, t) => {
-			'use strict';
-			function r(e) {
-				let { widthInt: t, heightInt: r, blurWidth: i, blurHeight: o, blurDataURL: n, objectFit: l } = e,
-					s = i ? 40 * i : t,
-					a = o ? 40 * o : r,
-					u = s && a ? "viewBox='0 0 " + s + ' ' + a + "'" : '';
-				return (
-					"%3Csvg xmlns='http://www.w3.org/2000/svg' " +
-					u +
-					"%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3CfeColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1' result='s'/%3E%3CfeFlood x='0' y='0' width='100%25' height='100%25'/%3E%3CfeComposite operator='out' in='s'/%3E%3CfeComposite in2='SourceGraphic'/%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3C/filter%3E%3Cimage width='100%25' height='100%25' x='0' y='0' preserveAspectRatio='" +
-					(u ? 'none' : 'contain' === l ? 'xMidYMid' : 'cover' === l ? 'xMidYMid slice' : 'none') +
-					"' style='filter: url(%23b);' href='" +
-					n +
-					"'/%3E%3C/svg%3E"
-				);
-			}
-			Object.defineProperty(t, '__esModule', { value: !0 }),
-				Object.defineProperty(t, 'getImageBlurSvg', {
-					enumerable: !0,
-					get: function () {
-						return r;
-					},
-				});
+		58: (e, t, r) => {
+			e.exports = r(7127);
 		},
-		2039: (e, t) => {
+		812: (e, t, r) => {
+			'use strict';
+			r.d(t, { k5: () => c });
+			var i = r(148),
+				o = { color: void 0, size: void 0, className: void 0, style: void 0, attr: void 0 },
+				n = i.createContext && i.createContext(o),
+				l = ['attr', 'size', 'title'];
+			function s() {
+				return (s = Object.assign
+					? Object.assign.bind()
+					: function (e) {
+							for (var t = 1; t < arguments.length; t++) {
+								var r = arguments[t];
+								for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+							}
+							return e;
+						}).apply(this, arguments);
+			}
+			function a(e, t) {
+				var r = Object.keys(e);
+				if (Object.getOwnPropertySymbols) {
+					var i = Object.getOwnPropertySymbols(e);
+					t &&
+						(i = i.filter(function (t) {
+							return Object.getOwnPropertyDescriptor(e, t).enumerable;
+						})),
+						r.push.apply(r, i);
+				}
+				return r;
+			}
+			function u(e) {
+				for (var t = 1; t < arguments.length; t++) {
+					var r = null != arguments[t] ? arguments[t] : {};
+					t % 2
+						? a(Object(r), !0).forEach(function (t) {
+								var i, o, n;
+								(i = e),
+									(o = t),
+									(n = r[t]),
+									(o = (function (e) {
+										var t = (function (e, t) {
+											if ('object' != typeof e || !e) return e;
+											var r = e[Symbol.toPrimitive];
+											if (void 0 !== r) {
+												var i = r.call(e, t || 'default');
+												if ('object' != typeof i) return i;
+												throw TypeError('@@toPrimitive must return a primitive value.');
+											}
+											return ('string' === t ? String : Number)(e);
+										})(e, 'string');
+										return 'symbol' == typeof t ? t : t + '';
+									})(o)) in i
+										? Object.defineProperty(i, o, { value: n, enumerable: !0, configurable: !0, writable: !0 })
+										: (i[o] = n);
+							})
+						: Object.getOwnPropertyDescriptors
+							? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+							: a(Object(r)).forEach(function (t) {
+									Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
+								});
+				}
+				return e;
+			}
+			function c(e) {
+				return (t) =>
+					i.createElement(
+						d,
+						s({ attr: u({}, e.attr) }, t),
+						(function e(t) {
+							return t && t.map((t, r) => i.createElement(t.tag, u({ key: r }, t.attr), e(t.child)));
+						})(e.child),
+					);
+			}
+			function d(e) {
+				var t = (t) => {
+					var r,
+						{ attr: o, size: n, title: a } = e,
+						c = (function (e, t) {
+							if (null == e) return {};
+							var r,
+								i,
+								o = (function (e, t) {
+									if (null == e) return {};
+									var r = {};
+									for (var i in e)
+										if (Object.prototype.hasOwnProperty.call(e, i)) {
+											if (t.indexOf(i) >= 0) continue;
+											r[i] = e[i];
+										}
+									return r;
+								})(e, t);
+							if (Object.getOwnPropertySymbols) {
+								var n = Object.getOwnPropertySymbols(e);
+								for (i = 0; i < n.length; i++)
+									(r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+							}
+							return o;
+						})(e, l),
+						d = n || t.size || '1em';
+					return (
+						t.className && (r = t.className),
+						e.className && (r = (r ? r + ' ' : '') + e.className),
+						i.createElement(
+							'svg',
+							s({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, t.attr, o, c, {
+								className: r,
+								style: u(u({ color: e.color || t.color }, t.style), e.style),
+								height: d,
+								width: d,
+								xmlns: 'http://www.w3.org/2000/svg',
+							}),
+							a && i.createElement('title', null, a),
+							e.children,
+						)
+					);
+				};
+				return void 0 !== n ? i.createElement(n.Consumer, null, (e) => t(e)) : t(o);
+			}
+		},
+		1032: (e, t) => {
 			'use strict';
 			function r(e) {
 				var t;
@@ -49,41 +146,7 @@
 				(r.__next_img_default = !0);
 			let i = r;
 		},
-		3643: (e, t, r) => {
-			'use strict';
-			Object.defineProperty(t, '__esModule', { value: !0 }),
-				!(function (e, t) {
-					for (var r in t) Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
-				})(t, {
-					default: function () {
-						return a;
-					},
-					getImageProps: function () {
-						return s;
-					},
-				});
-			let i = r(1532),
-				o = r(8361),
-				n = r(6753),
-				l = i._(r(2039));
-			function s(e) {
-				let { props: t } = (0, o.getImgProps)(e, {
-					defaultLoader: l.default,
-					imgConf: {
-						deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-						imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-						path: '/telegram-mini-app/_next/image/',
-						loader: 'default',
-						dangerouslyAllowSVG: !1,
-						unoptimized: !0,
-					},
-				});
-				for (let [e, r] of Object.entries(t)) void 0 === r && delete t[e];
-				return { props: t };
-			}
-			let a = n.Image;
-		},
-		6753: (e, t, r) => {
+		3349: (e, t, r) => {
 			'use strict';
 			Object.defineProperty(t, '__esModule', { value: !0 }),
 				Object.defineProperty(t, 'Image', {
@@ -97,14 +160,14 @@
 				n = r(5640),
 				l = o._(r(148)),
 				s = i._(r(7897)),
-				a = i._(r(2738)),
-				u = r(8361),
-				c = r(5854),
-				d = r(3778);
-			r(9908);
-			let f = r(9687),
-				p = i._(r(2039)),
-				g = r(372),
+				a = i._(r(9142)),
+				u = r(6229),
+				c = r(5058),
+				d = r(758);
+			r(6208);
+			let f = r(8651),
+				p = i._(r(1032)),
+				g = r(5264),
 				m = {
 					deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
 					imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -275,126 +338,7 @@
 				Object.assign(t.default, t),
 				(e.exports = t.default));
 		},
-		7182: (e, t, r) => {
-			'use strict';
-			r.d(t, { k5: () => c });
-			var i = r(148),
-				o = { color: void 0, size: void 0, className: void 0, style: void 0, attr: void 0 },
-				n = i.createContext && i.createContext(o),
-				l = ['attr', 'size', 'title'];
-			function s() {
-				return (s = Object.assign
-					? Object.assign.bind()
-					: function (e) {
-							for (var t = 1; t < arguments.length; t++) {
-								var r = arguments[t];
-								for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
-							}
-							return e;
-						}).apply(this, arguments);
-			}
-			function a(e, t) {
-				var r = Object.keys(e);
-				if (Object.getOwnPropertySymbols) {
-					var i = Object.getOwnPropertySymbols(e);
-					t &&
-						(i = i.filter(function (t) {
-							return Object.getOwnPropertyDescriptor(e, t).enumerable;
-						})),
-						r.push.apply(r, i);
-				}
-				return r;
-			}
-			function u(e) {
-				for (var t = 1; t < arguments.length; t++) {
-					var r = null != arguments[t] ? arguments[t] : {};
-					t % 2
-						? a(Object(r), !0).forEach(function (t) {
-								var i, o, n;
-								(i = e),
-									(o = t),
-									(n = r[t]),
-									(o = (function (e) {
-										var t = (function (e, t) {
-											if ('object' != typeof e || !e) return e;
-											var r = e[Symbol.toPrimitive];
-											if (void 0 !== r) {
-												var i = r.call(e, t || 'default');
-												if ('object' != typeof i) return i;
-												throw TypeError('@@toPrimitive must return a primitive value.');
-											}
-											return ('string' === t ? String : Number)(e);
-										})(e, 'string');
-										return 'symbol' == typeof t ? t : t + '';
-									})(o)) in i
-										? Object.defineProperty(i, o, { value: n, enumerable: !0, configurable: !0, writable: !0 })
-										: (i[o] = n);
-							})
-						: Object.getOwnPropertyDescriptors
-							? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-							: a(Object(r)).forEach(function (t) {
-									Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
-								});
-				}
-				return e;
-			}
-			function c(e) {
-				return (t) =>
-					i.createElement(
-						d,
-						s({ attr: u({}, e.attr) }, t),
-						(function e(t) {
-							return t && t.map((t, r) => i.createElement(t.tag, u({ key: r }, t.attr), e(t.child)));
-						})(e.child),
-					);
-			}
-			function d(e) {
-				var t = (t) => {
-					var r,
-						{ attr: o, size: n, title: a } = e,
-						c = (function (e, t) {
-							if (null == e) return {};
-							var r,
-								i,
-								o = (function (e, t) {
-									if (null == e) return {};
-									var r = {};
-									for (var i in e)
-										if (Object.prototype.hasOwnProperty.call(e, i)) {
-											if (t.indexOf(i) >= 0) continue;
-											r[i] = e[i];
-										}
-									return r;
-								})(e, t);
-							if (Object.getOwnPropertySymbols) {
-								var n = Object.getOwnPropertySymbols(e);
-								for (i = 0; i < n.length; i++)
-									(r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
-							}
-							return o;
-						})(e, l),
-						d = n || t.size || '1em';
-					return (
-						t.className && (r = t.className),
-						e.className && (r = (r ? r + ' ' : '') + e.className),
-						i.createElement(
-							'svg',
-							s({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, t.attr, o, c, {
-								className: r,
-								style: u(u({ color: e.color || t.color }, t.style), e.style),
-								height: d,
-								width: d,
-								xmlns: 'http://www.w3.org/2000/svg',
-							}),
-							a && i.createElement('title', null, a),
-							e.children,
-						)
-					);
-				};
-				return void 0 !== n ? i.createElement(n.Consumer, null, (e) => t(e)) : t(o);
-			}
-		},
-		8361: (e, t, r) => {
+		6229: (e, t, r) => {
 			'use strict';
 			Object.defineProperty(t, '__esModule', { value: !0 }),
 				Object.defineProperty(t, 'getImgProps', {
@@ -403,9 +347,9 @@
 						return a;
 					},
 				}),
-				r(9908);
-			let i = r(1066),
-				o = r(5854),
+				r(6208);
+			let i = r(9606),
+				o = r(5058),
 				n = ['-moz-initial', 'fill', 'none', 'scale-down', void 0];
 			function l(e) {
 				return void 0 !== e.default;
@@ -626,8 +570,64 @@
 				};
 			}
 		},
-		9343: (e, t, r) => {
-			e.exports = r(3643);
+		7127: (e, t, r) => {
+			'use strict';
+			Object.defineProperty(t, '__esModule', { value: !0 }),
+				!(function (e, t) {
+					for (var r in t) Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
+				})(t, {
+					default: function () {
+						return a;
+					},
+					getImageProps: function () {
+						return s;
+					},
+				});
+			let i = r(1532),
+				o = r(6229),
+				n = r(3349),
+				l = i._(r(1032));
+			function s(e) {
+				let { props: t } = (0, o.getImgProps)(e, {
+					defaultLoader: l.default,
+					imgConf: {
+						deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+						imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+						path: '/telegram-mini-app/_next/image/',
+						loader: 'default',
+						dangerouslyAllowSVG: !1,
+						unoptimized: !0,
+					},
+				});
+				for (let [e, r] of Object.entries(t)) void 0 === r && delete t[e];
+				return { props: t };
+			}
+			let a = n.Image;
+		},
+		9606: (e, t) => {
+			'use strict';
+			function r(e) {
+				let { widthInt: t, heightInt: r, blurWidth: i, blurHeight: o, blurDataURL: n, objectFit: l } = e,
+					s = i ? 40 * i : t,
+					a = o ? 40 * o : r,
+					u = s && a ? "viewBox='0 0 " + s + ' ' + a + "'" : '';
+				return (
+					"%3Csvg xmlns='http://www.w3.org/2000/svg' " +
+					u +
+					"%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3CfeColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1' result='s'/%3E%3CfeFlood x='0' y='0' width='100%25' height='100%25'/%3E%3CfeComposite operator='out' in='s'/%3E%3CfeComposite in2='SourceGraphic'/%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3C/filter%3E%3Cimage width='100%25' height='100%25' x='0' y='0' preserveAspectRatio='" +
+					(u ? 'none' : 'contain' === l ? 'xMidYMid' : 'cover' === l ? 'xMidYMid slice' : 'none') +
+					"' style='filter: url(%23b);' href='" +
+					n +
+					"'/%3E%3C/svg%3E"
+				);
+			}
+			Object.defineProperty(t, '__esModule', { value: !0 }),
+				Object.defineProperty(t, 'getImageBlurSvg', {
+					enumerable: !0,
+					get: function () {
+						return r;
+					},
+				});
 		},
 	},
 ]);

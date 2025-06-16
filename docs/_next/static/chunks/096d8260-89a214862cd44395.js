@@ -2,7 +2,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[72],
 	{
-		1238: (a, t, r) => {
+		9695: (a, t, r) => {
 			r.d(t, {
 				FZc: () => h,
 				JjX: () => A,
@@ -22,7 +22,7 @@
 				rRm: () => M,
 				xzC: () => e,
 			});
-			var l = r(7182);
+			var l = r(812);
 			function i(a) {
 				return (0, l.k5)({
 					tag: 'svg',

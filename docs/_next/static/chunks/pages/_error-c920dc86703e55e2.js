@@ -1,11 +1,11 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[731],
 	{
-		2351: (e, r, s) => {
+		1190: (e, r, s) => {
 			'use strict';
 			s.d(r, { L: () => c });
 			var t = s(5640),
-				l = s(6826),
+				l = s(5089),
 				n = s.n(l);
 			let c = (e) => {
 				let { code: r } = e;
@@ -27,24 +27,24 @@
 				});
 			};
 		},
-		6334: (e, r, s) => {
-			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/_error',
-				function () {
-					return s(6950);
-				},
-			]);
-		},
-		6950: (e, r, s) => {
+		6018: (e, r, s) => {
 			'use strict';
 			s.r(r), s.d(r, { default: () => n });
 			var t = s(5640),
-				l = s(2351);
+				l = s(1190);
 			let n = () => (0, t.jsx)(l.L, { code: '500' });
+		},
+		7917: (e, r, s) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/_error',
+				function () {
+					return s(6018);
+				},
+			]);
 		},
 	},
 	(e) => {
 		var r = (r) => e((e.s = r));
-		e.O(0, [826, 636, 593, 792], () => r(6334)), (_N_E = e.O());
+		e.O(0, [89, 636, 593, 792], () => r(7917)), (_N_E = e.O());
 	},
 ]);

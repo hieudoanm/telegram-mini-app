@@ -1,7 +1,142 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[636],
 	{
-		248: (e, t, r) => {
+		18: (e, t, r) => {
+			'use strict';
+			r.r(t), r.d(t, { default: () => y });
+			var s = r(5640),
+				i = r(2803),
+				n = r(148),
+				a = (function (e) {
+					return (
+						(e.Android = 'android'), (e.IOS = 'ios'), (e.MacOS = 'macos'), (e.TDesktop = 'tdesktop'), (e.Web = 'web'), e
+					);
+				})(a || {});
+			let u = () => {
+				var e;
+				let t = null == (e = window.Telegram) ? void 0 : e.WebApp,
+					r = (0, n.useCallback)(() => {
+						try {
+							if (t) return t.ready(), t.platform;
+						} catch (e) {
+							console.error(e);
+						}
+						return 'web';
+					}, [t]),
+					s = (0, n.useCallback)(() => {
+						try {
+							if (t) {
+								if ('web' === r()) return;
+								t.ready(), t.requestFullscreen();
+							}
+						} catch (e) {
+							console.error(e);
+						}
+					}, [t]);
+				return { getPlatform: r, requestFullscreen: s };
+			};
+			r(8834);
+			var o = r(4209),
+				l = r(2252),
+				c = r.n(l),
+				h = r(6620),
+				d = r.n(h),
+				p = r(2611),
+				f = r.n(p);
+			let y = o.t.withTRPC((e) => {
+				let { Component: t, pageProps: r } = e,
+					{ requestFullscreen: a } = u();
+				return (
+					(0, n.useEffect)(() => {
+						a();
+					}, [a]),
+					(0, s.jsxs)(s.Fragment, {
+						children: [
+							(0, s.jsx)(f(), { children: (0, s.jsx)('title', { children: 'Telegram Mini App' }) }),
+							(0, s.jsx)('div', {
+								className: ''.concat(c().className, ' ').concat(d().className),
+								children: (0, s.jsx)(i.i, { children: (0, s.jsx)(t, { ...r }) }),
+							}),
+						],
+					})
+				);
+			});
+		},
+		2252: (e) => {
+			e.exports = {
+				style: { fontFamily: "'Geist', 'Geist Fallback'", fontStyle: 'normal' },
+				className: '__className_6f2501',
+				variable: '__variable_6f2501',
+			};
+		},
+		2379: (e, t, r) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/_app',
+				function () {
+					return r(18);
+				},
+			]);
+		},
+		2611: (e, t, r) => {
+			e.exports = r(9142);
+		},
+		2803: (e, t, r) => {
+			'use strict';
+			r.d(t, { i: () => l, O: () => c });
+			var s = r(5640),
+				i = r(4209);
+			let n = async (e) => {
+				try {
+					return { data: await e, error: null };
+				} catch (e) {
+					return { data: null, error: e };
+				}
+			};
+			var a = r(148);
+			let u = async () => {
+					var e, t, r;
+					if (null == (r = window) || null == (t = r.Telegram) || null == (e = t.WebApp) ? void 0 : e.initData) {
+						let e = window.Telegram.WebApp.initData,
+							{ user: t } = Object.fromEntries(new URLSearchParams(e)),
+							{ data: r, error: s } = await n(JSON.parse(t));
+						return s ? (console.error(s), { user: null, initData: '' }) : { user: r, initData: e };
+					}
+					return { user: null, initData: '' };
+				},
+				o = (0, a.createContext)({ isAuthenticated: !1, user: null }),
+				l = (e) => {
+					let { children: t = (0, s.jsx)(s.Fragment, {}) } = e,
+						[{ loading: r = !0, isAuthenticated: l = !1, user: c = null }, h] = (0, a.useState)({
+							loading: !1,
+							isAuthenticated: !1,
+							user: null,
+						});
+					(0, a.useEffect)(() => {
+						(async () => {
+							h((e) => ({ ...e, loading: !0 }));
+							let { initData: e, user: t } = await u(),
+								{ data: r, error: s } = await n(i.r.auth.telegram.mutate({ initData: e }));
+							s && console.error(s.message), r || console.error('Invalid Data');
+							let { data: a, error: o } = await n(i.r.app.authenticated.query());
+							o && console.error(o.message), a || console.error('Invalid Data');
+							let { isAuthenticated: l } = null != a ? a : { isAuthenticated: !1 };
+							h((e) => ({ ...e, loading: !1, isAuthenticated: l, user: t }));
+						})();
+					}, []);
+					let d = (0, a.useMemo)(() => ({ isAuthenticated: l, user: c }), [l, c]);
+					return (0, s.jsx)(o.Provider, {
+						value: d,
+						children: r
+							? (0, s.jsx)('div', {
+									className: 'flex h-screen w-screen items-center justify-center',
+									children: (0, s.jsx)('span', { className: 'text-xl', children: 'Loading' }),
+								})
+							: (0, s.jsx)(s.Fragment, { children: t }),
+					});
+				},
+				c = () => (0, a.useContext)(o);
+		},
+		4209: (e, t, r) => {
 			'use strict';
 			function s(e) {
 				let t = {
@@ -175,7 +310,7 @@
 			let C = () => {
 				throw Error('Something went wrong. Please submit an issue at https://github.com/trpc/trpc/issues/new');
 			};
-			function P(e) {
+			function S(e) {
 				let t = null,
 					r = null,
 					s = () => {
@@ -241,7 +376,7 @@
 					},
 				};
 			}
-			let S = {
+			let P = {
 					css: { query: ['72e3ff', '3fb0d8'], mutation: ['c5a3fc', '904dfc'], subscription: ['ff49e1', 'd83fbe'] },
 					ansi: {
 						regular: {
@@ -877,15 +1012,15 @@
 				let s = [...e, t];
 				return r && s.length > r ? s.slice(1) : s;
 			}
-			function eP(e, t, r = 0) {
+			function eS(e, t, r = 0) {
 				let s = [t, ...e];
 				return r && s.length > r ? s.slice(0, -1) : s;
 			}
-			var eS = Symbol();
+			var eP = Symbol();
 			function eq(e, t) {
 				return !e.queryFn && t?.initialPromise
 					? () => t.initialPromise
-					: e.queryFn && e.queryFn !== eS
+					: e.queryFn && e.queryFn !== eP
 						? e.queryFn
 						: () => Promise.reject(Error(`Missing queryFn: '${e.queryHash}'`));
 			}
@@ -1003,7 +1138,7 @@
 					let { cursor: e, direction: r, ...i } = t;
 					return [s, { input: i, type: 'infinite' }];
 				}
-				return [s, { ...(void 0 !== t && t !== eS && { input: t }), ...(r && 'any' !== r && { type: r }) }];
+				return [s, { ...(void 0 !== t && t !== eP && { input: t }), ...(r && 'any' !== r && { type: r }) }];
 			}
 			function eI(e) {
 				return eM(e, void 0, 'any');
@@ -1351,7 +1486,7 @@
 					isDisabled() {
 						return this.getObserversCount() > 0
 							? !this.isActive()
-							: this.options.queryFn === eS || this.state.dataUpdateCount + this.state.errorUpdateCount === 0;
+							: this.options.queryFn === eP || this.state.dataUpdateCount + this.state.errorUpdateCount === 0;
 					}
 					isStatic() {
 						return (
@@ -1553,8 +1688,8 @@
 				#w;
 				#R;
 				#C;
-				#P;
 				#S;
+				#P;
 				#q = new Set();
 				bindMethods() {
 					this.refetch = this.refetch.bind(this);
@@ -1601,7 +1736,7 @@
 							this.#M();
 					let i = this.#I();
 					s &&
-						(this.#y !== r || eh(this.options.enabled, this.#y) !== eh(t.enabled, this.#y) || i !== this.#S) &&
+						(this.#y !== r || eh(this.options.enabled, this.#y) !== eh(t.enabled, this.#y) || i !== this.#P) &&
 						this.#A(i);
 				}
 				getOptimisticResult(e) {
@@ -1661,14 +1796,14 @@
 				}
 				#A(e) {
 					this.#D(),
-						(this.#S = e),
+						(this.#P = e),
 						!ea &&
 							!1 !== eh(this.options.enabled, this.#y) &&
-							eo(this.#S) &&
-							0 !== this.#S &&
-							(this.#P = setInterval(() => {
+							eo(this.#P) &&
+							0 !== this.#P &&
+							(this.#S = setInterval(() => {
 								(this.options.refetchIntervalInBackground || ek.isFocused()) && this.#E();
-							}, this.#S));
+							}, this.#P));
 				}
 				#Q() {
 					this.#M(), this.#A(this.#I());
@@ -1677,7 +1812,7 @@
 					this.#C && (clearTimeout(this.#C), (this.#C = void 0));
 				}
 				#D() {
-					this.#P && (clearInterval(this.#P), (this.#P = void 0));
+					this.#S && (clearInterval(this.#S), (this.#S = void 0));
 				}
 				createResult(e, t) {
 					let r,
@@ -1859,9 +1994,9 @@
 				},
 				e4 = ({ result: e, errorResetBoundary: t, throwOnError: r, query: s, suspense: i }) =>
 					e.isError && !t.isReset() && !e.isFetching && s && ((i && void 0 === e.data) || eE(r, [e.error, s])),
-				e3 = et.createContext(!1),
-				e2 = () => et.useContext(e3);
-			e3.Provider;
+				e2 = et.createContext(!1),
+				e3 = () => et.useContext(e2);
+			e2.Provider;
 			var e5 = (e, t) => void 0 === t.state.data,
 				e6 = (e) => {
 					if (e.suspense) {
@@ -1871,14 +2006,14 @@
 							'number' == typeof e.gcTime && (e.gcTime = Math.max(e.gcTime, 1e3));
 					}
 				},
-				e8 = (e, t) => e.isLoading && e.isFetching && !t,
-				e9 = (e, t) => e?.suspense && t.isPending,
+				e9 = (e, t) => e.isLoading && e.isFetching && !t,
+				e8 = (e, t) => e?.suspense && t.isPending,
 				e7 = (e, t, r) =>
 					t.fetchOptimistic(e).catch(() => {
 						r.clearReset();
 					});
 			function te(e, t, r) {
-				let s = e2(),
+				let s = e3(),
 					i = eZ(),
 					n = ei(r),
 					a = n.defaultQueryOptions(e);
@@ -1906,7 +2041,7 @@
 					et.useEffect(() => {
 						o.setOptions(a);
 					}, [a, o]),
-					e9(a, l))
+					e8(a, l))
 				)
 					throw e7(a, o, i);
 				if (
@@ -1921,7 +2056,7 @@
 					throw l.error;
 				if (
 					(n.getDefaultOptions().queries?._experimental_afterQuery?.(a, l),
-					a.experimental_prefetchInRender && !ea && e8(l, s))
+					a.experimental_prefetchInRender && !ea && e9(l, s))
 				) {
 					let e = u ? e7(a, o, i) : n.getQueryCache().get(a.queryHash)?.promise;
 					e?.catch(eu).finally(() => {
@@ -2192,7 +2327,7 @@
 											})(),
 											a = await c(n),
 											{ maxPages: u } = t.options,
-											o = i ? eP : eC;
+											o = i ? eS : eC;
 										return { pages: o(e.pages, a, u), pageParams: o(e.pageParams, s, u) };
 									};
 								if (i && n.length) {
@@ -2404,7 +2539,7 @@
 			};
 			function tc({ queries: e, ...t }, r) {
 				let s = ei(r),
-					i = e2(),
+					i = e3(),
 					n = eZ(),
 					a = et.useMemo(
 						() =>
@@ -2429,13 +2564,13 @@
 					et.useEffect(() => {
 						u.setQueries(a, t);
 					}, [a, t, u]);
-				let d = o.some((e, t) => e9(a[t], e))
+				let d = o.some((e, t) => e8(a[t], e))
 					? o.flatMap((e, t) => {
 							let r = a[t];
 							if (r) {
 								let t = new eB(s, r);
-								if (e9(r, e)) return e7(r, t, n);
-								e8(e, i) && e7(r, t, n);
+								if (e8(r, e)) return e7(r, t, n);
+								e9(e, i) && e7(r, t, n);
 							}
 							return [];
 						})
@@ -2801,7 +2936,7 @@
 						void 0 === t.refetchOnReconnect && (t.refetchOnReconnect = 'always' !== t.networkMode),
 						void 0 === t.throwOnError && (t.throwOnError = !!t.suspense),
 						!t.networkMode && t.persister && (t.networkMode = 'offlineFirst'),
-						t.queryFn === eS && (t.enabled = !1),
+						t.queryFn === eP && (t.enabled = !1),
 						t
 					);
 				}
@@ -2879,7 +3014,7 @@
 				return i;
 			}
 			let tC = (e, t) => new Proxy(e, { get: (e, r) => (t(r), e[r]) });
-			function tP(e) {
+			function tS(e) {
 				let t = e?.overrides?.useMutation?.onSuccess ?? ((e) => e.originalFn()),
 					r = e?.context ?? tm;
 				function s() {
@@ -2907,7 +3042,7 @@
 											s = t instanceof V ? t : t[$];
 										return {
 											infiniteQueryOptions: (e, t, r) => {
-												let i = t[1]?.input === eS,
+												let i = t[1]?.input === eP,
 													n = async (e) => {
 														let i = {
 															...r,
@@ -2923,14 +3058,14 @@
 														...r,
 														initialData: r?.initialData,
 														queryKey: t,
-														queryFn: i ? eS : n,
+														queryFn: i ? eP : n,
 														initialPageParam: r?.initialCursor ?? null,
 													},
 													{ trpc: tO({ path: e }) },
 												);
 											},
 											queryOptions: (e, t, i) => {
-												let n = t[1]?.input === eS,
+												let n = t[1]?.input === eP,
 													a = async (e) => {
 														let n = {
 																...i,
@@ -2943,7 +3078,7 @@
 														return o(a) ? tR(a, r, t) : a;
 													};
 												return Object.assign(
-													{ ...i, initialData: i?.initialData, queryKey: t, queryFn: n ? eS : a },
+													{ ...i, initialData: i?.initialData, queryKey: t, queryFn: n ? eP : a },
 													{ trpc: tO({ path: e }) },
 												);
 											},
@@ -3010,7 +3145,7 @@
 						let { abortOnUnmount: a, client: u, ssrState: l, queryClient: c, prefetchQuery: h } = s(),
 							d = eM(t, r, 'query'),
 							p = c.getQueryDefaults(d),
-							f = r === eS;
+							f = r === eP;
 						'undefined' != typeof window ||
 							'prepass' !== l ||
 							n?.trpc?.ssr === !1 ||
@@ -3040,7 +3175,7 @@
 					usePrefetchQuery: function (t, r, i) {
 						let n = s(),
 							a = eM(t, r, 'query'),
-							u = r === eS,
+							u = r === eP,
 							o = i?.trpc?.abortOnUnmount ?? e?.abortOnUnmount ?? n.abortOnUnmount;
 						!(function (e, t) {
 							let r = ei(void 0);
@@ -3142,7 +3277,7 @@
 						return (o.trpc = tw({ path: e })), o;
 					},
 					useSubscription: function (e, t, r) {
-						let i = r?.enabled ?? t !== eS,
+						let i = r?.enabled ?? t !== eP,
 							u = ey(eM(e, t, 'any')),
 							{ client: o } = s(),
 							l = et.useRef(r);
@@ -3218,7 +3353,7 @@
 						let { client: n, ssrState: a, prefetchInfiniteQuery: u, queryClient: o, abortOnUnmount: l } = s(),
 							c = eM(e, t, 'infinite'),
 							h = o.getQueryDefaults(c),
-							d = t === eS;
+							d = t === eP;
 						'undefined' != typeof window ||
 							'prepass' !== a ||
 							r?.trpc?.ssr === !1 ||
@@ -3252,7 +3387,7 @@
 						let n = s(),
 							a = eM(e, t, 'infinite'),
 							u = n.queryClient.getQueryDefaults(a),
-							o = t === eS,
+							o = t === eP,
 							l = i(a, { ...u, ...r }),
 							c = r?.trpc?.abortOnUnmount ?? n.abortOnUnmount;
 						!(function (e, t) {
@@ -3297,8 +3432,8 @@
 					},
 				};
 			}
-			let tS = (e) => e.queryClient ?? new tf(e.queryClientConfig);
-			r(6064);
+			let tP = (e) => e.queryClient ?? new tf(e.queryClientConfig);
+			r(7595);
 			let tq = (function (e) {
 					let t = {
 							url: e.url.toString(),
@@ -3342,7 +3477,7 @@
 									return (Array.isArray(u.json) ? u.json : r.map(() => u.json)).map((e) => ({ meta: u.meta, json: e }));
 								},
 							}),
-							u = { query: P(n('query')), mutation: P(n('mutation')) };
+							u = { query: S(n('query')), mutation: S(n('mutation')) };
 						return ({ op: e }) =>
 							s((r) => {
 								let s;
@@ -3394,17 +3529,17 @@
 					};
 				})({ url: ''.concat('', '/api/trpc'), headers: async () => ({}) }),
 				tE = (function (e) {
-					let t = tP(e),
+					let t = tS(e),
 						r = (function (e) {
 							let { config: t } = e,
 								r = c(e.transformer);
 							return (s) => {
-								let i = tP(e),
+								let i = tS(e),
 									n = (n) => {
 										let [a] = (0, et.useState)(() => {
 												if (n.trpc) return n.trpc;
 												let r = t({}),
-													s = tS(r),
+													s = tP(r),
 													a = i.createClient(r);
 												return {
 													abortOnUnmount: r.abortOnUnmount,
@@ -3511,150 +3646,17 @@
 				})({ config: () => ({ links: [tq] }), ssr: !1 }),
 				tQ = ee({ links: [tq] });
 		},
-		1158: (e, t, r) => {
-			'use strict';
-			r.d(t, { i: () => l, O: () => c });
-			var s = r(5640),
-				i = r(248);
-			let n = async (e) => {
-				try {
-					return { data: await e, error: null };
-				} catch (e) {
-					return { data: null, error: e };
-				}
-			};
-			var a = r(148);
-			let u = async () => {
-					var e, t, r;
-					if (null == (r = window) || null == (t = r.Telegram) || null == (e = t.WebApp) ? void 0 : e.initData) {
-						let e = window.Telegram.WebApp.initData,
-							{ user: t } = Object.fromEntries(new URLSearchParams(e)),
-							{ data: r, error: s } = await n(JSON.parse(t));
-						return s ? (console.error(s), { user: null, initData: '' }) : { user: r, initData: e };
-					}
-					return { user: null, initData: '' };
-				},
-				o = (0, a.createContext)({ isAuthenticated: !1, user: null }),
-				l = (e) => {
-					let { children: t = (0, s.jsx)(s.Fragment, {}) } = e,
-						[{ loading: r = !0, isAuthenticated: l = !1, user: c = null }, h] = (0, a.useState)({
-							loading: !1,
-							isAuthenticated: !1,
-							user: null,
-						});
-					(0, a.useEffect)(() => {
-						(async () => {
-							h((e) => ({ ...e, loading: !0 }));
-							let { initData: e, user: t } = await u(),
-								{ data: r, error: s } = await n(i.r.auth.telegram.mutate({ initData: e }));
-							s && console.error(s.message), r || console.error('Invalid Data');
-							let { data: a, error: o } = await n(i.r.app.authenticated.query());
-							o && console.error(o.message), a || console.error('Invalid Data');
-							let { isAuthenticated: l } = null != a ? a : { isAuthenticated: !1 };
-							h((e) => ({ ...e, loading: !1, isAuthenticated: l, user: t }));
-						})();
-					}, []);
-					let d = (0, a.useMemo)(() => ({ isAuthenticated: l, user: c }), [l, c]);
-					return (0, s.jsx)(o.Provider, {
-						value: d,
-						children: r
-							? (0, s.jsx)('div', {
-									className: 'flex h-screen w-screen items-center justify-center',
-									children: (0, s.jsx)('span', { className: 'text-xl', children: 'Loading' }),
-								})
-							: (0, s.jsx)(s.Fragment, { children: t }),
-					});
-				},
-				c = () => (0, a.useContext)(o);
-		},
-		1668: (e, t, r) => {
-			e.exports = r(2738);
-		},
-		1800: (e) => {
+		6620: (e) => {
 			e.exports = {
 				style: { fontFamily: "'Geist Mono', 'Geist Mono Fallback'", fontStyle: 'normal' },
 				className: '__className_44e023',
 				variable: '__variable_44e023',
 			};
 		},
-		2772: (e, t, r) => {
-			'use strict';
-			r.r(t), r.d(t, { default: () => y });
-			var s = r(5640),
-				i = r(1158),
-				n = r(148),
-				a = (function (e) {
-					return (
-						(e.Android = 'android'), (e.IOS = 'ios'), (e.MacOS = 'macos'), (e.TDesktop = 'tdesktop'), (e.Web = 'web'), e
-					);
-				})(a || {});
-			let u = () => {
-				var e;
-				let t = null == (e = window.Telegram) ? void 0 : e.WebApp;
-				return {
-					getPlatform: (0, n.useCallback)(() => {
-						try {
-							if (t) return t.platform;
-						} catch (e) {
-							console.error(e);
-						}
-						return 'web';
-					}, [t]),
-					requestFullscreen: (0, n.useCallback)(() => {
-						try {
-							t && (t.ready(), t.requestFullscreen());
-						} catch (e) {
-							console.error(e);
-						}
-					}, [t]),
-				};
-			};
-			r(8217);
-			var o = r(248),
-				l = r(5e3),
-				c = r.n(l),
-				h = r(1800),
-				d = r.n(h),
-				p = r(1668),
-				f = r.n(p);
-			let y = o.t.withTRPC((e) => {
-				let { Component: t, pageProps: r } = e,
-					{ requestFullscreen: a } = u();
-				return (
-					(0, n.useEffect)(() => {
-						a();
-					}, [a]),
-					(0, s.jsxs)(s.Fragment, {
-						children: [
-							(0, s.jsx)(f(), { children: (0, s.jsx)('title', { children: 'Telegram Mini App' }) }),
-							(0, s.jsx)('div', {
-								className: ''.concat(c().className, ' ').concat(d().className),
-								children: (0, s.jsx)(i.i, { children: (0, s.jsx)(t, { ...r }) }),
-							}),
-						],
-					})
-				);
-			});
-		},
-		5e3: (e) => {
-			e.exports = {
-				style: { fontFamily: "'Geist', 'Geist Fallback'", fontStyle: 'normal' },
-				className: '__className_6f2501',
-				variable: '__variable_6f2501',
-			};
-		},
-		8217: () => {},
-		9896: (e, t, r) => {
-			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/_app',
-				function () {
-					return r(2772);
-				},
-			]);
-		},
+		8834: () => {},
 	},
 	(e) => {
 		var t = (t) => e((e.s = t));
-		e.O(0, [593, 792], () => (t(9896), t(9743))), (_N_E = e.O());
+		e.O(0, [593, 792], () => (t(2379), t(7203))), (_N_E = e.O());
 	},
 ]);

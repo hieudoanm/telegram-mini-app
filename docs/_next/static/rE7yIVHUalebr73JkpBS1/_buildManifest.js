@@ -1,0 +1,33 @@
+(self.__BUILD_MANIFEST = (function (e, s, a, t, c) {
+	return {
+		__rewrites: { afterFiles: [], beforeFiles: [], fallback: [] },
+		__routerFilterStatic: { numItems: 0, errorRate: 1e-4, numBits: 0, numHashes: null, bitArray: [] },
+		__routerFilterDynamic: { numItems: a, errorRate: 1e-4, numBits: a, numHashes: null, bitArray: [] },
+		'/': [s, e, 'static/chunks/pages/index-414476fbe4671f29.js'],
+		'/404': [e, 'static/chunks/pages/404-cdfd9b113710ae3e.js'],
+		'/500': [e, 'static/chunks/pages/500-9eaadea257038d45.js'],
+		'/_error': [e, 'static/chunks/pages/_error-c920dc86703e55e2.js'],
+		'/games': [s, e, 'static/chunks/pages/games-b4978429f58e09f6.js'],
+		'/games/[gameId]': [s, e, 'static/chunks/pages/games/[gameId]-b5bbe1f4bdd36427.js'],
+		'/news': [s, e, 'static/chunks/pages/news-6ee28edccbb34736.js'],
+		'/news/[articleId]': [s, e, 'static/chunks/pages/news/[articleId]-4f5f195869db9814.js'],
+		'/profile': [s, e, 'static/chunks/503-fd8814e2e4e0377d.js', 'static/chunks/pages/profile-fc49d3eb87e518b6.js'],
+		'/store': [s, e, 'static/chunks/pages/store-0d0655a201266a15.js'],
+		'/store/[itemId]': [s, e, 'static/chunks/pages/store/[itemId]-2af78eb3f6c9a1ed.js'],
+		sortedPages: [
+			'/',
+			'/404',
+			'/500',
+			'/_app',
+			'/_error',
+			'/games',
+			'/games/[gameId]',
+			'/news',
+			'/news/[articleId]',
+			'/profile',
+			'/store',
+			'/store/[itemId]',
+		],
+	};
+})('static/chunks/89-9cd53e4f2d9c9ce5.js', 'static/chunks/096d8260-89a214862cd44395.js', 0, 1e-4, null)),
+	self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();

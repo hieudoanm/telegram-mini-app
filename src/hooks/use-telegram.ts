@@ -14,6 +14,7 @@ export const useTelegram = () => {
 	const getPlatform = useCallback((): TelegramPlatform => {
 		try {
 			if (tg) {
+				tg.ready();
 				return tg.platform;
 			}
 		} catch (error) {
@@ -26,6 +27,7 @@ export const useTelegram = () => {
 	const requestFullscreen = useCallback(() => {
 		try {
 			if (tg) {
+				if (getPlatform() === TelegramPlatform.Web) return;
 				tg.ready();
 				tg.requestFullscreen();
 			}
