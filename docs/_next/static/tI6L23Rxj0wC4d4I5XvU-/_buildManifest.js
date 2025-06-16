@@ -11,7 +11,7 @@
 		'/games/[gameId]': [s, e, 'static/chunks/pages/games/[gameId]-1ddc43a7b0dc2d4f.js'],
 		'/news': [s, e, 'static/chunks/pages/news-48acb419086aacb2.js'],
 		'/news/[articleId]': [s, e, 'static/chunks/pages/news/[articleId]-d4b82ed6e6a5da15.js'],
-		'/profile': [s, e, 'static/chunks/503-fd8814e2e4e0377d.js', 'static/chunks/pages/profile-64a38b7ea678c742.js'],
+		'/profile': [s, e, 'static/chunks/503-fd8814e2e4e0377d.js', 'static/chunks/pages/profile-3a00c494a2ecb5c7.js'],
 		'/store': [s, e, 'static/chunks/pages/store-afa7d73bfce598f7.js'],
 		'/store/[itemId]': [s, e, 'static/chunks/pages/store/[itemId]-ca6f840da280e142.js'],
 		sortedPages: [

@@ -1,22 +1,16 @@
 import { Badge } from '@telegram/components/Badge';
 import { Button } from '@telegram/components/Button';
 import { useTelegram } from '@telegram/contexts/TelegramContext';
+import { useWallet } from '@telegram/hooks/use-ton-wallet';
 import { PageTemplate } from '@telegram/templates/PageTemplate';
-import { useTonConnectUI, useTonWallet } from '@tonconnect/ui-react';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { PiBinary, PiCurrencyCircleDollar, PiDetective, PiFileDoc, PiTranslate } from 'react-icons/pi';
 
 const ProfilePage: NextPage = () => {
 	const { isAuthenticated, user } = useTelegram();
-	const [tonConnectUI] = useTonConnectUI();
-	const wallet = useTonWallet();
-
+	const { shortAddress, wallet, connect } = useWallet();
 	const fullName = `${user?.first_name ?? ''} ${user?.last_name}`.trim();
-
-	const shortAddress = wallet?.account.address
-		? `${wallet.account.address.slice(0, 6)}...${wallet.account.address.slice(-4)}`
-		: null;
 
 	return (
 		<PageTemplate activeId="profile">
@@ -41,19 +35,7 @@ const ProfilePage: NextPage = () => {
 								</div>
 							</div>
 						</div>
-						<Button
-							onClick={() => {
-								if (wallet) {
-									// If already connected, disconnect
-									tonConnectUI.disconnect();
-								} else {
-									// Else open modal to connect
-									tonConnectUI.openModal();
-								}
-							}}>
-							{wallet ? `🔗 (${shortAddress})` : 'Connect TON Wallet'}
-						</Button>
-
+						<Button onClick={connect}>{wallet ? `🔗 (${shortAddress})` : 'Connect TON Wallet'}</Button>
 						<div className="px-4">
 							<hr className="border-neutral-900" />
 						</div>

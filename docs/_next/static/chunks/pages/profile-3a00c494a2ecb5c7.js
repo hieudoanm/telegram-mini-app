@@ -1,36 +1,68 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[63],
 	{
-		817: (e, l, s) => {
+		5549: (e, l, s) => {
 			'use strict';
-			s.r(l), s.d(l, { default: () => u });
+			s.d(l, { $: () => t });
+			var r = s(5640);
+			let t = (e) => {
+				let { size: l = 'md', type: s = 'button', onClick: t = () => {}, children: n = (0, r.jsx)(r.Fragment, {}) } = e;
+				return 'sm' === l
+					? (0, r.jsx)('button', {
+							type: s,
+							className: 'w-full rounded-full bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900',
+							onClick: t,
+							children: n,
+						})
+					: (0, r.jsx)('button', {
+							type: s,
+							className: 'w-full rounded-full bg-yellow-500 px-4 py-2 font-semibold text-neutral-900',
+							onClick: t,
+							children: n,
+						});
+			};
+		},
+		5944: (e, l, s) => {
+			'use strict';
+			s.r(l), s.d(l, { default: () => h });
 			var r = s(5640),
 				t = s(8377),
 				n = s(5549),
 				a = s(1211),
-				c = s(6440),
-				d = s(158),
-				i = s(58),
-				x = s.n(i),
-				o = s(9695);
-			let u = () => {
+				c = s(158);
+			let i = () => {
+				var e;
+				let [l] = (0, c.Lg)(),
+					s = (0, c.c5)(),
+					r = null != (e = null == s ? void 0 : s.account.address) ? e : '',
+					t = (null == s ? void 0 : s.account.address) ? ''.concat(r.slice(0, 6), '...').concat(r.slice(-4)) : null;
+				return {
+					address: r,
+					shortAddress: t,
+					wallet: s,
+					connect: () => {
+						s ? l.disconnect() : l.openModal();
+					},
+				};
+			};
+			var d = s(6440),
+				x = s(58),
+				o = s.n(x),
+				u = s(9695);
+			let h = () => {
 				var e, l, s;
-				let { isAuthenticated: i, user: u } = (0, a.j)(),
-					[h] = (0, d.Lg)(),
-					j = (0, d.c5)(),
-					p = ''
-						.concat(null != (e = null == u ? void 0 : u.first_name) ? e : '', ' ')
-						.concat(null == u ? void 0 : u.last_name)
-						.trim(),
-					m = (null == j ? void 0 : j.account.address)
-						? ''.concat(j.account.address.slice(0, 6), '...').concat(j.account.address.slice(-4))
-						: null;
-				return (0, r.jsx)(c.U, {
+				let { isAuthenticated: c, user: x } = (0, a.j)(),
+					{ shortAddress: h, wallet: j, connect: p } = i(),
+					m = ''
+						.concat(null != (e = null == x ? void 0 : x.first_name) ? e : '', ' ')
+						.concat(null == x ? void 0 : x.last_name)
+						.trim();
+				return (0, r.jsx)(d.U, {
 					activeId: 'profile',
 					children: (0, r.jsxs)('div', {
 						className: 'flex flex-col gap-y-4 p-4',
 						children: [
-							u &&
+							x &&
 								(0, r.jsxs)(r.Fragment, {
 									children: [
 										(0, r.jsxs)('div', {
@@ -41,9 +73,9 @@
 													className: 'flex items-center',
 													children: (0, r.jsx)('div', {
 														className: 'aspect-square w-20 overflow-hidden rounded-full border border-neutral-900',
-														children: (0, r.jsx)(x(), {
-															src: u.photo_url,
-															alt: null != (l = null == u ? void 0 : u.username) ? l : '',
+														children: (0, r.jsx)(o(), {
+															src: x.photo_url,
+															alt: null != (l = null == x ? void 0 : x.username) ? l : '',
 															width: 128,
 															height: 128,
 														}),
@@ -52,14 +84,14 @@
 												(0, r.jsxs)('div', {
 													className: 'flex grow flex-col justify-center gap-y-2 truncate',
 													children: [
-														(0, r.jsx)('p', { className: 'truncate text-xl leading-none font-black', children: p }),
+														(0, r.jsx)('p', { className: 'truncate text-xl leading-none font-black', children: m }),
 														(0, r.jsxs)('p', {
 															className: 'truncate text-sm leading-none',
-															children: ['@', u.username],
+															children: ['@', x.username],
 														}),
 														(0, r.jsx)('div', {
 															className: 'flex items-center gap-x-2',
-															children: i
+															children: c
 																? (0, r.jsx)(t.E, { type: 'success', children: 'Authenticated' })
 																: (0, r.jsx)(t.E, { type: 'error', children: 'Unauthenticated' }),
 														}),
@@ -68,10 +100,8 @@
 											],
 										}),
 										(0, r.jsx)(n.$, {
-											onClick: () => {
-												j ? h.disconnect() : h.openModal();
-											},
-											children: j ? '\uD83D\uDD17 ('.concat(m, ')') : 'Connect TON Wallet',
+											onClick: p,
+											children: j ? '\uD83D\uDD17 ('.concat(h, ')') : 'Connect TON Wallet',
 										}),
 										(0, r.jsx)('div', {
 											className: 'px-4',
@@ -86,7 +116,7 @@
 									(0, r.jsxs)('div', {
 										className: 'flex items-center gap-x-2',
 										children: [
-											(0, r.jsx)(o.xzC, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)(u.xzC, { className: 'text-xl text-yellow-500' }),
 											(0, r.jsx)('span', { children: 'Currency' }),
 										],
 									}),
@@ -134,7 +164,7 @@
 									(0, r.jsxs)('div', {
 										className: 'flex items-center gap-x-2',
 										children: [
-											(0, r.jsx)(o.qyE, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)(u.qyE, { className: 'text-xl text-yellow-500' }),
 											(0, r.jsx)('span', { children: 'Language' }),
 										],
 									}),
@@ -142,7 +172,7 @@
 										id: 'language',
 										name: 'language',
 										className: 'text-align-last-right appearance-none text-right text-yellow-500',
-										defaultValue: null != (s = null == u ? void 0 : u.language_code) ? s : 'en',
+										defaultValue: null != (s = null == x ? void 0 : x.language_code) ? s : 'en',
 										disabled: !0,
 										children: [
 											(0, r.jsx)('option', { value: 'en', children: 'English' }),
@@ -159,7 +189,7 @@
 									(0, r.jsxs)('div', {
 										className: 'flex items-center gap-x-2',
 										children: [
-											(0, r.jsx)(o.JjX, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)(u.JjX, { className: 'text-xl text-yellow-500' }),
 											(0, r.jsx)('span', { children: 'Version' }),
 										],
 									}),
@@ -173,7 +203,7 @@
 								children: (0, r.jsxs)('div', {
 									className: 'flex items-center gap-x-2',
 									children: [
-										(0, r.jsx)(o.NMB, { className: 'text-xl text-yellow-500' }),
+										(0, r.jsx)(u.NMB, { className: 'text-xl text-yellow-500' }),
 										(0, r.jsx)('span', { children: 'Privacy Policy' }),
 									],
 								}),
@@ -184,7 +214,7 @@
 								children: (0, r.jsxs)('div', {
 									className: 'flex items-center gap-x-2',
 									children: [
-										(0, r.jsx)(o.eF3, { className: 'text-xl text-yellow-500' }),
+										(0, r.jsx)(u.eF3, { className: 'text-xl text-yellow-500' }),
 										(0, r.jsx)('span', { children: 'Terms of Service' }),
 									],
 								}),
@@ -192,27 +222,6 @@
 						],
 					}),
 				});
-			};
-		},
-		5549: (e, l, s) => {
-			'use strict';
-			s.d(l, { $: () => t });
-			var r = s(5640);
-			let t = (e) => {
-				let { size: l = 'md', type: s = 'button', onClick: t = () => {}, children: n = (0, r.jsx)(r.Fragment, {}) } = e;
-				return 'sm' === l
-					? (0, r.jsx)('button', {
-							type: s,
-							className: 'w-full rounded-full bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900',
-							onClick: t,
-							children: n,
-						})
-					: (0, r.jsx)('button', {
-							type: s,
-							className: 'w-full rounded-full bg-yellow-500 px-4 py-2 font-semibold text-neutral-900',
-							onClick: t,
-							children: n,
-						});
 			};
 		},
 		6440: (e, l, s) => {
@@ -229,7 +238,7 @@
 			var n = s(5089),
 				a = s.n(n),
 				c = s(9695);
-			let d = (e) => {
+			let i = (e) => {
 				let { activeId: l } = e;
 				return (0, r.jsx)('nav', {
 					className: 'border-t border-neutral-900 bg-neutral-950',
@@ -271,9 +280,9 @@
 									href: t = '',
 									text: n = '',
 									icon: c = (0, r.jsx)(r.Fragment, {}),
-									activeIcon: d = (0, r.jsx)(r.Fragment, {}),
+									activeIcon: i = (0, r.jsx)(r.Fragment, {}),
 								} = e,
-								i = s === l;
+								d = s === l;
 							return (0, r.jsx)(
 								'div',
 								{
@@ -282,13 +291,13 @@
 										href: t,
 										children: (0, r.jsxs)('div', {
 											className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
-												i ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
+												d ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
 											),
 											children: [
 												(0, r.jsx)('span', {
 													className: 'text-3xl',
-													children: i
-														? (0, r.jsx)(r.Fragment, { children: d })
+													children: d
+														? (0, r.jsx)(r.Fragment, { children: i })
 														: (0, r.jsx)(r.Fragment, { children: c }),
 												}),
 												(0, r.jsx)('span', { className: 'text-xs', children: n }),
@@ -302,11 +311,11 @@
 					}),
 				});
 			};
-			var i = s(1211),
+			var d = s(1211),
 				x = s(148);
 			let o = (e) => {
 				let { activeId: l = '', children: s = (0, r.jsx)(r.Fragment, {}) } = e,
-					{ requestFullscreen: n } = (0, i.j)();
+					{ requestFullscreen: n } = (0, d.j)();
 				return (
 					(0, x.useEffect)(() => {
 						n();
@@ -318,7 +327,7 @@
 								children: (0, r.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
 							}),
 							(0, r.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: s }),
-							(0, r.jsx)(d, { activeId: l }),
+							(0, r.jsx)(i, { activeId: l }),
 						],
 					})
 				);
@@ -328,7 +337,7 @@
 			(window.__NEXT_P = window.__NEXT_P || []).push([
 				'/profile',
 				function () {
-					return s(817);
+					return s(5944);
 				},
 			]);
 		},
