@@ -4,7 +4,7 @@ import { useTelegram } from '@telegram/contexts/TelegramContext';
 import { useWallet } from '@telegram/hooks/use-wallet';
 import { PageTemplate } from '@telegram/templates/PageTemplate';
 import { copy } from '@telegram/utils/copy-paste';
-import { commas } from '@telegram/utils/number';
+import { currency } from '@telegram/utils/number';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -40,9 +40,9 @@ const ProfilePage: NextPage = () => {
 						</div>
 						{wallet ? (
 							<div className="flex flex-col gap-y-4">
-								<p className="text-center text-4xl">{commas(balance)}</p>
-								<Button onClick={() => copy(address)}>🔗 {shortAddress}</Button>
-								<OutlineButton onClick={disconnect}>Disconnect</OutlineButton>
+								<p className="text-center text-4xl">{currency(balance)}</p>
+								<Button onClick={() => copy(address)}>{shortAddress}</Button>
+								<OutlineButton onClick={disconnect}>Disconnect TON Wallet</OutlineButton>
 							</div>
 						) : (
 							<Button onClick={connect}>Connect TON Wallet</Button>

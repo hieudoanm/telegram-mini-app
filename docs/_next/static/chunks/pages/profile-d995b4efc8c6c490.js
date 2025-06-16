@@ -60,9 +60,15 @@
 							console.error('Failed to copy: ', e);
 						});
 				},
-				b = (e) => ('number' != typeof e && 'bigint' != typeof e ? '' : e.toLocaleString('en-US'));
-			var g = s(58),
-				v = s.n(g),
+				b = function (e) {
+					let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'USD',
+						s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'en-US';
+					return 'number' != typeof e && 'bigint' != typeof e
+						? ''
+						: new Intl.NumberFormat(s, { style: 'currency', currency: l }).format(e);
+				};
+			var v = s(58),
+				g = s.n(v),
 				N = s(5089),
 				y = s.n(N),
 				w = s(5160);
@@ -70,7 +76,7 @@
 				var e, l, s;
 				let { isAuthenticated: t, user: i } = (0, c.j)(),
 					{ balance: d = 0, address: o = '', shortAddress: x, wallet: u, connect: h, disconnect: p } = j(),
-					g = ''
+					v = ''
 						.concat(null != (e = null == i ? void 0 : i.first_name) ? e : '', ' ')
 						.concat(null == i ? void 0 : i.last_name)
 						.trim();
@@ -90,7 +96,7 @@
 													className: 'flex items-center',
 													children: (0, r.jsx)('div', {
 														className: 'aspect-square w-20 overflow-hidden rounded-full border border-neutral-900',
-														children: (0, r.jsx)(v(), {
+														children: (0, r.jsx)(g(), {
 															src: i.photo_url,
 															alt: null != (l = null == i ? void 0 : i.username) ? l : '',
 															width: 128,
@@ -101,7 +107,7 @@
 												(0, r.jsxs)('div', {
 													className: 'flex grow flex-col justify-center gap-y-2 truncate',
 													children: [
-														(0, r.jsx)('p', { className: 'truncate text-xl leading-none font-black', children: g }),
+														(0, r.jsx)('p', { className: 'truncate text-xl leading-none font-black', children: v }),
 														(0, r.jsxs)('p', {
 															className: 'truncate text-sm leading-none',
 															children: ['@', i.username],
@@ -121,8 +127,8 @@
 													className: 'flex flex-col gap-y-4',
 													children: [
 														(0, r.jsx)('p', { className: 'text-center text-4xl', children: b(d) }),
-														(0, r.jsxs)(a.$, { onClick: () => f(o), children: ['\uD83D\uDD17 ', x] }),
-														(0, r.jsx)(a.r, { onClick: p, children: 'Disconnect' }),
+														(0, r.jsx)(a.$, { onClick: () => f(o), children: x }),
+														(0, r.jsx)(a.r, { onClick: p, children: 'Disconnect TON Wallet' }),
 													],
 												})
 											: (0, r.jsx)(a.$, { onClick: h, children: 'Connect TON Wallet' }),
