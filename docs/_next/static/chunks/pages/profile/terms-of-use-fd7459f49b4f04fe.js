@@ -154,7 +154,7 @@
 					(0, t.jsxs)(l, {
 						children: [
 							(0, t.jsx)('header', {
-								className: 'border-b border-neutral-900 pt-6 pb-4',
+								className: 'border-b border-neutral-900 pt-7 pb-4',
 								children: (0, t.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
 							}),
 							(0, t.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: r }),

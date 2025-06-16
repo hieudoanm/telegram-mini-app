@@ -21,9 +21,7 @@ export const authenticate = async (initData: string): Promise<{ user: User }> =>
 		.map(([key, value]) => `${key}=${value}`)
 		.sort(compareLex)
 		.join('\n');
-	console.debug('initDataWithoutHash', initDataWithoutHash);
 	const hmac: string = createHmac('sha256', secretKey).update(initDataWithoutHash).digest('hex');
-	console.log(TELEGRAM_BOT_TOKEN, hmac, hash);
 	if (hmac !== hash) throw new Error('Invalid HMAC');
 
 	const telegramUser: TelegramUser = JSON.parse(params.get('user') ?? '{}');
