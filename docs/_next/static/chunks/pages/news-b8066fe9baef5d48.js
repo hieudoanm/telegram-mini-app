@@ -101,7 +101,7 @@
 					return (0, n.jsxs)(a, {
 						children: [
 							(0, n.jsx)('header', {
-								className: 'border-b border-neutral-900 py-4',
+								className: 'border-b border-neutral-900 pt-8 pb-4',
 								children: (0, n.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
 							}),
 							(0, n.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: r }),

@@ -12,16 +12,25 @@ export const useTelegram = () => {
 	const tg = typeof window !== 'undefined' && window.Telegram?.WebApp;
 
 	const getPlatform = useCallback((): TelegramPlatform => {
-		if (tg) {
-			return tg.platform;
+		try {
+			if (tg) {
+				return tg.platform;
+			}
+		} catch (error) {
+			console.error(error);
+			return TelegramPlatform.Web;
 		}
 		return TelegramPlatform.Web;
 	}, [tg]);
 
 	const requestFullscreen = useCallback(() => {
-		if (tg) {
-			tg.ready();
-			tg.requestFullscreen();
+		try {
+			if (tg) {
+				tg.ready();
+				tg.requestFullscreen();
+			}
+		} catch (error) {
+			console.error(error);
 		}
 	}, [tg]);
 

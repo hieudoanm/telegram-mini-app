@@ -3592,9 +3592,20 @@
 				var e;
 				let t = null == (e = window.Telegram) ? void 0 : e.WebApp;
 				return {
-					getPlatform: (0, n.useCallback)(() => (t ? t.platform : 'web'), [t]),
+					getPlatform: (0, n.useCallback)(() => {
+						try {
+							if (t) return t.platform;
+						} catch (e) {
+							console.error(e);
+						}
+						return 'web';
+					}, [t]),
 					requestFullscreen: (0, n.useCallback)(() => {
-						t && (t.ready(), t.requestFullscreen());
+						try {
+							t && (t.ready(), t.requestFullscreen());
+						} catch (e) {
+							console.error(e);
+						}
 					}, [t]),
 				};
 			};
