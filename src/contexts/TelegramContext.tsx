@@ -1,7 +1,7 @@
+import { LoadingTemplate } from '@telegram/templates/LoadingTemplate';
 import { trpcClient } from '@telegram/utils/trpc';
 import { tryCatch } from '@telegram/utils/try-catch';
 import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import { PiSpinner } from 'react-icons/pi';
 
 enum TelegramPlatform {
 	Android = 'android',
@@ -103,20 +103,7 @@ export const TelegramProvider: React.FC<{ children: ReactNode }> = ({ children =
 		[isAuthenticated, user, getPlatform, requestFullscreen],
 	);
 
-	return (
-		<UserContext.Provider value={value}>
-			{loading ? (
-				<div className="flex h-screen w-screen items-center justify-center">
-					<div className="flex flex-col gap-y-4">
-						<span className="text-center text-2xl font-semibold">Mini App</span>
-						<PiSpinner className="mx-auto animate-spin text-4xl" />
-					</div>
-				</div>
-			) : (
-				<>{children}</>
-			)}
-		</UserContext.Provider>
-	);
+	return <UserContext.Provider value={value}>{loading ? <LoadingTemplate /> : <>{children}</>}</UserContext.Provider>;
 };
 
 export const useTelegram = () => {

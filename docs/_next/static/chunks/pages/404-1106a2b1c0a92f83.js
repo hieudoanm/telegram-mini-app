@@ -1,20 +1,12 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-	[421],
+	[336],
 	{
-		95: (e, l, t) => {
-			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/500',
-				function () {
-					return t(6818);
-				},
-			]);
-		},
 		1190: (e, l, t) => {
 			'use strict';
 			t.d(l, { L: () => c });
 			var r = t(5640),
 				s = t(5549),
-				n = t(1211),
+				n = t(3856),
 				o = t(5089),
 				u = t.n(o),
 				d = t(148);
@@ -87,16 +79,24 @@
 							});
 				};
 		},
-		6818: (e, l, t) => {
+		5943: (e, l, t) => {
 			'use strict';
 			t.r(l), t.d(l, { default: () => n });
 			var r = t(5640),
 				s = t(1190);
-			let n = () => (0, r.jsx)(s.L, { code: '500' });
+			let n = () => (0, r.jsx)(s.L, { code: '404' });
+		},
+		9628: (e, l, t) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/404',
+				function () {
+					return t(5943);
+				},
+			]);
 		},
 	},
 	(e) => {
 		var l = (l) => e((e.s = l));
-		e.O(0, [89, 636, 593, 792], () => l(95)), (_N_E = e.O());
+		e.O(0, [89, 636, 593, 792], () => l(9628)), (_N_E = e.O());
 	},
 ]);

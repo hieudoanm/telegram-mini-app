@@ -12814,102 +12814,6 @@
 				);
 			});
 		},
-		1211: (e, t, n) => {
-			'use strict';
-			n.d(t, { Z: () => d, j: () => h });
-			var r = n(5640),
-				i = n(4209);
-			let o = async (e) => {
-				try {
-					return { data: await e, error: null };
-				} catch (e) {
-					return { data: null, error: e };
-				}
-			};
-			var a = n(148),
-				s = n(5160),
-				l = (function (e) {
-					return (
-						(e.Android = 'android'), (e.IOS = 'ios'), (e.MacOS = 'macos'), (e.TDesktop = 'tdesktop'), (e.Web = 'web'), e
-					);
-				})(l || {});
-			let c = async () => {
-					var e, t, n;
-					if (null == (n = window) || null == (t = n.Telegram) || null == (e = t.WebApp) ? void 0 : e.initData) {
-						let e = window.Telegram.WebApp.initData,
-							{ user: t } = Object.fromEntries(new URLSearchParams(e)),
-							{ data: n, error: r } = await o(JSON.parse(t));
-						return r ? (console.error(r), { user: null, initData: '' }) : { user: n, initData: e };
-					}
-					return { user: null, initData: '' };
-				},
-				u = (0, a.createContext)({
-					isAuthenticated: !1,
-					user: null,
-					getPlatform: () => 'web',
-					requestFullscreen: () => {},
-				}),
-				d = (e) => {
-					var t;
-					let { children: n = (0, r.jsx)(r.Fragment, {}) } = e,
-						[{ loading: l = !0, isAuthenticated: d = !1, user: h = null }, f] = (0, a.useState)({
-							loading: !1,
-							isAuthenticated: !1,
-							user: null,
-						});
-					(0, a.useEffect)(() => {
-						(async () => {
-							f((e) => ({ ...e, loading: !0 }));
-							let { initData: e, user: t } = await c(),
-								{ data: n, error: r } = await o(i.r.auth.telegram.mutate({ initData: e }));
-							r && console.error(r.message), n || console.error('Invalid Data');
-							let { data: a, error: s } = await o(i.r.app.authenticated.query());
-							s && console.error(s.message), a || console.error('Invalid Data');
-							let { isAuthenticated: l } = null != a ? a : { isAuthenticated: !1 };
-							f((e) => ({ ...e, loading: !1, isAuthenticated: l, user: t }));
-						})();
-					}, []);
-					let p = null == (t = window.Telegram) ? void 0 : t.WebApp,
-						g = (0, a.useCallback)(() => {
-							try {
-								if (p) return p.ready(), p.platform;
-							} catch (e) {
-								console.error(e);
-							}
-							return 'web';
-						}, [p]),
-						m = (0, a.useCallback)(() => {
-							try {
-								if (p) {
-									if ('web' === g()) return;
-									p.ready(), p.requestFullscreen();
-								}
-							} catch (e) {
-								console.error(e);
-							}
-						}, [p, g]),
-						y = (0, a.useMemo)(
-							() => ({ isAuthenticated: d, user: h, getPlatform: g, requestFullscreen: m }),
-							[d, h, g, m],
-						);
-					return (0, r.jsx)(u.Provider, {
-						value: y,
-						children: l
-							? (0, r.jsx)('div', {
-									className: 'flex h-screen w-screen items-center justify-center',
-									children: (0, r.jsxs)('div', {
-										className: 'flex flex-col gap-y-4',
-										children: [
-											(0, r.jsx)('span', { className: 'text-center text-2xl font-semibold', children: 'Mini App' }),
-											(0, r.jsx)(s.PeZ, { className: 'mx-auto animate-spin text-4xl' }),
-										],
-									}),
-								})
-							: (0, r.jsx)(r.Fragment, { children: n }),
-					});
-				},
-				h = () => (0, a.useContext)(u);
-		},
 		1412: (e, t, n) => {
 			!(function (e) {
 				'use strict';
@@ -14854,6 +14758,102 @@
 		},
 		2611: (e, t, n) => {
 			e.exports = n(9142);
+		},
+		3856: (e, t, n) => {
+			'use strict';
+			n.d(t, { Z: () => h, j: () => f });
+			var r = n(5640),
+				i = n(5160);
+			let o = () =>
+				(0, r.jsx)('div', {
+					className: 'flex h-screen w-screen items-center justify-center',
+					children: (0, r.jsxs)('div', {
+						className: 'flex flex-col gap-y-4',
+						children: [
+							(0, r.jsx)('span', { className: 'text-center text-2xl font-semibold', children: 'Mini App' }),
+							(0, r.jsx)(i.PeZ, { className: 'mx-auto animate-spin text-4xl' }),
+						],
+					}),
+				});
+			var a = n(4209);
+			let s = async (e) => {
+				try {
+					return { data: await e, error: null };
+				} catch (e) {
+					return { data: null, error: e };
+				}
+			};
+			var l = n(148),
+				c = (function (e) {
+					return (
+						(e.Android = 'android'), (e.IOS = 'ios'), (e.MacOS = 'macos'), (e.TDesktop = 'tdesktop'), (e.Web = 'web'), e
+					);
+				})(c || {});
+			let u = async () => {
+					var e, t, n;
+					if (null == (n = window) || null == (t = n.Telegram) || null == (e = t.WebApp) ? void 0 : e.initData) {
+						let e = window.Telegram.WebApp.initData,
+							{ user: t } = Object.fromEntries(new URLSearchParams(e)),
+							{ data: n, error: r } = await s(JSON.parse(t));
+						return r ? (console.error(r), { user: null, initData: '' }) : { user: n, initData: e };
+					}
+					return { user: null, initData: '' };
+				},
+				d = (0, l.createContext)({
+					isAuthenticated: !1,
+					user: null,
+					getPlatform: () => 'web',
+					requestFullscreen: () => {},
+				}),
+				h = (e) => {
+					var t;
+					let { children: n = (0, r.jsx)(r.Fragment, {}) } = e,
+						[{ loading: i = !0, isAuthenticated: c = !1, user: h = null }, f] = (0, l.useState)({
+							loading: !1,
+							isAuthenticated: !1,
+							user: null,
+						});
+					(0, l.useEffect)(() => {
+						(async () => {
+							f((e) => ({ ...e, loading: !0 }));
+							let { initData: e, user: t } = await u(),
+								{ data: n, error: r } = await s(a.r.auth.telegram.mutate({ initData: e }));
+							r && console.error(r.message), n || console.error('Invalid Data');
+							let { data: i, error: o } = await s(a.r.app.authenticated.query());
+							o && console.error(o.message), i || console.error('Invalid Data');
+							let { isAuthenticated: l } = null != i ? i : { isAuthenticated: !1 };
+							f((e) => ({ ...e, loading: !1, isAuthenticated: l, user: t }));
+						})();
+					}, []);
+					let p = null == (t = window.Telegram) ? void 0 : t.WebApp,
+						g = (0, l.useCallback)(() => {
+							try {
+								if (p) return p.ready(), p.platform;
+							} catch (e) {
+								console.error(e);
+							}
+							return 'web';
+						}, [p]),
+						m = (0, l.useCallback)(() => {
+							try {
+								if (p) {
+									if ('web' === g()) return;
+									p.ready(), p.requestFullscreen();
+								}
+							} catch (e) {
+								console.error(e);
+							}
+						}, [p, g]),
+						y = (0, l.useMemo)(
+							() => ({ isAuthenticated: c, user: h, getPlatform: g, requestFullscreen: m }),
+							[c, h, g, m],
+						);
+					return (0, r.jsx)(d.Provider, {
+						value: y,
+						children: i ? (0, r.jsx)(o, {}) : (0, r.jsx)(r.Fragment, { children: n }),
+					});
+				},
+				f = () => (0, l.useContext)(d);
 		},
 		4209: (e, t, n) => {
 			'use strict';
@@ -18778,7 +18778,7 @@
 			'use strict';
 			n.r(t), n.d(t, { default: () => f });
 			var r = n(5640),
-				i = n(1211);
+				i = n(3856);
 			n(8834);
 			var o = n(4209),
 				a = n(2252),

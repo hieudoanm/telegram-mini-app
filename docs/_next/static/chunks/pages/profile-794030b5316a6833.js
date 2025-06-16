@@ -8,7 +8,7 @@
 				r = s(5640),
 				n = s(8377),
 				a = s(5549),
-				c = s(1211),
+				c = s(3856),
 				i = s(2076);
 			s(6376);
 			var d = s(3441),
@@ -60,17 +60,17 @@
 							console.error('Failed to copy: ', e);
 						});
 				},
-				b = (e) => ('number' != typeof e ? '' : e.toLocaleString('en-US'));
-			var v = s(58),
-				g = s.n(v),
+				b = (e) => ('number' != typeof e && 'bigint' != typeof e ? '' : e.toLocaleString('en-US'));
+			var g = s(58),
+				v = s.n(g),
 				N = s(5089),
-				w = s.n(N),
-				y = s(5160);
+				y = s.n(N),
+				w = s(5160);
 			let E = () => {
 				var e, l, s;
 				let { isAuthenticated: t, user: i } = (0, c.j)(),
 					{ balance: d = 0, address: o = '', shortAddress: x, wallet: u, connect: h, disconnect: p } = j(),
-					v = ''
+					g = ''
 						.concat(null != (e = null == i ? void 0 : i.first_name) ? e : '', ' ')
 						.concat(null == i ? void 0 : i.last_name)
 						.trim();
@@ -90,7 +90,7 @@
 													className: 'flex items-center',
 													children: (0, r.jsx)('div', {
 														className: 'aspect-square w-20 overflow-hidden rounded-full border border-neutral-900',
-														children: (0, r.jsx)(g(), {
+														children: (0, r.jsx)(v(), {
 															src: i.photo_url,
 															alt: null != (l = null == i ? void 0 : i.username) ? l : '',
 															width: 128,
@@ -101,7 +101,7 @@
 												(0, r.jsxs)('div', {
 													className: 'flex grow flex-col justify-center gap-y-2 truncate',
 													children: [
-														(0, r.jsx)('p', { className: 'truncate text-xl leading-none font-black', children: v }),
+														(0, r.jsx)('p', { className: 'truncate text-xl leading-none font-black', children: g }),
 														(0, r.jsxs)('p', {
 															className: 'truncate text-sm leading-none',
 															children: ['@', i.username],
@@ -139,7 +139,7 @@
 									(0, r.jsxs)('div', {
 										className: 'flex items-center gap-x-2',
 										children: [
-											(0, r.jsx)(y.xzC, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)(w.xzC, { className: 'text-xl text-yellow-500' }),
 											(0, r.jsx)('span', { children: 'Currency' }),
 										],
 									}),
@@ -187,7 +187,7 @@
 									(0, r.jsxs)('div', {
 										className: 'flex items-center gap-x-2',
 										children: [
-											(0, r.jsx)(y.qyE, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)(w.qyE, { className: 'text-xl text-yellow-500' }),
 											(0, r.jsx)('span', { children: 'Language' }),
 										],
 									}),
@@ -212,7 +212,7 @@
 									(0, r.jsxs)('div', {
 										className: 'flex items-center gap-x-2',
 										children: [
-											(0, r.jsx)(y.JjX, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)(w.JjX, { className: 'text-xl text-yellow-500' }),
 											(0, r.jsx)('span', { children: 'Version' }),
 										],
 									}),
@@ -220,7 +220,7 @@
 								],
 							}),
 							(0, r.jsx)('div', { className: 'px-4', children: (0, r.jsx)('hr', { className: 'border-neutral-900' }) }),
-							(0, r.jsx)(w(), {
+							(0, r.jsx)(y(), {
 								href: '/profile/privacy-policy',
 								children: (0, r.jsx)('div', {
 									className:
@@ -228,13 +228,13 @@
 									children: (0, r.jsxs)('div', {
 										className: 'flex items-center gap-x-2',
 										children: [
-											(0, r.jsx)(y.NMB, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)(w.NMB, { className: 'text-xl text-yellow-500' }),
 											(0, r.jsx)('span', { children: 'Privacy Policy' }),
 										],
 									}),
 								}),
 							}),
-							(0, r.jsx)(w(), {
+							(0, r.jsx)(y(), {
 								href: '/profile/terms-of-use',
 								children: (0, r.jsx)('div', {
 									className:
@@ -242,7 +242,7 @@
 									children: (0, r.jsxs)('div', {
 										className: 'flex items-center gap-x-2',
 										children: [
-											(0, r.jsx)(y.eF3, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)(w.eF3, { className: 'text-xl text-yellow-500' }),
 											(0, r.jsx)('span', { children: 'Terms of Use' }),
 										],
 									}),
@@ -388,7 +388,7 @@
 					}),
 				});
 			};
-			var d = s(1211),
+			var d = s(3856),
 				o = s(148);
 			let x = (e) => {
 				let { activeId: l = '', children: s = (0, t.jsx)(t.Fragment, {}) } = e,
