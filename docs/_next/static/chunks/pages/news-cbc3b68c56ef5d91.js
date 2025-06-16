@@ -101,7 +101,7 @@
 						children: [
 							(0, a.jsx)('header', {
 								className: 'border-b border-neutral-900 pt-7 pb-4',
-								children: (0, a.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
+								children: (0, a.jsx)('h1', { className: 'text-center text-2xl font-semibold', children: 'Mini App' }),
 							}),
 							(0, a.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: s }),
 							(0, a.jsx)(c, { activeId: t }),

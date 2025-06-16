@@ -3,10 +3,10 @@
 	{
 		1637: (e, s, r) => {
 			'use strict';
-			r.r(s), r.d(s, { default: () => a });
+			r.r(s), r.d(s, { default: () => i });
 			var t = r(5640),
 				l = r(6440);
-			let a = () =>
+			let i = () =>
 				(0, t.jsx)(l.U, {
 					activeId: 'profile',
 					children: (0, t.jsxs)('div', {
@@ -66,8 +66,8 @@
 					children: s,
 				});
 			};
-			var a = r(5089),
-				i = r.n(a),
+			var i = r(5089),
+				a = r.n(i),
 				n = r(5160);
 			let o = (e) => {
 				let { activeId: s } = e;
@@ -109,7 +109,7 @@
 							let {
 									id: r = '',
 									href: l = '',
-									text: a = '',
+									text: i = '',
 									icon: n = (0, t.jsx)(t.Fragment, {}),
 									activeIcon: o = (0, t.jsx)(t.Fragment, {}),
 								} = e,
@@ -118,7 +118,7 @@
 								'div',
 								{
 									className: 'col-span-1',
-									children: (0, t.jsx)(i(), {
+									children: (0, t.jsx)(a(), {
 										href: l,
 										children: (0, t.jsxs)('div', {
 											className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
@@ -131,7 +131,7 @@
 														? (0, t.jsx)(t.Fragment, { children: o })
 														: (0, t.jsx)(t.Fragment, { children: n }),
 												}),
-												(0, t.jsx)('span', { className: 'text-xs', children: a }),
+												(0, t.jsx)('span', { className: 'text-xs', children: i }),
 											],
 										}),
 									}),
@@ -146,16 +146,16 @@
 				x = r(148);
 			let d = (e) => {
 				let { activeId: s = '', children: r = (0, t.jsx)(t.Fragment, {}) } = e,
-					{ requestFullscreen: a } = (0, c.j)();
+					{ requestFullscreen: i } = (0, c.j)();
 				return (
 					(0, x.useEffect)(() => {
-						a();
-					}, [a]),
+						i();
+					}, [i]),
 					(0, t.jsxs)(l, {
 						children: [
 							(0, t.jsx)('header', {
 								className: 'border-b border-neutral-900 pt-7 pb-4',
-								children: (0, t.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
+								children: (0, t.jsx)('h1', { className: 'text-center text-2xl font-semibold', children: 'Mini App' }),
 							}),
 							(0, t.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: r }),
 							(0, t.jsx)(o, { activeId: s }),

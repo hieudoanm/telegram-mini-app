@@ -1,6 +1,258 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[63],
 	{
+		4711: (e, l, s) => {
+			'use strict';
+			s.r(l), s.d(l, { default: () => E });
+			var t,
+				r = s(5640),
+				n = s(8377),
+				a = s(5549),
+				c = s(1211),
+				i = s(2076);
+			s(6376);
+			var d = s(3441),
+				o = s(7595);
+			globalThis.Buffer = i.hp;
+			o.env.USDT_JETTON_ADDRESS, (null != (t = o.env.TON_WALLET_MNEMONIC) ? t : '').split(' ');
+			let x = new d.TonClient({ endpoint: 'https://toncenter.com/api/v2/jsonRPC' });
+			var u = s(1851),
+				h = s(158),
+				p = s(148);
+			let j = () => {
+				var e;
+				let [{ balance: l = BigInt(0) }, s] = (0, p.useState)({ balance: BigInt(0) }),
+					[t] = (0, h.Lg)(),
+					r = (0, h.c5)(),
+					n = null != (e = null == r ? void 0 : r.account.address) ? e : '',
+					a = (null == r ? void 0 : r.account.address) ? ''.concat(n.slice(0, 6), '...').concat(n.slice(-4)) : null;
+				return (
+					(0, p.useEffect)(() => {
+						n &&
+							(async () => {
+								let e = u.Address.parse(n),
+									l = await x.getBalance(e);
+								s((e) => ({ ...e, balance: l }));
+							})();
+					}, [n]),
+					{
+						balance: l,
+						address: n,
+						shortAddress: a,
+						wallet: r,
+						connect: () => {
+							r || t.openModal();
+						},
+						disconnect: () => {
+							r && t.disconnect();
+						},
+					}
+				);
+			};
+			var m = s(6440);
+			let f = (e) => {
+					navigator.clipboard
+						.writeText(e)
+						.then(() => {
+							alert('Copied to clipboard!');
+						})
+						.catch((e) => {
+							console.error('Failed to copy: ', e);
+						});
+				},
+				b = (e) => ('number' != typeof e ? '' : e.toLocaleString('en-US'));
+			var v = s(58),
+				g = s.n(v),
+				N = s(5089),
+				w = s.n(N),
+				y = s(5160);
+			let E = () => {
+				var e, l, s;
+				let { isAuthenticated: t, user: i } = (0, c.j)(),
+					{ balance: d = 0, address: o = '', shortAddress: x, wallet: u, connect: h, disconnect: p } = j(),
+					v = ''
+						.concat(null != (e = null == i ? void 0 : i.first_name) ? e : '', ' ')
+						.concat(null == i ? void 0 : i.last_name)
+						.trim();
+				return (0, r.jsx)(m.U, {
+					activeId: 'profile',
+					children: (0, r.jsxs)('div', {
+						className: 'flex flex-col gap-y-4 p-4',
+						children: [
+							i &&
+								(0, r.jsxs)(r.Fragment, {
+									children: [
+										(0, r.jsxs)('div', {
+											className:
+												'flex gap-x-4 rounded-2xl border border-neutral-900 bg-neutral-950 p-4 shadow shadow-neutral-900',
+											children: [
+												(0, r.jsx)('div', {
+													className: 'flex items-center',
+													children: (0, r.jsx)('div', {
+														className: 'aspect-square w-20 overflow-hidden rounded-full border border-neutral-900',
+														children: (0, r.jsx)(g(), {
+															src: i.photo_url,
+															alt: null != (l = null == i ? void 0 : i.username) ? l : '',
+															width: 128,
+															height: 128,
+														}),
+													}),
+												}),
+												(0, r.jsxs)('div', {
+													className: 'flex grow flex-col justify-center gap-y-2 truncate',
+													children: [
+														(0, r.jsx)('p', { className: 'truncate text-xl leading-none font-black', children: v }),
+														(0, r.jsxs)('p', {
+															className: 'truncate text-sm leading-none',
+															children: ['@', i.username],
+														}),
+														(0, r.jsx)('div', {
+															className: 'flex items-center gap-x-2',
+															children: t
+																? (0, r.jsx)(n.E, { type: 'success', children: 'Authenticated' })
+																: (0, r.jsx)(n.E, { type: 'error', children: 'Unauthenticated' }),
+														}),
+													],
+												}),
+											],
+										}),
+										u
+											? (0, r.jsxs)('div', {
+													className: 'flex flex-col gap-y-4',
+													children: [
+														(0, r.jsx)('p', { className: 'text-center text-4xl', children: b(d) }),
+														(0, r.jsxs)(a.$, { onClick: () => f(o), children: ['\uD83D\uDD17 ', x] }),
+														(0, r.jsx)(a.r, { onClick: p, children: 'Disconnect' }),
+													],
+												})
+											: (0, r.jsx)(a.$, { onClick: h, children: 'Connect TON Wallet' }),
+										(0, r.jsx)('div', {
+											className: 'px-4',
+											children: (0, r.jsx)('hr', { className: 'border-neutral-900' }),
+										}),
+									],
+								}),
+							(0, r.jsxs)('div', {
+								className:
+									'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
+								children: [
+									(0, r.jsxs)('div', {
+										className: 'flex items-center gap-x-2',
+										children: [
+											(0, r.jsx)(y.xzC, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)('span', { children: 'Currency' }),
+										],
+									}),
+									(0, r.jsxs)('select', {
+										id: 'currency',
+										name: 'currency',
+										className: 'text-align-last-right appearance-none text-right text-yellow-500',
+										defaultValue: 'USD',
+										children: [
+											(0, r.jsxs)('optgroup', {
+												label: 'Asia',
+												children: [
+													(0, r.jsx)('option', { value: 'CNY', children: 'CNY' }),
+													(0, r.jsx)('option', { value: 'JPY', children: 'JPY' }),
+													(0, r.jsx)('option', { value: 'KRW', children: 'KRW' }),
+													(0, r.jsx)('option', { value: 'VND', children: 'VND' }),
+												],
+											}),
+											(0, r.jsxs)('optgroup', {
+												label: 'Europe',
+												children: [
+													(0, r.jsx)('option', { value: 'EUR', children: 'EUR' }),
+													(0, r.jsx)('option', { value: 'GBP', children: 'GBP' }),
+												],
+											}),
+											(0, r.jsxs)('optgroup', {
+												label: 'North America',
+												children: [
+													(0, r.jsx)('option', { value: 'CAD', children: 'CAD' }),
+													(0, r.jsx)('option', { value: 'USD', children: 'USD' }),
+												],
+											}),
+											(0, r.jsx)('optgroup', {
+												label: 'Oceania',
+												children: (0, r.jsx)('option', { value: 'AUD', children: 'AUD' }),
+											}),
+										],
+									}),
+								],
+							}),
+							(0, r.jsxs)('div', {
+								className:
+									'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
+								children: [
+									(0, r.jsxs)('div', {
+										className: 'flex items-center gap-x-2',
+										children: [
+											(0, r.jsx)(y.qyE, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)('span', { children: 'Language' }),
+										],
+									}),
+									(0, r.jsxs)('select', {
+										id: 'language',
+										name: 'language',
+										className: 'text-align-last-right appearance-none text-right text-yellow-500',
+										defaultValue: null != (s = null == i ? void 0 : i.language_code) ? s : 'en',
+										disabled: !0,
+										children: [
+											(0, r.jsx)('option', { value: 'en', children: 'English' }),
+											(0, r.jsx)('option', { value: 'de', children: 'Deutsch' }),
+											(0, r.jsx)('option', { value: 'kr', children: '한글' }),
+										],
+									}),
+								],
+							}),
+							(0, r.jsxs)('div', {
+								className:
+									'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
+								children: [
+									(0, r.jsxs)('div', {
+										className: 'flex items-center gap-x-2',
+										children: [
+											(0, r.jsx)(y.JjX, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)('span', { children: 'Version' }),
+										],
+									}),
+									(0, r.jsx)('span', { className: 'text-yellow-500', children: 'v0.0.1' }),
+								],
+							}),
+							(0, r.jsx)('div', { className: 'px-4', children: (0, r.jsx)('hr', { className: 'border-neutral-900' }) }),
+							(0, r.jsx)(w(), {
+								href: '/profile/privacy-policy',
+								children: (0, r.jsx)('div', {
+									className:
+										'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
+									children: (0, r.jsxs)('div', {
+										className: 'flex items-center gap-x-2',
+										children: [
+											(0, r.jsx)(y.NMB, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)('span', { children: 'Privacy Policy' }),
+										],
+									}),
+								}),
+							}),
+							(0, r.jsx)(w(), {
+								href: '/profile/terms-of-use',
+								children: (0, r.jsx)('div', {
+									className:
+										'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
+									children: (0, r.jsxs)('div', {
+										className: 'flex items-center gap-x-2',
+										children: [
+											(0, r.jsx)(y.eF3, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)('span', { children: 'Terms of Use' }),
+										],
+									}),
+								}),
+							}),
+						],
+					}),
+				});
+			};
+		},
 		5549: (e, l, s) => {
 			'use strict';
 			s.d(l, { $: () => r, r: () => n });
@@ -149,7 +401,7 @@
 						children: [
 							(0, t.jsx)('header', {
 								className: 'border-b border-neutral-900 pt-7 pb-4',
-								children: (0, t.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
+								children: (0, t.jsx)('h1', { className: 'text-center text-2xl font-semibold', children: 'Mini App' }),
 							}),
 							(0, t.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: s }),
 							(0, t.jsx)(i, { activeId: l }),
@@ -162,7 +414,7 @@
 			(window.__NEXT_P = window.__NEXT_P || []).push([
 				'/profile',
 				function () {
-					return s(8887);
+					return s(4711);
 				},
 			]);
 		},
@@ -186,257 +438,6 @@
 								className: 'rounded-full bg-yellow-500 px-2 py-0.5 text-xs text-neutral-900',
 								children: s,
 							});
-			};
-		},
-		8887: (e, l, s) => {
-			'use strict';
-			s.r(l), s.d(l, { default: () => y });
-			var t,
-				r = s(5640),
-				n = s(8377),
-				a = s(5549),
-				c = s(1211),
-				i = s(2076);
-			s(6376);
-			var d = s(3441),
-				o = s(7595);
-			globalThis.Buffer = i.hp;
-			o.env.USDT_JETTON_ADDRESS, (null != (t = o.env.TON_WALLET_MNEMONIC) ? t : '').split(' ');
-			let x = new d.TonClient({ endpoint: 'https://toncenter.com/api/v2/jsonRPC' });
-			var u = s(1851),
-				h = s(158),
-				p = s(148);
-			let j = () => {
-				var e;
-				let [{ balance: l = BigInt(0) }, s] = (0, p.useState)({ balance: BigInt(0) }),
-					[t] = (0, h.Lg)(),
-					r = (0, h.c5)(),
-					n = null != (e = null == r ? void 0 : r.account.address) ? e : '',
-					a = (null == r ? void 0 : r.account.address) ? ''.concat(n.slice(0, 6), '...').concat(n.slice(-4)) : null;
-				return (
-					(0, p.useEffect)(() => {
-						n &&
-							(async () => {
-								let e = u.Address.parse(n),
-									l = await x.getBalance(e);
-								s((e) => ({ ...e, balance: l }));
-							})();
-					}, [n]),
-					{
-						balance: l,
-						address: n,
-						shortAddress: a,
-						wallet: r,
-						connect: () => {
-							r || t.openModal();
-						},
-						disconnect: () => {
-							r && t.disconnect();
-						},
-					}
-				);
-			};
-			var m = s(6440);
-			let f = (e) => {
-				navigator.clipboard
-					.writeText(e)
-					.then(() => {
-						alert('Copied to clipboard!');
-					})
-					.catch((e) => {
-						console.error('Failed to copy: ', e);
-					});
-			};
-			var v = s(58),
-				b = s.n(v),
-				g = s(5089),
-				N = s.n(g),
-				w = s(5160);
-			let y = () => {
-				var e, l, s;
-				let { isAuthenticated: t, user: i } = (0, c.j)(),
-					{ balance: d = 0, address: o = '', shortAddress: x, wallet: u, connect: h, disconnect: p } = j(),
-					v = ''
-						.concat(null != (e = null == i ? void 0 : i.first_name) ? e : '', ' ')
-						.concat(null == i ? void 0 : i.last_name)
-						.trim();
-				return (0, r.jsx)(m.U, {
-					activeId: 'profile',
-					children: (0, r.jsxs)('div', {
-						className: 'flex flex-col gap-y-4 p-4',
-						children: [
-							i &&
-								(0, r.jsxs)(r.Fragment, {
-									children: [
-										(0, r.jsxs)('div', {
-											className:
-												'flex gap-x-4 rounded-2xl border border-neutral-900 bg-neutral-950 p-4 shadow shadow-neutral-900',
-											children: [
-												(0, r.jsx)('div', {
-													className: 'flex items-center',
-													children: (0, r.jsx)('div', {
-														className: 'aspect-square w-20 overflow-hidden rounded-full border border-neutral-900',
-														children: (0, r.jsx)(b(), {
-															src: i.photo_url,
-															alt: null != (l = null == i ? void 0 : i.username) ? l : '',
-															width: 128,
-															height: 128,
-														}),
-													}),
-												}),
-												(0, r.jsxs)('div', {
-													className: 'flex grow flex-col justify-center gap-y-2 truncate',
-													children: [
-														(0, r.jsx)('p', { className: 'truncate text-xl leading-none font-black', children: v }),
-														(0, r.jsxs)('p', {
-															className: 'truncate text-sm leading-none',
-															children: ['@', i.username],
-														}),
-														(0, r.jsx)('div', {
-															className: 'flex items-center gap-x-2',
-															children: t
-																? (0, r.jsx)(n.E, { type: 'success', children: 'Authenticated' })
-																: (0, r.jsx)(n.E, { type: 'error', children: 'Unauthenticated' }),
-														}),
-													],
-												}),
-											],
-										}),
-										u
-											? (0, r.jsxs)('div', {
-													className: 'flex flex-col gap-y-4',
-													children: [
-														(0, r.jsx)('p', { className: 'text-center text-4xl', children: d }),
-														(0, r.jsxs)(a.$, { onClick: () => f(o), children: ['\uD83D\uDD17 ', x] }),
-														(0, r.jsx)(a.r, { onClick: p, children: 'Disconnect' }),
-													],
-												})
-											: (0, r.jsx)(a.$, { onClick: h, children: 'Connect TON Wallet' }),
-										(0, r.jsx)('div', {
-											className: 'px-4',
-											children: (0, r.jsx)('hr', { className: 'border-neutral-900' }),
-										}),
-									],
-								}),
-							(0, r.jsxs)('div', {
-								className:
-									'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
-								children: [
-									(0, r.jsxs)('div', {
-										className: 'flex items-center gap-x-2',
-										children: [
-											(0, r.jsx)(w.xzC, { className: 'text-xl text-yellow-500' }),
-											(0, r.jsx)('span', { children: 'Currency' }),
-										],
-									}),
-									(0, r.jsxs)('select', {
-										id: 'currency',
-										name: 'currency',
-										className: 'text-align-last-right appearance-none text-right text-yellow-500',
-										defaultValue: 'USD',
-										children: [
-											(0, r.jsxs)('optgroup', {
-												label: 'Asia',
-												children: [
-													(0, r.jsx)('option', { value: 'CNY', children: 'CNY' }),
-													(0, r.jsx)('option', { value: 'JPY', children: 'JPY' }),
-													(0, r.jsx)('option', { value: 'KRW', children: 'KRW' }),
-													(0, r.jsx)('option', { value: 'VND', children: 'VND' }),
-												],
-											}),
-											(0, r.jsxs)('optgroup', {
-												label: 'Europe',
-												children: [
-													(0, r.jsx)('option', { value: 'EUR', children: 'EUR' }),
-													(0, r.jsx)('option', { value: 'GBP', children: 'GBP' }),
-												],
-											}),
-											(0, r.jsxs)('optgroup', {
-												label: 'North America',
-												children: [
-													(0, r.jsx)('option', { value: 'CAD', children: 'CAD' }),
-													(0, r.jsx)('option', { value: 'USD', children: 'USD' }),
-												],
-											}),
-											(0, r.jsx)('optgroup', {
-												label: 'Oceania',
-												children: (0, r.jsx)('option', { value: 'AUD', children: 'AUD' }),
-											}),
-										],
-									}),
-								],
-							}),
-							(0, r.jsxs)('div', {
-								className:
-									'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
-								children: [
-									(0, r.jsxs)('div', {
-										className: 'flex items-center gap-x-2',
-										children: [
-											(0, r.jsx)(w.qyE, { className: 'text-xl text-yellow-500' }),
-											(0, r.jsx)('span', { children: 'Language' }),
-										],
-									}),
-									(0, r.jsxs)('select', {
-										id: 'language',
-										name: 'language',
-										className: 'text-align-last-right appearance-none text-right text-yellow-500',
-										defaultValue: null != (s = null == i ? void 0 : i.language_code) ? s : 'en',
-										disabled: !0,
-										children: [
-											(0, r.jsx)('option', { value: 'en', children: 'English' }),
-											(0, r.jsx)('option', { value: 'de', children: 'Deutsch' }),
-											(0, r.jsx)('option', { value: 'kr', children: '한글' }),
-										],
-									}),
-								],
-							}),
-							(0, r.jsxs)('div', {
-								className:
-									'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
-								children: [
-									(0, r.jsxs)('div', {
-										className: 'flex items-center gap-x-2',
-										children: [
-											(0, r.jsx)(w.JjX, { className: 'text-xl text-yellow-500' }),
-											(0, r.jsx)('span', { children: 'Version' }),
-										],
-									}),
-									(0, r.jsx)('span', { className: 'text-yellow-500', children: 'v0.0.1' }),
-								],
-							}),
-							(0, r.jsx)('div', { className: 'px-4', children: (0, r.jsx)('hr', { className: 'border-neutral-900' }) }),
-							(0, r.jsx)(N(), {
-								href: '/profile/privacy-policy',
-								children: (0, r.jsx)('div', {
-									className:
-										'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
-									children: (0, r.jsxs)('div', {
-										className: 'flex items-center gap-x-2',
-										children: [
-											(0, r.jsx)(w.NMB, { className: 'text-xl text-yellow-500' }),
-											(0, r.jsx)('span', { children: 'Privacy Policy' }),
-										],
-									}),
-								}),
-							}),
-							(0, r.jsx)(N(), {
-								href: '/profile/terms-of-use',
-								children: (0, r.jsx)('div', {
-									className:
-										'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
-									children: (0, r.jsxs)('div', {
-										className: 'flex items-center gap-x-2',
-										children: [
-											(0, r.jsx)(w.eF3, { className: 'text-xl text-yellow-500' }),
-											(0, r.jsx)('span', { children: 'Terms of Use' }),
-										],
-									}),
-								}),
-							}),
-						],
-					}),
-				});
 			};
 		},
 	},

@@ -1,17 +1,17 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[13],
 	{
-		2401: (e, t, s) => {
+		2401: (e, s, t) => {
 			'use strict';
-			s.r(t), s.d(t, { default: () => o });
-			var r = s(5640),
-				l = s(8377),
-				a = s(5437),
-				n = s(6440),
-				c = s(7226),
-				i = s(5089),
-				x = s.n(i),
-				d = s(5160);
+			t.r(s), t.d(s, { default: () => o });
+			var r = t(5640),
+				l = t(8377),
+				a = t(5437),
+				n = t(6440),
+				i = t(7226),
+				c = t(5089),
+				d = t.n(c),
+				x = t(5160);
 			let o = () => {
 				let e = (0, a.I)('articleId');
 				return (0, r.jsx)(n.U, {
@@ -19,11 +19,11 @@
 					children: (0, r.jsxs)('div', {
 						className: 'flex flex-col gap-y-6 p-4',
 						children: [
-							(0, r.jsx)(x(), {
+							(0, r.jsx)(d(), {
 								href: '/news',
 								children: (0, r.jsxs)('div', {
 									className: 'flex items-center gap-x-2 text-yellow-500',
-									children: [(0, r.jsx)(d.FZc, {}), (0, r.jsx)('span', { className: 'font-medium', children: 'News' })],
+									children: [(0, r.jsx)(x.FZc, {}), (0, r.jsx)('span', { className: 'font-medium', children: 'News' })],
 								}),
 							}),
 							(0, r.jsx)('div', {
@@ -32,7 +32,7 @@
 							(0, r.jsxs)('div', {
 								className: 'flex flex-col gap-y-3',
 								children: [
-									(0, r.jsx)('p', { className: 'text-xs text-neutral-500', children: (0, c.Y)(new Date()) }),
+									(0, r.jsx)('p', { className: 'text-xs text-neutral-500', children: (0, i.Y)(new Date()) }),
 									(0, r.jsxs)('h1', { className: 'text-xl leading-none font-semibold', children: ['Article ', e] }),
 									(0, r.jsxs)('div', {
 										className: 'flex items-center gap-x-2',
@@ -53,84 +53,84 @@
 				});
 			};
 		},
-		4914: (e, t, s) => {
+		4914: (e, s, t) => {
 			(window.__NEXT_P = window.__NEXT_P || []).push([
 				'/news/[articleId]',
 				function () {
-					return s(2401);
+					return t(2401);
 				},
 			]);
 		},
-		5437: (e, t, s) => {
+		5437: (e, s, t) => {
 			'use strict';
-			s.d(t, { I: () => l });
-			var r = s(8512);
+			t.d(s, { I: () => l });
+			var r = t(8512);
 			let l = (e) => {
-				var t, s;
+				var s, t;
 				let { query: l } = (0, r.useRouter)(),
-					a = null != (t = new Map(Object.entries(l)).get(e)) ? t : '';
-				return Array.isArray(a) ? (null != (s = a.at(0)) ? s : '') : a;
+					a = null != (s = new Map(Object.entries(l)).get(e)) ? s : '';
+				return Array.isArray(a) ? (null != (t = a.at(0)) ? t : '') : a;
 			};
 		},
-		6440: (e, t, s) => {
+		6440: (e, s, t) => {
 			'use strict';
-			s.d(t, { U: () => o });
-			var r = s(5640);
+			t.d(s, { U: () => o });
+			var r = t(5640);
 			let l = (e) => {
-				let { children: t = (0, r.jsx)(r.Fragment, {}) } = e;
+				let { children: s = (0, r.jsx)(r.Fragment, {}) } = e;
 				return (0, r.jsx)('div', {
 					className: 'mx-auto flex h-screen w-full max-w-lg flex-col overflow-hidden bg-neutral-950/10',
-					children: t,
+					children: s,
 				});
 			};
-			var a = s(5089),
-				n = s.n(a),
-				c = s(5160);
-			let i = (e) => {
-				let { activeId: t } = e;
+			var a = t(5089),
+				n = t.n(a),
+				i = t(5160);
+			let c = (e) => {
+				let { activeId: s } = e;
 				return (0, r.jsx)('nav', {
 					className: 'border-t border-neutral-900 bg-neutral-950',
 					children: (0, r.jsx)('div', {
 						className: 'grid grid-cols-5',
 						children: [
-							{ id: 'home', href: '/', icon: (0, r.jsx)(c.cEk, {}), activeIcon: (0, r.jsx)(c.ZVi, {}), text: 'Home' },
+							{ id: 'home', href: '/', icon: (0, r.jsx)(i.cEk, {}), activeIcon: (0, r.jsx)(i.ZVi, {}), text: 'Home' },
 							{
 								id: 'games',
 								href: '/games',
-								icon: (0, r.jsx)(c.SkF, {}),
-								activeIcon: (0, r.jsx)(c.rNT, {}),
+								icon: (0, r.jsx)(i.SkF, {}),
+								activeIcon: (0, r.jsx)(i.rNT, {}),
 								text: 'Games',
 							},
 							{
 								id: 'store',
 								href: '/store',
-								icon: (0, r.jsx)(c.Qsx, {}),
-								activeIcon: (0, r.jsx)(c.XsE, {}),
+								icon: (0, r.jsx)(i.Qsx, {}),
+								activeIcon: (0, r.jsx)(i.XsE, {}),
 								text: 'Store',
 							},
 							{
 								id: 'news',
 								href: '/news',
-								icon: (0, r.jsx)(c.rRm, {}),
-								activeIcon: (0, r.jsx)(c.mKO, {}),
+								icon: (0, r.jsx)(i.rRm, {}),
+								activeIcon: (0, r.jsx)(i.mKO, {}),
 								text: 'News',
 							},
 							{
 								id: 'profile',
 								href: '/profile',
-								icon: (0, r.jsx)(c.NMe, {}),
-								activeIcon: (0, r.jsx)(c.MrL, {}),
+								icon: (0, r.jsx)(i.NMe, {}),
+								activeIcon: (0, r.jsx)(i.MrL, {}),
 								text: 'Profile',
 							},
 						].map((e) => {
 							let {
-									id: s = '',
+									id: t = '',
 									href: l = '',
 									text: a = '',
-									icon: c = (0, r.jsx)(r.Fragment, {}),
-									activeIcon: i = (0, r.jsx)(r.Fragment, {}),
+									icon: i = (0, r.jsx)(r.Fragment, {}),
+									activeIcon: c = (0, r.jsx)(r.Fragment, {}),
 								} = e,
-								x = s === t;
+								d = t === s;
 							return (0, r.jsx)(
 								'div',
 								{
@@ -139,51 +139,51 @@
 										href: l,
 										children: (0, r.jsxs)('div', {
 											className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
-												x ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
+												d ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
 											),
 											children: [
 												(0, r.jsx)('span', {
 													className: 'text-3xl',
-													children: x
-														? (0, r.jsx)(r.Fragment, { children: i })
-														: (0, r.jsx)(r.Fragment, { children: c }),
+													children: d
+														? (0, r.jsx)(r.Fragment, { children: c })
+														: (0, r.jsx)(r.Fragment, { children: i }),
 												}),
 												(0, r.jsx)('span', { className: 'text-xs', children: a }),
 											],
 										}),
 									}),
 								},
-								s,
+								t,
 							);
 						}),
 					}),
 				});
 			};
-			var x = s(1211),
-				d = s(148);
+			var d = t(1211),
+				x = t(148);
 			let o = (e) => {
-				let { activeId: t = '', children: s = (0, r.jsx)(r.Fragment, {}) } = e,
-					{ requestFullscreen: a } = (0, x.j)();
+				let { activeId: s = '', children: t = (0, r.jsx)(r.Fragment, {}) } = e,
+					{ requestFullscreen: a } = (0, d.j)();
 				return (
-					(0, d.useEffect)(() => {
+					(0, x.useEffect)(() => {
 						a();
 					}, [a]),
 					(0, r.jsxs)(l, {
 						children: [
 							(0, r.jsx)('header', {
 								className: 'border-b border-neutral-900 pt-7 pb-4',
-								children: (0, r.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
+								children: (0, r.jsx)('h1', { className: 'text-center text-2xl font-semibold', children: 'Mini App' }),
 							}),
-							(0, r.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: s }),
-							(0, r.jsx)(i, { activeId: t }),
+							(0, r.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: t }),
+							(0, r.jsx)(c, { activeId: s }),
 						],
 					})
 				);
 			};
 		},
-		7226: (e, t, s) => {
+		7226: (e, s, t) => {
 			'use strict';
-			s.d(t, { Y: () => a });
+			t.d(s, { Y: () => a });
 			let r = [
 					'January',
 					'February',
@@ -199,46 +199,46 @@
 					'December',
 				],
 				l = (e) => {
-					let t = e % 10,
-						s = e % 100;
-					return 1 === t && 11 !== s ? 'st' : 2 === t && 12 !== s ? 'nd' : 3 === t && 13 !== s ? 'rd' : 'th';
+					let s = e % 10,
+						t = e % 100;
+					return 1 === s && 11 !== t ? 'st' : 2 === s && 12 !== t ? 'nd' : 3 === s && 13 !== t ? 'rd' : 'th';
 				},
 				a = (e) => {
-					let t = r[e.getMonth()],
-						s = e.getDate(),
+					let s = r[e.getMonth()],
+						t = e.getDate(),
 						a = e.getFullYear(),
-						n = l(s);
-					return ''.concat(t, ' ').concat(s).concat(n, ' ').concat(a);
+						n = l(t);
+					return ''.concat(s, ' ').concat(t).concat(n, ' ').concat(a);
 				};
 		},
-		8377: (e, t, s) => {
+		8377: (e, s, t) => {
 			'use strict';
-			s.d(t, { E: () => l });
-			var r = s(5640);
+			t.d(s, { E: () => l });
+			var r = t(5640);
 			let l = (e) => {
-				let { type: t = 'primary', children: s = (0, r.jsx)(r.Fragment, {}) } = e;
-				return 'success' === t
+				let { type: s = 'primary', children: t = (0, r.jsx)(r.Fragment, {}) } = e;
+				return 'success' === s
 					? (0, r.jsx)('span', {
 							className: 'rounded-full bg-green-900 px-2 py-0.5 text-xs text-neutral-900',
-							children: s,
+							children: t,
 						})
-					: 'error' === t
+					: 'error' === s
 						? (0, r.jsx)('span', {
 								className: 'rounded-full bg-red-900 px-2 py-0.5 text-xs text-neutral-900',
-								children: s,
+								children: t,
 							})
 						: (0, r.jsx)('span', {
 								className: 'rounded-full bg-yellow-500 px-2 py-0.5 text-xs text-neutral-900',
-								children: s,
+								children: t,
 							});
 			};
 		},
-		8512: (e, t, s) => {
-			e.exports = s(7203);
+		8512: (e, s, t) => {
+			e.exports = t(7203);
 		},
 	},
 	(e) => {
-		var t = (t) => e((e.s = t));
-		e.O(0, [89, 636, 593, 792], () => t(4914)), (_N_E = e.O());
+		var s = (s) => e((e.s = s));
+		e.O(0, [89, 636, 593, 792], () => s(4914)), (_N_E = e.O());
 	},
 ]);

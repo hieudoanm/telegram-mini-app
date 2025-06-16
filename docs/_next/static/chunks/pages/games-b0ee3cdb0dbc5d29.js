@@ -237,7 +237,7 @@
 						children: [
 							(0, r.jsx)('header', {
 								className: 'border-b border-neutral-900 pt-7 pb-4',
-								children: (0, r.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
+								children: (0, r.jsx)('h1', { className: 'text-center text-2xl font-semibold', children: 'Mini App' }),
 							}),
 							(0, r.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: s }),
 							(0, r.jsx)(o, { activeId: l }),
