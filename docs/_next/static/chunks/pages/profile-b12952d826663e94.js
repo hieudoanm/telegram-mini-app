@@ -126,7 +126,7 @@
 											? (0, r.jsxs)('div', {
 													className: 'flex flex-col gap-y-4',
 													children: [
-														(0, r.jsx)('p', { className: 'text-center text-4xl', children: b(d) }),
+														(0, r.jsx)('p', { className: 'text-center text-6xl', children: b(d) }),
 														(0, r.jsx)(a.$, { onClick: () => f(o), children: x }),
 														(0, r.jsx)(a.r, { onClick: p, children: 'Disconnect TON Wallet' }),
 													],

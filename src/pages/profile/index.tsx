@@ -40,7 +40,7 @@ const ProfilePage: NextPage = () => {
 						</div>
 						{wallet ? (
 							<div className="flex flex-col gap-y-4">
-								<p className="text-center text-4xl">{currency(balance)}</p>
+								<p className="text-center text-6xl">{currency(balance)}</p>
 								<Button onClick={() => copy(address)}>{shortAddress}</Button>
 								<OutlineButton onClick={disconnect}>Disconnect TON Wallet</OutlineButton>
 							</div>
