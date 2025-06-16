@@ -76,6 +76,8 @@
 		--text-2xl--line-height: calc(2 / 1.5);
 		--text-3xl: 1.875rem;
 		--text-3xl--line-height: calc(2.25 / 1.875);
+		--text-4xl: 2.25rem;
+		--text-4xl--line-height: calc(2.5 / 2.25);
 		--text-9xl: 8rem;
 		--text-9xl--line-height: 1;
 		--font-weight-medium: 500;
@@ -86,6 +88,7 @@
 		--radius-xl: 0.75rem;
 		--radius-2xl: 1rem;
 		--ease-out: cubic-bezier(0, 0, 0.2, 1);
+		--animate-spin: spin 1s linear infinite;
 		--aspect-video: 16/9;
 		--default-transition-duration: 0.15s;
 		--default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -422,6 +425,9 @@
 	.transform {
 		transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
 	}
+	.animate-spin {
+		animation: var(--animate-spin);
+	}
 	.resize {
 		resize: both;
 	}
@@ -593,6 +599,10 @@
 	.text-3xl {
 		font-size: var(--text-3xl);
 		line-height: var(--tw-leading, var(--text-3xl--line-height));
+	}
+	.text-4xl {
+		font-size: var(--text-4xl);
+		line-height: var(--tw-leading, var(--text-4xl--line-height));
 	}
 	.text-9xl {
 		font-size: var(--text-9xl);
@@ -904,6 +914,11 @@ body {
 @property --tw-ease {
 	syntax: '*';
 	inherits: false;
+}
+@keyframes spin {
+	to {
+		transform: rotate(1turn);
+	}
 }
 @font-face {
 	font-family: Geist;

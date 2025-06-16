@@ -1,6 +1,7 @@
 import { trpcClient } from '@telegram/utils/trpc';
 import { tryCatch } from '@telegram/utils/try-catch';
 import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import { PiSpinner } from 'react-icons/pi';
 
 enum TelegramPlatform {
 	Android = 'android',
@@ -106,7 +107,10 @@ export const TelegramProvider: React.FC<{ children: ReactNode }> = ({ children =
 		<UserContext.Provider value={value}>
 			{loading ? (
 				<div className="flex h-screen w-screen items-center justify-center">
-					<span className="text-xl">Loading</span>
+					<div className="flex flex-col gap-y-4 text-4xl">
+						<span className="text-center font-semibold">Mini App</span>
+						<PiSpinner className="mx-auto animate-spin" />
+					</div>
 				</div>
 			) : (
 				<>{children}</>
