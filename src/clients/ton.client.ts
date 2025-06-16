@@ -3,16 +3,19 @@
 import { Buffer } from 'buffer';
 globalThis.Buffer = Buffer;
 
-import { Address, TonClient, WalletContractV4, beginCell, internal, toNano, Cell } from '@ton/ton';
-import { mnemonicToPrivateKey, KeyPair } from '@ton/crypto';
+import { KeyPair, mnemonicToPrivateKey } from '@ton/crypto';
+import { Address, Cell, TonClient, WalletContractV4, beginCell, internal, toNano } from '@ton/ton';
 
+const TON_ENDPOINT_MAINNET: string = 'https://toncenter.com/api/v2/jsonRPC';
+const TON_ENDPOINT_TESTNET: string = 'https://testnet.toncenter.com/api/v2/jsonRPC';
 // --- CONFIG TYPES ---
-const TON_ENDPOINT: string = process.env.TON_ENDPOINT as string;
+const NODE_ENV: 'development' | 'production' | 'test' = process.env.NODE_ENV ?? 'development';
+const TON_ENDPOINT: string = NODE_ENV === 'development' ? TON_ENDPOINT_TESTNET : TON_ENDPOINT_MAINNET;
 const USDT_JETTON_ADDRESS: string = process.env.USDT_JETTON_ADDRESS as string;
 const MNEMONIC: string[] = (process.env.TON_WALLET_MNEMONIC ?? '').split(' ');
 
 // --- CLIENT SINGLETON ---
-const client: TonClient = new TonClient({ endpoint: TON_ENDPOINT });
+export const tonClient: TonClient = new TonClient({ endpoint: TON_ENDPOINT });
 
 // --- WALLET KEY & CONTRACT ---
 let keyPair: KeyPair | null = null;
@@ -57,7 +60,7 @@ export const transfer = async ({ address, amount = 0 }: { address: string; amoun
 		throw new Error('Failed to initialize server wallet');
 	}
 
-	const serverWalletContract = client.open(serverWallet);
+	const serverWalletContract = tonClient.open(serverWallet);
 
 	const seqno = await serverWalletContract.getSeqno();
 

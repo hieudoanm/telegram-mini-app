@@ -1,7 +1,7 @@
 import { Badge } from '@telegram/components/Badge';
 import { Button, OutlineButton } from '@telegram/components/Button';
 import { useTelegram } from '@telegram/contexts/TelegramContext';
-import { useWallet } from '@telegram/hooks/use-ton-wallet';
+import { useWallet } from '@telegram/hooks/use-wallet';
 import { PageTemplate } from '@telegram/templates/PageTemplate';
 import { copy } from '@telegram/utils/copy-paste';
 import { NextPage } from 'next';
