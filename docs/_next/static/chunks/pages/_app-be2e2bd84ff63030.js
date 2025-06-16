@@ -18796,7 +18796,7 @@
 						(0, r.jsx)('div', {
 							className: ''.concat(s().className, ' ').concat(c().className),
 							children: (0, r.jsx)(h.Nl, {
-								manifestUrl: 'https://YOUR_DOMAIN/tonconnect-manifest.json',
+								manifestUrl: 'https://hieudoanm-telegram-mini-app.vercel.app/tonconnect-manifest.json',
 								children: (0, r.jsx)(i.Z, { children: (0, r.jsx)(t, { ...n }) }),
 							}),
 						}),

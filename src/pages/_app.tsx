@@ -24,7 +24,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
 				<title>Telegram Mini App</title>
 			</Head>
 			<div className={`${geistSans.className} ${geistMono.className}`}>
-				<TonConnectUIProvider manifestUrl="https://YOUR_DOMAIN/tonconnect-manifest.json">
+				<TonConnectUIProvider manifestUrl="https://hieudoanm-telegram-mini-app.vercel.app/tonconnect-manifest.json">
 					<TelegramProvider>
 						<Component {...pageProps} />
 					</TelegramProvider>
