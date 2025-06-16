@@ -12,9 +12,13 @@ const compareLex = (a: string, b: string): number => {
 };
 
 export const authenticate = async (initData: string): Promise<{ user: User }> => {
+	console.info('TELEGRAM_BOT_TOKEN', TELEGRAM_BOT_TOKEN);
 	const secretKey: Buffer<ArrayBufferLike> = createHmac('sha256', 'WebAppData').update(TELEGRAM_BOT_TOKEN).digest();
+	console.info('initData', initData);
 	const params = new URLSearchParams(initData);
+	console.info('params', params);
 	const hash = params.get('hash');
+	console.info('hash', hash);
 	if (!hash) throw new Error('Invalid Hash');
 	params.delete('hash');
 	const initDataWithoutHash = Array.from(params)
@@ -22,6 +26,7 @@ export const authenticate = async (initData: string): Promise<{ user: User }> =>
 		.sort(compareLex)
 		.join('\n');
 	const hmac: string = createHmac('sha256', secretKey).update(initDataWithoutHash).digest('hex');
+	console.info('hmac', hmac);
 	if (hmac !== hash) throw new Error('Invalid HMAC');
 
 	const telegramUser: TelegramUser = JSON.parse(params.get('user') ?? '{}');
