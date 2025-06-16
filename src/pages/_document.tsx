@@ -1,8 +1,15 @@
+import { useTelegram } from '@telegram/hooks/use-telegram';
 import { Head, Html, Main, NextScript } from 'next/document';
 import Script from 'next/script';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 const Document: FC = () => {
+	const { requestFullscreen } = useTelegram();
+
+	useEffect(() => {
+		requestFullscreen();
+	}, []);
+
 	return (
 		<Html lang="en">
 			<Head>

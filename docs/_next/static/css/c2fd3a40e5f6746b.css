@@ -373,6 +373,9 @@
 	.h-12 {
 		height: calc(var(--spacing) * 12);
 	}
+	.h-20 {
+		height: calc(var(--spacing) * 20);
+	}
 	.h-full {
 		height: 100%;
 	}
@@ -408,9 +411,6 @@
 	}
 	.appearance-none {
 		appearance: none;
-	}
-	.grid-cols-4 {
-		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 	.grid-cols-5 {
 		grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -560,6 +560,9 @@
 	}
 	.pb-2 {
 		padding-bottom: calc(var(--spacing) * 2);
+	}
+	.text-center {
+		text-align: center;
 	}
 	.text-right {
 		text-align: right;

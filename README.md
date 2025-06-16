@@ -8,6 +8,7 @@
   - [Screenshots](#screenshots)
     - [Home](#home)
     - [Games](#games)
+      - [Game](#game)
     - [Store](#store)
       - [Product](#product)
     - [News](#news)
@@ -28,13 +29,17 @@
 
 ![games](./images/screenshots/games.png)
 
+#### Game
+
+![game](./images/screenshots/games-game.png)
+
 ### Store
 
 ![store](./images/screenshots/store.png)
 
 #### Product
 
-![product](./images/screenshots/store-item.png)
+![item](./images/screenshots/store-item.png)
 
 ### News
 

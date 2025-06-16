@@ -1,3 +1,4 @@
+import { Badge } from '@telegram/components/Badge';
 import { useQuery } from '@telegram/hooks/use-query';
 import { PageTemplate } from '@telegram/templates/PageTemplate';
 import { formatDate } from '@telegram/utils/date';
@@ -19,12 +20,13 @@ const ArticlePage = () => {
 						<span className="font-medium">News</span>
 					</div>
 				</Link>
-				<div className="aspect-square w-full rounded-xl border border-neutral-900 shadow shadow-neutral-900"></div>
+				<div className="aspect-video w-full rounded-xl border border-neutral-900 shadow shadow-neutral-900"></div>
 				<div className="flex flex-col gap-y-3">
 					<p className="text-xs text-neutral-500">{formatDate(new Date())}</p>
 					<h1 className="text-xl leading-none font-semibold">Article {articleId}</h1>
-					<div>
-						<span className="rounded-full bg-yellow-500 px-2 py-0.5 text-xs text-neutral-900">Category</span>
+					<div className="flex items-center gap-x-2">
+						<Badge>Tag 1</Badge>
+						<Badge>Tag 2</Badge>
 					</div>
 					<p className="text-sm text-neutral-300">{CONTENT}</p>
 				</div>

@@ -1,3 +1,4 @@
+import { Badge } from '@telegram/components/Badge';
 import { PageTemplate } from '@telegram/templates/PageTemplate';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -17,31 +18,34 @@ const StorePage: NextPage = () => {
 					</div>
 					<h1 className="text-2xl font-black">Store</h1>
 					{[
-						{ id: '1', title: 'Item 1', description: 'Lorem ipsum dolor sit amet.' },
-						{ id: '2', title: 'Item 2', description: 'Lorem ipsum dolor sit amet.' },
-						{ id: '3', title: 'Item 3', description: 'Lorem ipsum dolor sit amet.' },
-						{ id: '4', title: 'Item 4', description: 'Lorem ipsum dolor sit amet.' },
-						{ id: '5', title: 'Item 5', description: 'Lorem ipsum dolor sit amet.' },
-						{ id: '6', title: 'Item 6', description: 'Lorem ipsum dolor sit amet.' },
-					].map(({ id = '', title = '', description = '' }) => {
+						{ id: '1', name: 'Item 1', price: '$1.00', category: 'Category' },
+						{ id: '2', name: 'Item 2', price: '$1.00', category: 'Category' },
+						{ id: '3', name: 'Item 3', price: '$1.00', category: 'Category' },
+						{ id: '4', name: 'Item 4', price: '$1.00', category: 'Category' },
+						{ id: '5', name: 'Item 5', price: '$1.00', category: 'Category' },
+						{ id: '6', name: 'Item 6', price: '$1.00', category: 'Category' },
+					].map(({ id = '', name = '', price = '', category = '' }) => {
 						return (
 							<div
 								key={id}
 								className="rounded-xl border border-neutral-900 bg-neutral-950 px-4 py-3 shadow shadow-neutral-900">
 								<div className="flex w-full items-center gap-x-4">
 									<div className="flex grow items-center gap-x-4 truncate">
-										<div className="aspect-square h-12 rounded-lg border border-neutral-900"></div>
+										<div className="aspect-square h-20 rounded-lg border border-neutral-900"></div>
 										<div className="flex grow flex-col gap-y-2 truncate">
-											<Link href={`/store/${id}`}>
-												<h2 className="text-lg leading-none font-bold">{title}</h2>
-											</Link>
-											<p className="truncate text-sm leading-none">{description}</p>
+											<div>
+												<Badge>{category}</Badge>
+											</div>
+											<h2 className="leading-none font-semibold">{name}</h2>
+											<p className="truncate text-lg leading-none font-black">{price}</p>
 										</div>
 									</div>
 									<div className="shrink-0">
-										<button className="cursor-pointer rounded-full bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900">
-											Buy
-										</button>
+										<Link href={`/store/${id}`}>
+											<button className="cursor-pointer rounded-full bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900">
+												Buy
+											</button>
+										</Link>
 									</div>
 								</div>
 							</div>

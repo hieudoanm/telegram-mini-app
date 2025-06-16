@@ -11,7 +11,7 @@
 		},
 		2461: (e, t, r) => {
 			'use strict';
-			r.d(t, { U: () => c });
+			r.d(t, { U: () => o });
 			var n = r(5640);
 			let s = (e) => {
 				let { children: t = (0, n.jsx)(n.Fragment, {}) } = e;
@@ -22,7 +22,7 @@
 			};
 			var l = r(6826),
 				a = r.n(l),
-				o = r(1238);
+				c = r(1238);
 			let i = (e) => {
 					let { activeId: t } = e;
 					return (0, n.jsx)('nav', {
@@ -30,33 +30,33 @@
 						children: (0, n.jsx)('div', {
 							className: 'grid grid-cols-5',
 							children: [
-								{ id: 'home', href: '/', icon: (0, n.jsx)(o.cEk, {}), activeIcon: (0, n.jsx)(o.ZVi, {}), text: 'Home' },
+								{ id: 'home', href: '/', icon: (0, n.jsx)(c.cEk, {}), activeIcon: (0, n.jsx)(c.ZVi, {}), text: 'Home' },
 								{
 									id: 'games',
 									href: '/games',
-									icon: (0, n.jsx)(o.SkF, {}),
-									activeIcon: (0, n.jsx)(o.rNT, {}),
+									icon: (0, n.jsx)(c.SkF, {}),
+									activeIcon: (0, n.jsx)(c.rNT, {}),
 									text: 'Games',
 								},
 								{
 									id: 'store',
 									href: '/store',
-									icon: (0, n.jsx)(o.Qsx, {}),
-									activeIcon: (0, n.jsx)(o.XsE, {}),
+									icon: (0, n.jsx)(c.Qsx, {}),
+									activeIcon: (0, n.jsx)(c.XsE, {}),
 									text: 'Store',
 								},
 								{
 									id: 'news',
 									href: '/news',
-									icon: (0, n.jsx)(o.rRm, {}),
-									activeIcon: (0, n.jsx)(o.mKO, {}),
+									icon: (0, n.jsx)(c.rRm, {}),
+									activeIcon: (0, n.jsx)(c.mKO, {}),
 									text: 'News',
 								},
 								{
 									id: 'profile',
 									href: '/profile',
-									icon: (0, n.jsx)(o.NMe, {}),
-									activeIcon: (0, n.jsx)(o.MrL, {}),
+									icon: (0, n.jsx)(c.NMe, {}),
+									activeIcon: (0, n.jsx)(c.MrL, {}),
 									text: 'Profile',
 								},
 							].map((e) => {
@@ -64,10 +64,10 @@
 										id: r = '',
 										href: s = '',
 										text: l = '',
-										icon: o = (0, n.jsx)(n.Fragment, {}),
+										icon: c = (0, n.jsx)(n.Fragment, {}),
 										activeIcon: i = (0, n.jsx)(n.Fragment, {}),
 									} = e,
-									c = r === t;
+									o = r === t;
 								return (0, n.jsx)(
 									'div',
 									{
@@ -76,14 +76,14 @@
 											href: s,
 											children: (0, n.jsxs)('div', {
 												className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
-													c ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
+													o ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
 												),
 												children: [
 													(0, n.jsx)('span', {
 														className: 'text-3xl',
-														children: c
+														children: o
 															? (0, n.jsx)(n.Fragment, { children: i })
-															: (0, n.jsx)(n.Fragment, { children: o }),
+															: (0, n.jsx)(n.Fragment, { children: c }),
 													}),
 													(0, n.jsx)('span', { className: 'text-xs', children: l }),
 												],
@@ -96,10 +96,14 @@
 						}),
 					});
 				},
-				c = (e) => {
+				o = (e) => {
 					let { activeId: t = '', children: r = (0, n.jsx)(n.Fragment, {}) } = e;
 					return (0, n.jsxs)(s, {
 						children: [
+							(0, n.jsx)('header', {
+								className: 'border-b border-neutral-900 py-4',
+								children: (0, n.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
+							}),
 							(0, n.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: r }),
 							(0, n.jsx)(i, { activeId: t }),
 						],
@@ -119,13 +123,13 @@
 		},
 		7182: (e, t, r) => {
 			'use strict';
-			r.d(t, { k5: () => u });
+			r.d(t, { k5: () => d });
 			var n = r(148),
 				s = { color: void 0, size: void 0, className: void 0, style: void 0, attr: void 0 },
 				l = n.createContext && n.createContext(s),
 				a = ['attr', 'size', 'title'];
-			function o() {
-				return (o = Object.assign
+			function c() {
+				return (c = Object.assign
 					? Object.assign.bind()
 					: function (e) {
 							for (var t = 1; t < arguments.length; t++) {
@@ -147,7 +151,7 @@
 				}
 				return r;
 			}
-			function c(e) {
+			function o(e) {
 				for (var t = 1; t < arguments.length; t++) {
 					var r = null != arguments[t] ? arguments[t] : {};
 					t % 2
@@ -180,21 +184,21 @@
 				}
 				return e;
 			}
-			function u(e) {
+			function d(e) {
 				return (t) =>
 					n.createElement(
-						d,
-						o({ attr: c({}, e.attr) }, t),
+						u,
+						c({ attr: o({}, e.attr) }, t),
 						(function e(t) {
-							return t && t.map((t, r) => n.createElement(t.tag, c({ key: r }, t.attr), e(t.child)));
+							return t && t.map((t, r) => n.createElement(t.tag, o({ key: r }, t.attr), e(t.child)));
 						})(e.child),
 					);
 			}
-			function d(e) {
+			function u(e) {
 				var t = (t) => {
 					var r,
 						{ attr: s, size: l, title: i } = e,
-						u = (function (e, t) {
+						d = (function (e, t) {
 							if (null == e) return {};
 							var r,
 								n,
@@ -215,17 +219,17 @@
 							}
 							return s;
 						})(e, a),
-						d = l || t.size || '1em';
+						u = l || t.size || '1em';
 					return (
 						t.className && (r = t.className),
 						e.className && (r = (r ? r + ' ' : '') + e.className),
 						n.createElement(
 							'svg',
-							o({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, t.attr, s, u, {
+							c({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, t.attr, s, d, {
 								className: r,
-								style: c(c({ color: e.color || t.color }, t.style), e.style),
-								height: d,
-								width: d,
+								style: o(o({ color: e.color || t.color }, t.style), e.style),
+								height: u,
+								width: u,
 								xmlns: 'http://www.w3.org/2000/svg',
 							}),
 							i && n.createElement('title', null, i),
@@ -239,28 +243,41 @@
 		7871: (e, t, r) => {
 			e.exports = r(9743);
 		},
+		9569: (e, t, r) => {
+			'use strict';
+			r.d(t, { E: () => s });
+			var n = r(5640);
+			let s = (e) => {
+				let { children: t = (0, n.jsx)(n.Fragment, {}) } = e;
+				return (0, n.jsx)('span', {
+					className: 'rounded-full bg-yellow-500 px-2 py-0.5 text-xs text-neutral-900',
+					children: t,
+				});
+			};
+		},
 		9943: (e, t, r) => {
 			'use strict';
-			r.r(t), r.d(t, { default: () => c });
+			r.r(t), r.d(t, { default: () => d });
 			var n = r(5640),
-				s = r(6194),
-				l = r(2461),
-				a = r(6826),
-				o = r.n(a),
-				i = r(1238);
-			let c = () => {
-				let e = (0, s.I)('itemId');
-				return (0, n.jsx)(l.U, {
+				s = r(9569),
+				l = r(6194),
+				a = r(2461),
+				c = r(6826),
+				i = r.n(c),
+				o = r(1238);
+			let d = () => {
+				let e = (0, l.I)('itemId');
+				return (0, n.jsx)(a.U, {
 					activeId: 'store',
 					children: (0, n.jsxs)('div', {
 						className: 'flex flex-col gap-y-6 p-4',
 						children: [
-							(0, n.jsx)(o(), {
+							(0, n.jsx)(i(), {
 								href: '/store',
 								children: (0, n.jsxs)('div', {
 									className: 'flex items-center gap-x-2 text-yellow-500',
 									children: [
-										(0, n.jsx)(i.FZc, {}),
+										(0, n.jsx)(o.FZc, {}),
 										(0, n.jsx)('span', { className: 'font-medium', children: 'Store' }),
 									],
 								}),
@@ -271,12 +288,7 @@
 							(0, n.jsxs)('div', {
 								className: 'flex flex-col gap-y-3',
 								children: [
-									(0, n.jsx)('div', {
-										children: (0, n.jsx)('span', {
-											className: 'rounded-full bg-yellow-500 px-2 py-0.5 text-xs text-neutral-900',
-											children: 'Category',
-										}),
-									}),
+									(0, n.jsx)('div', { children: (0, n.jsx)(s.E, { children: 'Category' }) }),
 									(0, n.jsxs)('h1', { className: 'text-xl leading-none font-semibold', children: ['Item ', e] }),
 									(0, n.jsx)('p', {
 										className: 'text-sm leading-none text-neutral-500',
@@ -293,7 +305,7 @@
 							}),
 							(0, n.jsx)('button', {
 								className: 'cursor-pointer rounded-full bg-yellow-500 px-4 py-2 font-semibold text-neutral-900',
-								children: 'Buy',
+								children: 'Buy Now',
 							}),
 						],
 					}),
