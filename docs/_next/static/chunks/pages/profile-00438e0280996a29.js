@@ -23,7 +23,7 @@
 						s && l.openModal();
 					},
 					disconnect: () => {
-						s || l.openModal();
+						s || l.disconnect();
 					},
 				};
 			};

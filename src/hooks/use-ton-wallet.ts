@@ -12,7 +12,7 @@ export const useWallet = () => {
 	};
 
 	const disconnect = () => {
-		if (!wallet) tonConnectUI.openModal();
+		if (!wallet) tonConnectUI.disconnect();
 	};
 
 	return { address, shortAddress, wallet, connect, disconnect };
