@@ -10,7 +10,7 @@ enum TelegramPlatform {
 	Web = 'web',
 }
 
-const getTelegramUser = async (): Promise<{ initData: string; user: TelegramUser | null }> => {
+const getUser = async (): Promise<{ initData: string; user: TelegramUser | null }> => {
 	if (window?.Telegram?.WebApp?.initData) {
 		const telegramWebAppInitData = window.Telegram.WebApp.initData;
 		const initData = Object.fromEntries(new URLSearchParams(telegramWebAppInitData)) as InitData;
@@ -54,9 +54,9 @@ export const TelegramProvider: React.FC<{ children: ReactNode }> = ({ children =
 	});
 
 	useEffect(() => {
-		const getTelegramUserAsync = async () => {
+		const getUserAsync = async () => {
 			setState((previous) => ({ ...previous, loading: true }));
-			const { initData, user } = await getTelegramUser();
+			const { initData, user } = await getUser();
 			const { data, error } = await tryCatch(trpcClient.auth.telegram.mutate({ initData }));
 			if (error) console.error(error.message);
 			if (!data) console.error('Invalid Data');
@@ -68,7 +68,7 @@ export const TelegramProvider: React.FC<{ children: ReactNode }> = ({ children =
 			const { isAuthenticated } = authenticatedData ?? { isAuthenticated: false };
 			setState((previous) => ({ ...previous, loading: false, isAuthenticated, user }));
 		};
-		getTelegramUserAsync();
+		getUserAsync();
 	}, []);
 	const tg = typeof window !== 'undefined' && window.Telegram?.WebApp;
 
@@ -95,7 +95,7 @@ export const TelegramProvider: React.FC<{ children: ReactNode }> = ({ children =
 		} catch (error) {
 			console.error(error);
 		}
-	}, [tg]);
+	}, [tg, getPlatform]);
 
 	const value = useMemo(
 		() => ({ isAuthenticated, user, getPlatform, requestFullscreen }),

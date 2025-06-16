@@ -24,7 +24,7 @@
 		},
 		5944: (e, l, s) => {
 			'use strict';
-			s.r(l), s.d(l, { default: () => h });
+			s.r(l), s.d(l, { default: () => p });
 			var r = s(5640),
 				t = s(8377),
 				n = s(5549),
@@ -48,12 +48,14 @@
 			var d = s(6440),
 				x = s(58),
 				o = s.n(x),
-				u = s(9695);
-			let h = () => {
+				u = s(5089),
+				h = s.n(u),
+				j = s(9695);
+			let p = () => {
 				var e, l, s;
 				let { isAuthenticated: c, user: x } = (0, a.j)(),
-					{ shortAddress: h, wallet: j, connect: p } = i(),
-					m = ''
+					{ shortAddress: u, wallet: p, connect: m } = i(),
+					f = ''
 						.concat(null != (e = null == x ? void 0 : x.first_name) ? e : '', ' ')
 						.concat(null == x ? void 0 : x.last_name)
 						.trim();
@@ -84,7 +86,7 @@
 												(0, r.jsxs)('div', {
 													className: 'flex grow flex-col justify-center gap-y-2 truncate',
 													children: [
-														(0, r.jsx)('p', { className: 'truncate text-xl leading-none font-black', children: m }),
+														(0, r.jsx)('p', { className: 'truncate text-xl leading-none font-black', children: f }),
 														(0, r.jsxs)('p', {
 															className: 'truncate text-sm leading-none',
 															children: ['@', x.username],
@@ -100,8 +102,8 @@
 											],
 										}),
 										(0, r.jsx)(n.$, {
-											onClick: p,
-											children: j ? '\uD83D\uDD17 ('.concat(h, ')') : 'Connect TON Wallet',
+											onClick: m,
+											children: p ? '\uD83D\uDD17 ('.concat(u, ')') : 'Connect TON Wallet',
 										}),
 										(0, r.jsx)('div', {
 											className: 'px-4',
@@ -116,7 +118,7 @@
 									(0, r.jsxs)('div', {
 										className: 'flex items-center gap-x-2',
 										children: [
-											(0, r.jsx)(u.xzC, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)(j.xzC, { className: 'text-xl text-yellow-500' }),
 											(0, r.jsx)('span', { children: 'Currency' }),
 										],
 									}),
@@ -164,7 +166,7 @@
 									(0, r.jsxs)('div', {
 										className: 'flex items-center gap-x-2',
 										children: [
-											(0, r.jsx)(u.qyE, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)(j.qyE, { className: 'text-xl text-yellow-500' }),
 											(0, r.jsx)('span', { children: 'Language' }),
 										],
 									}),
@@ -189,7 +191,7 @@
 									(0, r.jsxs)('div', {
 										className: 'flex items-center gap-x-2',
 										children: [
-											(0, r.jsx)(u.JjX, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)(j.JjX, { className: 'text-xl text-yellow-500' }),
 											(0, r.jsx)('span', { children: 'Version' }),
 										],
 									}),
@@ -197,26 +199,32 @@
 								],
 							}),
 							(0, r.jsx)('div', { className: 'px-4', children: (0, r.jsx)('hr', { className: 'border-neutral-900' }) }),
-							(0, r.jsx)('div', {
-								className:
-									'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
-								children: (0, r.jsxs)('div', {
-									className: 'flex items-center gap-x-2',
-									children: [
-										(0, r.jsx)(u.NMB, { className: 'text-xl text-yellow-500' }),
-										(0, r.jsx)('span', { children: 'Privacy Policy' }),
-									],
+							(0, r.jsx)(h(), {
+								href: '/profile/privacy-policy',
+								children: (0, r.jsx)('div', {
+									className:
+										'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
+									children: (0, r.jsxs)('div', {
+										className: 'flex items-center gap-x-2',
+										children: [
+											(0, r.jsx)(j.NMB, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)('span', { children: 'Privacy Policy' }),
+										],
+									}),
 								}),
 							}),
-							(0, r.jsx)('div', {
-								className:
-									'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
-								children: (0, r.jsxs)('div', {
-									className: 'flex items-center gap-x-2',
-									children: [
-										(0, r.jsx)(u.eF3, { className: 'text-xl text-yellow-500' }),
-										(0, r.jsx)('span', { children: 'Terms of Service' }),
-									],
+							(0, r.jsx)(h(), {
+								href: '/profile/terms-of-service',
+								children: (0, r.jsx)('div', {
+									className:
+										'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
+									children: (0, r.jsxs)('div', {
+										className: 'flex items-center gap-x-2',
+										children: [
+											(0, r.jsx)(j.eF3, { className: 'text-xl text-yellow-500' }),
+											(0, r.jsx)('span', { children: 'Terms of Service' }),
+										],
+									}),
 								}),
 							}),
 						],

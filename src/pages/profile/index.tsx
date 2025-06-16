@@ -5,6 +5,7 @@ import { useWallet } from '@telegram/hooks/use-ton-wallet';
 import { PageTemplate } from '@telegram/templates/PageTemplate';
 import { NextPage } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { PiBinary, PiCurrencyCircleDollar, PiDetective, PiFileDoc, PiTranslate } from 'react-icons/pi';
 
 const ProfilePage: NextPage = () => {
@@ -96,18 +97,22 @@ const ProfilePage: NextPage = () => {
 				<div className="px-4">
 					<hr className="border-neutral-900" />
 				</div>
-				<div className="flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900">
-					<div className="flex items-center gap-x-2">
-						<PiDetective className="text-xl text-yellow-500" />
-						<span>Privacy Policy</span>
+				<Link href="/profile/privacy-policy">
+					<div className="flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900">
+						<div className="flex items-center gap-x-2">
+							<PiDetective className="text-xl text-yellow-500" />
+							<span>Privacy Policy</span>
+						</div>
 					</div>
-				</div>
-				<div className="flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900">
-					<div className="flex items-center gap-x-2">
-						<PiFileDoc className="text-xl text-yellow-500" />
-						<span>Terms of Service</span>
+				</Link>
+				<Link href="/profile/terms-of-service">
+					<div className="flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900">
+						<div className="flex items-center gap-x-2">
+							<PiFileDoc className="text-xl text-yellow-500" />
+							<span>Terms of Service</span>
+						</div>
 					</div>
-				</div>
+				</Link>
 			</div>
 		</PageTemplate>
 	);

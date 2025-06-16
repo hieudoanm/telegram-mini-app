@@ -12886,7 +12886,7 @@
 							} catch (e) {
 								console.error(e);
 							}
-						}, [f]),
+						}, [f, p]),
 						m = (0, s.useMemo)(
 							() => ({ isAuthenticated: u, user: d, getPlatform: p, requestFullscreen: g }),
 							[u, d, p, g],
