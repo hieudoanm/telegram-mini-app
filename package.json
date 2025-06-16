@@ -1,0 +1,71 @@
+{
+	"name": "@telegram/mini-app",
+	"version": "0.0.1",
+	"private": true,
+	"description": "Telegram Mini App",
+	"keywords": [
+		"telegram",
+		"mini",
+		"app"
+	],
+	"homepage": "https://github.com/hieudoanm/telegram-mini-app#readme",
+	"bugs": {
+		"url": "https://github.com/hieudoanm/telegram-mini-app/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/hieudoanm/telegram-mini-app.git"
+	},
+	"license": "MIT",
+	"author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+	"packageManager": "pnpm@10.12.1",
+	"scripts": {
+		"format": "prisma format && prettier --cache --write .",
+		"prisma:generate": "prisma format && prisma generate",
+		"prelint": "pnpm prisma:generate",
+		"lint": "next lint",
+		"predev": "pnpm prisma:generate && kill-port 3000",
+		"dev": "next dev",
+		"prebuild": "pnpm prisma:generate && rimraf .next",
+		"build": "next build",
+		"postbuild": "touch docs/.nojekyll",
+		"prestart": "pnpm prisma:generate && kill-port 3000",
+		"start": "next start",
+		"pretest": "pnpm prisma:generate && rimraf coverage",
+		"test": "jest"
+	},
+	"dependencies": {
+		"@prisma/client": "6.9.0",
+		"@tanstack/react-query": "5.80.7",
+		"@trpc/client": "11.4.1",
+		"@trpc/next": "11.4.1",
+		"@trpc/react-query": "11.4.1",
+		"@trpc/server": "11.4.1",
+		"cookie": "1.0.2",
+		"jsonwebtoken": "9.0.2",
+		"next": "15.3.3",
+		"react": "19.1.0",
+		"react-dom": "19.1.0",
+		"react-icons": "5.5.0",
+		"zod": "3.25.64"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "3.3.1",
+		"@tailwindcss/postcss": "4.1.10",
+		"@types/jsonwebtoken": "9.0.10",
+		"@types/node": "24.0.1",
+		"@types/react": "19.1.8",
+		"@types/react-dom": "19.1.6",
+		"eslint": "9.29.0",
+		"eslint-config-next": "15.3.3",
+		"husky": "9.1.7",
+		"kill-port": "2.0.1",
+		"ngrok": "5.0.0-beta.2",
+		"prettier": "3.5.3",
+		"prettier-plugin-tailwindcss": "0.6.12",
+		"prisma": "6.9.0",
+		"rimraf": "6.0.1",
+		"tailwindcss": "4.1.10",
+		"typescript": "5.8.3"
+	}
+}
