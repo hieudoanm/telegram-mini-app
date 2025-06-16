@@ -1,30 +1,9 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[63],
 	{
-		5549: (e, l, s) => {
+		4660: (e, l, s) => {
 			'use strict';
-			s.d(l, { $: () => t });
-			var r = s(5640);
-			let t = (e) => {
-				let { size: l = 'md', type: s = 'button', onClick: t = () => {}, children: n = (0, r.jsx)(r.Fragment, {}) } = e;
-				return 'sm' === l
-					? (0, r.jsx)('button', {
-							type: s,
-							className: 'w-full rounded-full bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900',
-							onClick: t,
-							children: n,
-						})
-					: (0, r.jsx)('button', {
-							type: s,
-							className: 'w-full rounded-full bg-yellow-500 px-4 py-2 font-semibold text-neutral-900',
-							onClick: t,
-							children: n,
-						});
-			};
-		},
-		5944: (e, l, s) => {
-			'use strict';
-			s.r(l), s.d(l, { default: () => p });
+			s.r(l), s.d(l, { default: () => m });
 			var r = s(5640),
 				t = s(8377),
 				n = s(5549),
@@ -41,21 +20,34 @@
 					shortAddress: t,
 					wallet: s,
 					connect: () => {
-						s ? l.disconnect() : l.openModal();
+						s && l.openModal();
+					},
+					disconnect: () => {
+						s || l.openModal();
 					},
 				};
 			};
-			var d = s(6440),
-				x = s(58),
-				o = s.n(x),
-				u = s(5089),
-				h = s.n(u),
+			var d = s(6440);
+			let o = (e) => {
+				navigator.clipboard
+					.writeText(e)
+					.then(() => {
+						alert('Copied to clipboard!');
+					})
+					.catch((e) => {
+						console.error('Failed to copy: ', e);
+					});
+			};
+			var x = s(58),
+				u = s.n(x),
+				h = s(5089),
+				p = s.n(h),
 				j = s(5160);
-			let p = () => {
+			let m = () => {
 				var e, l, s;
 				let { isAuthenticated: c, user: x } = (0, a.j)(),
-					{ shortAddress: u, wallet: p, connect: m } = i(),
-					f = ''
+					{ address: h, shortAddress: m, wallet: f, connect: b, disconnect: v } = i(),
+					g = ''
 						.concat(null != (e = null == x ? void 0 : x.first_name) ? e : '', ' ')
 						.concat(null == x ? void 0 : x.last_name)
 						.trim();
@@ -75,7 +67,7 @@
 													className: 'flex items-center',
 													children: (0, r.jsx)('div', {
 														className: 'aspect-square w-20 overflow-hidden rounded-full border border-neutral-900',
-														children: (0, r.jsx)(o(), {
+														children: (0, r.jsx)(u(), {
 															src: x.photo_url,
 															alt: null != (l = null == x ? void 0 : x.username) ? l : '',
 															width: 128,
@@ -86,7 +78,7 @@
 												(0, r.jsxs)('div', {
 													className: 'flex grow flex-col justify-center gap-y-2 truncate',
 													children: [
-														(0, r.jsx)('p', { className: 'truncate text-xl leading-none font-black', children: f }),
+														(0, r.jsx)('p', { className: 'truncate text-xl leading-none font-black', children: g }),
 														(0, r.jsxs)('p', {
 															className: 'truncate text-sm leading-none',
 															children: ['@', x.username],
@@ -101,10 +93,15 @@
 												}),
 											],
 										}),
-										(0, r.jsx)(n.$, {
-											onClick: m,
-											children: p ? '\uD83D\uDD17 ('.concat(u, ')') : 'Connect TON Wallet',
-										}),
+										f
+											? (0, r.jsxs)('div', {
+													className: 'flex flex-col gap-y-4',
+													children: [
+														(0, r.jsxs)(n.$, { onClick: () => o(h), children: ['\uD83D\uDD17 ', m] }),
+														(0, r.jsx)(n.r, { onClick: v, children: 'Disconnect' }),
+													],
+												})
+											: (0, r.jsx)(n.$, { onClick: b, children: 'Connect TON Wallet' }),
 										(0, r.jsx)('div', {
 											className: 'px-4',
 											children: (0, r.jsx)('hr', { className: 'border-neutral-900' }),
@@ -199,7 +196,7 @@
 								],
 							}),
 							(0, r.jsx)('div', { className: 'px-4', children: (0, r.jsx)('hr', { className: 'border-neutral-900' }) }),
-							(0, r.jsx)(h(), {
+							(0, r.jsx)(p(), {
 								href: '/profile/privacy-policy',
 								children: (0, r.jsx)('div', {
 									className:
@@ -213,7 +210,7 @@
 									}),
 								}),
 							}),
-							(0, r.jsx)(h(), {
+							(0, r.jsx)(p(), {
 								href: '/profile/terms-of-use',
 								children: (0, r.jsx)('div', {
 									className:
@@ -232,9 +229,57 @@
 				});
 			};
 		},
+		5549: (e, l, s) => {
+			'use strict';
+			s.d(l, { $: () => t, r: () => n });
+			var r = s(5640);
+			let t = (e) => {
+					let {
+						size: l = 'md',
+						type: s = 'button',
+						onClick: t = () => {},
+						children: n = (0, r.jsx)(r.Fragment, {}),
+					} = e;
+					return 'sm' === l
+						? (0, r.jsx)('button', {
+								type: s,
+								className: 'w-full rounded-full bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900',
+								onClick: t,
+								children: n,
+							})
+						: (0, r.jsx)('button', {
+								type: s,
+								className: 'w-full rounded-full bg-yellow-500 px-4 py-2 font-semibold text-neutral-900',
+								onClick: t,
+								children: n,
+							});
+				},
+				n = (e) => {
+					let {
+						size: l = 'md',
+						type: s = 'button',
+						onClick: t = () => {},
+						children: n = (0, r.jsx)(r.Fragment, {}),
+					} = e;
+					return 'sm' === l
+						? (0, r.jsx)('button', {
+								type: s,
+								className:
+									'w-full rounded-full border border-yellow-500 px-3 py-1 text-sm font-semibold text-yellow-500',
+								onClick: t,
+								children: n,
+							})
+						: (0, r.jsx)('button', {
+								type: s,
+								className: 'w-full rounded-full border border-yellow-500 px-4 py-2 font-semibold text-yellow-500',
+								onClick: t,
+								children: n,
+							});
+				};
+		},
 		6440: (e, l, s) => {
 			'use strict';
-			s.d(l, { U: () => o });
+			s.d(l, { U: () => x });
 			var r = s(5640);
 			let t = (e) => {
 				let { children: l = (0, r.jsx)(r.Fragment, {}) } = e;
@@ -320,12 +365,12 @@
 				});
 			};
 			var d = s(1211),
-				x = s(148);
-			let o = (e) => {
+				o = s(148);
+			let x = (e) => {
 				let { activeId: l = '', children: s = (0, r.jsx)(r.Fragment, {}) } = e,
 					{ requestFullscreen: n } = (0, d.j)();
 				return (
-					(0, x.useEffect)(() => {
+					(0, o.useEffect)(() => {
 						n();
 					}, [n]),
 					(0, r.jsxs)(t, {
@@ -345,7 +390,7 @@
 			(window.__NEXT_P = window.__NEXT_P || []).push([
 				'/profile',
 				function () {
-					return s(5944);
+					return s(4660);
 				},
 			]);
 		},

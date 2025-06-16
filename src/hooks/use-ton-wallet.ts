@@ -8,14 +8,12 @@ export const useWallet = () => {
 	const shortAddress = wallet?.account.address ? `${address.slice(0, 6)}...${address.slice(-4)}` : null;
 
 	const connect = () => {
-		if (wallet) {
-			// If already connected, disconnect
-			tonConnectUI.disconnect();
-		} else {
-			// Else open modal to connect
-			tonConnectUI.openModal();
-		}
+		if (wallet) tonConnectUI.openModal();
 	};
 
-	return { address, shortAddress, wallet, connect };
+	const disconnect = () => {
+		if (!wallet) tonConnectUI.openModal();
+	};
+
+	return { address, shortAddress, wallet, connect, disconnect };
 };

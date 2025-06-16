@@ -1,8 +1,9 @@
 import { Badge } from '@telegram/components/Badge';
-import { Button } from '@telegram/components/Button';
+import { Button, OutlineButton } from '@telegram/components/Button';
 import { useTelegram } from '@telegram/contexts/TelegramContext';
 import { useWallet } from '@telegram/hooks/use-ton-wallet';
 import { PageTemplate } from '@telegram/templates/PageTemplate';
+import { copy } from '@telegram/utils/copy-paste';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,7 +11,7 @@ import { PiBinary, PiCurrencyCircleDollar, PiDetective, PiFileDoc, PiTranslate }
 
 const ProfilePage: NextPage = () => {
 	const { isAuthenticated, user } = useTelegram();
-	const { shortAddress, wallet, connect } = useWallet();
+	const { address, shortAddress, wallet, connect, disconnect } = useWallet();
 	const fullName = `${user?.first_name ?? ''} ${user?.last_name}`.trim();
 
 	return (
@@ -36,7 +37,14 @@ const ProfilePage: NextPage = () => {
 								</div>
 							</div>
 						</div>
-						<Button onClick={connect}>{wallet ? `🔗 (${shortAddress})` : 'Connect TON Wallet'}</Button>
+						{wallet ? (
+							<div className="flex flex-col gap-y-4">
+								<Button onClick={() => copy(address)}>🔗 {shortAddress}</Button>
+								<OutlineButton onClick={disconnect}>Disconnect</OutlineButton>
+							</div>
+						) : (
+							<Button onClick={connect}>Connect TON Wallet</Button>
+						)}
 						<div className="px-4">
 							<hr className="border-neutral-900" />
 						</div>

@@ -1,0 +1,276 @@
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+	[315],
+	{
+		2758: (e, r, l) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/store',
+				function () {
+					return l(6201);
+				},
+			]);
+		},
+		5549: (e, r, l) => {
+			'use strict';
+			l.d(r, { $: () => t, r: () => a });
+			var s = l(5640);
+			let t = (e) => {
+					let {
+						size: r = 'md',
+						type: l = 'button',
+						onClick: t = () => {},
+						children: a = (0, s.jsx)(s.Fragment, {}),
+					} = e;
+					return 'sm' === r
+						? (0, s.jsx)('button', {
+								type: l,
+								className: 'w-full rounded-full bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900',
+								onClick: t,
+								children: a,
+							})
+						: (0, s.jsx)('button', {
+								type: l,
+								className: 'w-full rounded-full bg-yellow-500 px-4 py-2 font-semibold text-neutral-900',
+								onClick: t,
+								children: a,
+							});
+				},
+				a = (e) => {
+					let {
+						size: r = 'md',
+						type: l = 'button',
+						onClick: t = () => {},
+						children: a = (0, s.jsx)(s.Fragment, {}),
+					} = e;
+					return 'sm' === r
+						? (0, s.jsx)('button', {
+								type: l,
+								className:
+									'w-full rounded-full border border-yellow-500 px-3 py-1 text-sm font-semibold text-yellow-500',
+								onClick: t,
+								children: a,
+							})
+						: (0, s.jsx)('button', {
+								type: l,
+								className: 'w-full rounded-full border border-yellow-500 px-4 py-2 font-semibold text-yellow-500',
+								onClick: t,
+								children: a,
+							});
+				};
+		},
+		6201: (e, r, l) => {
+			'use strict';
+			l.r(r), l.d(r, { default: () => o });
+			var s = l(5640),
+				t = l(8377),
+				a = l(5549),
+				n = l(6440),
+				c = l(5089),
+				d = l.n(c);
+			let o = () =>
+				(0, s.jsx)(n.U, {
+					activeId: 'store',
+					children: (0, s.jsx)('div', {
+						className: 'flex flex-col p-4',
+						children: (0, s.jsxs)('div', {
+							className: 'flex flex-col gap-y-4',
+							children: [
+								(0, s.jsx)('div', {
+									className:
+										'aspect-video w-full rounded-2xl border border-neutral-900 bg-neutral-950 shadow shadow-neutral-900',
+									children: (0, s.jsxs)('div', {
+										className: 'flex h-full w-full flex-col p-4',
+										children: [(0, s.jsx)('div', { className: 'grow' }), (0, s.jsx)(a.$, { children: 'Buy Now' })],
+									}),
+								}),
+								(0, s.jsx)('h1', { className: 'text-2xl font-black', children: 'Store' }),
+								[
+									{ id: '1', name: 'Item 1', price: '$1.00', category: 'Category' },
+									{ id: '2', name: 'Item 2', price: '$1.00', category: 'Category' },
+									{ id: '3', name: 'Item 3', price: '$1.00', category: 'Category' },
+									{ id: '4', name: 'Item 4', price: '$1.00', category: 'Category' },
+									{ id: '5', name: 'Item 5', price: '$1.00', category: 'Category' },
+									{ id: '6', name: 'Item 6', price: '$1.00', category: 'Category' },
+								].map((e) => {
+									let { id: r = '', name: l = '', price: n = '', category: c = '' } = e;
+									return (0, s.jsx)(
+										'div',
+										{
+											className:
+												'rounded-xl border border-neutral-900 bg-neutral-950 px-4 py-3 shadow shadow-neutral-900',
+											children: (0, s.jsxs)('div', {
+												className: 'flex w-full items-center gap-x-4',
+												children: [
+													(0, s.jsxs)('div', {
+														className: 'flex grow items-center gap-x-4 truncate',
+														children: [
+															(0, s.jsx)('div', {
+																className: 'aspect-square h-20 rounded-lg border border-neutral-900',
+															}),
+															(0, s.jsxs)('div', {
+																className: 'flex grow flex-col gap-y-2 truncate',
+																children: [
+																	(0, s.jsx)('div', { children: (0, s.jsx)(t.E, { type: 'primary', children: c }) }),
+																	(0, s.jsx)('h2', { className: 'leading-none font-semibold', children: l }),
+																	(0, s.jsx)('p', {
+																		className: 'truncate text-lg leading-none font-black',
+																		children: n,
+																	}),
+																],
+															}),
+														],
+													}),
+													(0, s.jsx)('div', {
+														className: 'shrink-0',
+														children: (0, s.jsx)(d(), {
+															href: '/store/'.concat(r),
+															children: (0, s.jsx)(a.$, { size: 'sm', children: 'Buy' }),
+														}),
+													}),
+												],
+											}),
+										},
+										r,
+									);
+								}),
+							],
+						}),
+					}),
+				});
+		},
+		6440: (e, r, l) => {
+			'use strict';
+			l.d(r, { U: () => x });
+			var s = l(5640);
+			let t = (e) => {
+				let { children: r = (0, s.jsx)(s.Fragment, {}) } = e;
+				return (0, s.jsx)('div', {
+					className: 'mx-auto flex h-screen w-full max-w-lg flex-col overflow-hidden bg-neutral-950/10',
+					children: r,
+				});
+			};
+			var a = l(5089),
+				n = l.n(a),
+				c = l(5160);
+			let d = (e) => {
+				let { activeId: r } = e;
+				return (0, s.jsx)('nav', {
+					className: 'border-t border-neutral-900 bg-neutral-950',
+					children: (0, s.jsx)('div', {
+						className: 'grid grid-cols-5',
+						children: [
+							{ id: 'home', href: '/', icon: (0, s.jsx)(c.cEk, {}), activeIcon: (0, s.jsx)(c.ZVi, {}), text: 'Home' },
+							{
+								id: 'games',
+								href: '/games',
+								icon: (0, s.jsx)(c.SkF, {}),
+								activeIcon: (0, s.jsx)(c.rNT, {}),
+								text: 'Games',
+							},
+							{
+								id: 'store',
+								href: '/store',
+								icon: (0, s.jsx)(c.Qsx, {}),
+								activeIcon: (0, s.jsx)(c.XsE, {}),
+								text: 'Store',
+							},
+							{
+								id: 'news',
+								href: '/news',
+								icon: (0, s.jsx)(c.rRm, {}),
+								activeIcon: (0, s.jsx)(c.mKO, {}),
+								text: 'News',
+							},
+							{
+								id: 'profile',
+								href: '/profile',
+								icon: (0, s.jsx)(c.NMe, {}),
+								activeIcon: (0, s.jsx)(c.MrL, {}),
+								text: 'Profile',
+							},
+						].map((e) => {
+							let {
+									id: l = '',
+									href: t = '',
+									text: a = '',
+									icon: c = (0, s.jsx)(s.Fragment, {}),
+									activeIcon: d = (0, s.jsx)(s.Fragment, {}),
+								} = e,
+								o = l === r;
+							return (0, s.jsx)(
+								'div',
+								{
+									className: 'col-span-1',
+									children: (0, s.jsx)(n(), {
+										href: t,
+										children: (0, s.jsxs)('div', {
+											className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
+												o ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
+											),
+											children: [
+												(0, s.jsx)('span', {
+													className: 'text-3xl',
+													children: o
+														? (0, s.jsx)(s.Fragment, { children: d })
+														: (0, s.jsx)(s.Fragment, { children: c }),
+												}),
+												(0, s.jsx)('span', { className: 'text-xs', children: a }),
+											],
+										}),
+									}),
+								},
+								l,
+							);
+						}),
+					}),
+				});
+			};
+			var o = l(1211),
+				i = l(148);
+			let x = (e) => {
+				let { activeId: r = '', children: l = (0, s.jsx)(s.Fragment, {}) } = e,
+					{ requestFullscreen: a } = (0, o.j)();
+				return (
+					(0, i.useEffect)(() => {
+						a();
+					}, [a]),
+					(0, s.jsxs)(t, {
+						children: [
+							(0, s.jsx)('header', {
+								className: 'border-b border-neutral-900 pt-7 pb-4',
+								children: (0, s.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
+							}),
+							(0, s.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: l }),
+							(0, s.jsx)(d, { activeId: r }),
+						],
+					})
+				);
+			};
+		},
+		8377: (e, r, l) => {
+			'use strict';
+			l.d(r, { E: () => t });
+			var s = l(5640);
+			let t = (e) => {
+				let { type: r = 'primary', children: l = (0, s.jsx)(s.Fragment, {}) } = e;
+				return 'success' === r
+					? (0, s.jsx)('span', {
+							className: 'rounded-full bg-green-900 px-2 py-0.5 text-xs text-neutral-900',
+							children: l,
+						})
+					: 'error' === r
+						? (0, s.jsx)('span', {
+								className: 'rounded-full bg-red-900 px-2 py-0.5 text-xs text-neutral-900',
+								children: l,
+							})
+						: (0, s.jsx)('span', {
+								className: 'rounded-full bg-yellow-500 px-2 py-0.5 text-xs text-neutral-900',
+								children: l,
+							});
+			};
+		},
+	},
+	(e) => {
+		var r = (r) => e((e.s = r));
+		e.O(0, [89, 636, 593, 792], () => r(2758)), (_N_E = e.O());
+	},
+]);
