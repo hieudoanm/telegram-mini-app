@@ -1,8 +1,15 @@
 import { Container } from '@telegram/components/Container';
 import { Navbar } from '@telegram/components/Navbar';
-import { FC, ReactNode } from 'react';
+import { useTelegram } from '@telegram/contexts/TelegramContext';
+import { FC, ReactNode, useEffect } from 'react';
 
 export const PageTemplate: FC<{ activeId: string; children: ReactNode }> = ({ activeId = '', children = <></> }) => {
+	const { requestFullscreen } = useTelegram();
+
+	useEffect(() => {
+		requestFullscreen();
+	}, [requestFullscreen]);
+
 	return (
 		<Container>
 			<header className="border-b border-neutral-900 pt-8 pb-4">

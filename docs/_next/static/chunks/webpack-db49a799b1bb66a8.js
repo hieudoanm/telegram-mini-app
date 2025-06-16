@@ -8,13 +8,14 @@
 		var i = (r[o] = { exports: {} }),
 			a = !0;
 		try {
-			e[o](i, i.exports, t), (a = !1);
+			e[o].call(i.exports, i, i.exports, t), (a = !1);
 		} finally {
 			a && delete r[o];
 		}
 		return i.exports;
 	}
 	(t.m = e),
+		(t.amdO = {}),
 		(() => {
 			var e = [];
 			t.O = (r, o, n, i) => {

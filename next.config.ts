@@ -11,6 +11,13 @@ const nextConfig: NextConfig = {
 	output: NODE_ENV === 'development' ? 'standalone' : 'export',
 	distDir: NODE_ENV === 'development' ? '.next' : 'docs',
 	images: { unoptimized: NODE_ENV !== 'development' },
+	webpack: (config) => {
+		config.resolve.fallback = {
+			...config.resolve.fallback,
+			buffer: require.resolve('buffer/'),
+		};
+		return config;
+	},
 };
 
 export default nextConfig;

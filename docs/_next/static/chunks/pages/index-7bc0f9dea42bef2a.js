@@ -19,7 +19,7 @@
 							return e;
 						}).apply(this, arguments);
 			}
-			function i(e, r) {
+			function c(e, r) {
 				var t = Object.keys(e);
 				if (Object.getOwnPropertySymbols) {
 					var n = Object.getOwnPropertySymbols(e);
@@ -31,11 +31,11 @@
 				}
 				return t;
 			}
-			function c(e) {
+			function i(e) {
 				for (var r = 1; r < arguments.length; r++) {
 					var t = null != arguments[r] ? arguments[r] : {};
 					r % 2
-						? i(Object(t), !0).forEach(function (r) {
+						? c(Object(t), !0).forEach(function (r) {
 								var n, l, o;
 								(n = e),
 									(l = r),
@@ -58,7 +58,7 @@
 							})
 						: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-							: i(Object(t)).forEach(function (r) {
+							: c(Object(t)).forEach(function (r) {
 									Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
 								});
 				}
@@ -68,16 +68,16 @@
 				return (r) =>
 					n.createElement(
 						d,
-						s({ attr: c({}, e.attr) }, r),
+						s({ attr: i({}, e.attr) }, r),
 						(function e(r) {
-							return r && r.map((r, t) => n.createElement(r.tag, c({ key: t }, r.attr), e(r.child)));
+							return r && r.map((r, t) => n.createElement(r.tag, i({ key: t }, r.attr), e(r.child)));
 						})(e.child),
 					);
 			}
 			function d(e) {
 				var r = (r) => {
 					var t,
-						{ attr: l, size: o, title: i } = e,
+						{ attr: l, size: o, title: c } = e,
 						u = (function (e, r) {
 							if (null == e) return {};
 							var t,
@@ -107,12 +107,12 @@
 							'svg',
 							s({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, r.attr, l, u, {
 								className: t,
-								style: c(c({ color: e.color || r.color }, r.style), e.style),
+								style: i(i({ color: e.color || r.color }, r.style), e.style),
 								height: d,
 								width: d,
 								xmlns: 'http://www.w3.org/2000/svg',
 							}),
-							i && n.createElement('title', null, i),
+							c && n.createElement('title', null, c),
 							e.children,
 						)
 					);
@@ -165,7 +165,7 @@
 		},
 		6440: (e, r, t) => {
 			'use strict';
-			t.d(r, { U: () => c });
+			t.d(r, { U: () => d });
 			var n = t(5640);
 			let l = (e) => {
 				let { children: r = (0, n.jsx)(n.Fragment, {}) } = e;
@@ -177,92 +177,100 @@
 			var o = t(5089),
 				a = t.n(o),
 				s = t(9695);
-			let i = (e) => {
-					let { activeId: r } = e;
-					return (0, n.jsx)('nav', {
-						className: 'border-t border-neutral-900 bg-neutral-950',
-						children: (0, n.jsx)('div', {
-							className: 'grid grid-cols-5',
-							children: [
-								{ id: 'home', href: '/', icon: (0, n.jsx)(s.cEk, {}), activeIcon: (0, n.jsx)(s.ZVi, {}), text: 'Home' },
+			let c = (e) => {
+				let { activeId: r } = e;
+				return (0, n.jsx)('nav', {
+					className: 'border-t border-neutral-900 bg-neutral-950',
+					children: (0, n.jsx)('div', {
+						className: 'grid grid-cols-5',
+						children: [
+							{ id: 'home', href: '/', icon: (0, n.jsx)(s.cEk, {}), activeIcon: (0, n.jsx)(s.ZVi, {}), text: 'Home' },
+							{
+								id: 'games',
+								href: '/games',
+								icon: (0, n.jsx)(s.SkF, {}),
+								activeIcon: (0, n.jsx)(s.rNT, {}),
+								text: 'Games',
+							},
+							{
+								id: 'store',
+								href: '/store',
+								icon: (0, n.jsx)(s.Qsx, {}),
+								activeIcon: (0, n.jsx)(s.XsE, {}),
+								text: 'Store',
+							},
+							{
+								id: 'news',
+								href: '/news',
+								icon: (0, n.jsx)(s.rRm, {}),
+								activeIcon: (0, n.jsx)(s.mKO, {}),
+								text: 'News',
+							},
+							{
+								id: 'profile',
+								href: '/profile',
+								icon: (0, n.jsx)(s.NMe, {}),
+								activeIcon: (0, n.jsx)(s.MrL, {}),
+								text: 'Profile',
+							},
+						].map((e) => {
+							let {
+									id: t = '',
+									href: l = '',
+									text: o = '',
+									icon: s = (0, n.jsx)(n.Fragment, {}),
+									activeIcon: c = (0, n.jsx)(n.Fragment, {}),
+								} = e,
+								i = t === r;
+							return (0, n.jsx)(
+								'div',
 								{
-									id: 'games',
-									href: '/games',
-									icon: (0, n.jsx)(s.SkF, {}),
-									activeIcon: (0, n.jsx)(s.rNT, {}),
-									text: 'Games',
-								},
-								{
-									id: 'store',
-									href: '/store',
-									icon: (0, n.jsx)(s.Qsx, {}),
-									activeIcon: (0, n.jsx)(s.XsE, {}),
-									text: 'Store',
-								},
-								{
-									id: 'news',
-									href: '/news',
-									icon: (0, n.jsx)(s.rRm, {}),
-									activeIcon: (0, n.jsx)(s.mKO, {}),
-									text: 'News',
-								},
-								{
-									id: 'profile',
-									href: '/profile',
-									icon: (0, n.jsx)(s.NMe, {}),
-									activeIcon: (0, n.jsx)(s.MrL, {}),
-									text: 'Profile',
-								},
-							].map((e) => {
-								let {
-										id: t = '',
-										href: l = '',
-										text: o = '',
-										icon: s = (0, n.jsx)(n.Fragment, {}),
-										activeIcon: i = (0, n.jsx)(n.Fragment, {}),
-									} = e,
-									c = t === r;
-								return (0, n.jsx)(
-									'div',
-									{
-										className: 'col-span-1',
-										children: (0, n.jsx)(a(), {
-											href: l,
-											children: (0, n.jsxs)('div', {
-												className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
-													c ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
-												),
-												children: [
-													(0, n.jsx)('span', {
-														className: 'text-3xl',
-														children: c
-															? (0, n.jsx)(n.Fragment, { children: i })
-															: (0, n.jsx)(n.Fragment, { children: s }),
-													}),
-													(0, n.jsx)('span', { className: 'text-xs', children: o }),
-												],
-											}),
+									className: 'col-span-1',
+									children: (0, n.jsx)(a(), {
+										href: l,
+										children: (0, n.jsxs)('div', {
+											className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
+												i ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
+											),
+											children: [
+												(0, n.jsx)('span', {
+													className: 'text-3xl',
+													children: i
+														? (0, n.jsx)(n.Fragment, { children: c })
+														: (0, n.jsx)(n.Fragment, { children: s }),
+												}),
+												(0, n.jsx)('span', { className: 'text-xs', children: o }),
+											],
 										}),
-									},
-									t,
-								);
-							}),
+									}),
+								},
+								t,
+							);
 						}),
-					});
-				},
-				c = (e) => {
-					let { activeId: r = '', children: t = (0, n.jsx)(n.Fragment, {}) } = e;
-					return (0, n.jsxs)(l, {
+					}),
+				});
+			};
+			var i = t(1211),
+				u = t(148);
+			let d = (e) => {
+				let { activeId: r = '', children: t = (0, n.jsx)(n.Fragment, {}) } = e,
+					{ requestFullscreen: o } = (0, i.j)();
+				return (
+					(0, u.useEffect)(() => {
+						o();
+					}, [o]),
+					(0, n.jsxs)(l, {
 						children: [
 							(0, n.jsx)('header', {
 								className: 'border-b border-neutral-900 pt-8 pb-4',
 								children: (0, n.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
 							}),
 							(0, n.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: t }),
-							(0, n.jsx)(i, { activeId: r }),
+							(0, n.jsx)(c, { activeId: r }),
 						],
-					});
-				};
+					})
+				);
+			};
 		},
 		7757: (e, r, t) => {
 			(window.__NEXT_P = window.__NEXT_P || []).push([

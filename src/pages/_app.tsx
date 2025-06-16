@@ -1,11 +1,11 @@
-import { TelegramUserProvider } from '@telegram/contexts/TelegramUserContext';
-import { useTelegram } from '@telegram/hooks/use-telegram';
+import { TelegramProvider } from '@telegram/contexts/TelegramContext';
 import '@telegram/styles/globals.css';
 import { trpcHook } from '@telegram/utils/trpc';
 import type { AppProps } from 'next/app';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Head from 'next/head';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
+import { TonConnectUIProvider } from '@tonconnect/ui-react';
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -18,21 +18,17 @@ const geistMono = Geist_Mono({
 });
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
-	const { requestFullscreen } = useTelegram();
-
-	useEffect(() => {
-		requestFullscreen();
-	}, [requestFullscreen]);
-
 	return (
 		<>
 			<Head>
 				<title>Telegram Mini App</title>
 			</Head>
 			<div className={`${geistSans.className} ${geistMono.className}`}>
-				<TelegramUserProvider>
-					<Component {...pageProps} />
-				</TelegramUserProvider>
+				<TonConnectUIProvider manifestUrl="https://YOUR_DOMAIN/tonconnect-manifest.json">
+					<TelegramProvider>
+						<Component {...pageProps} />
+					</TelegramProvider>
+				</TonConnectUIProvider>
 			</div>
 		</>
 	);

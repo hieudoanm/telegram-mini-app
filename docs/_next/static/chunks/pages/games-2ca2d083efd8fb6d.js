@@ -6,8 +6,8 @@
 			t.d(r, { k5: () => d });
 			var l = t(148),
 				s = { color: void 0, size: void 0, className: void 0, style: void 0, attr: void 0 },
-				a = l.createContext && l.createContext(s),
-				n = ['attr', 'size', 'title'];
+				n = l.createContext && l.createContext(s),
+				a = ['attr', 'size', 'title'];
 			function o() {
 				return (o = Object.assign
 					? Object.assign.bind()
@@ -36,10 +36,10 @@
 					var t = null != arguments[r] ? arguments[r] : {};
 					r % 2
 						? i(Object(t), !0).forEach(function (r) {
-								var l, s, a;
+								var l, s, n;
 								(l = e),
 									(s = r),
-									(a = t[r]),
+									(n = t[r]),
 									(s = (function (e) {
 										var r = (function (e, r) {
 											if ('object' != typeof e || !e) return e;
@@ -53,8 +53,8 @@
 										})(e, 'string');
 										return 'symbol' == typeof r ? r : r + '';
 									})(s)) in l
-										? Object.defineProperty(l, s, { value: a, enumerable: !0, configurable: !0, writable: !0 })
-										: (l[s] = a);
+										? Object.defineProperty(l, s, { value: n, enumerable: !0, configurable: !0, writable: !0 })
+										: (l[s] = n);
 							})
 						: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -77,7 +77,7 @@
 			function u(e) {
 				var r = (r) => {
 					var t,
-						{ attr: s, size: a, title: i } = e,
+						{ attr: s, size: n, title: i } = e,
 						d = (function (e, r) {
 							if (null == e) return {};
 							var t,
@@ -93,13 +93,13 @@
 									return t;
 								})(e, r);
 							if (Object.getOwnPropertySymbols) {
-								var a = Object.getOwnPropertySymbols(e);
-								for (l = 0; l < a.length; l++)
-									(t = a[l]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (s[t] = e[t]);
+								var n = Object.getOwnPropertySymbols(e);
+								for (l = 0; l < n.length; l++)
+									(t = n[l]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (s[t] = e[t]);
 							}
 							return s;
-						})(e, n),
-						u = a || r.size || '1em';
+						})(e, a),
+						u = n || r.size || '1em';
 					return (
 						r.className && (t = r.className),
 						e.className && (t = (t ? t + ' ' : '') + e.className),
@@ -117,7 +117,7 @@
 						)
 					);
 				};
-				return void 0 !== a ? l.createElement(a.Consumer, null, (e) => r(e)) : r(s);
+				return void 0 !== n ? l.createElement(n.Consumer, null, (e) => r(e)) : r(s);
 			}
 		},
 		3911: (e, r, t) => {
@@ -125,11 +125,11 @@
 			t.r(r), t.d(r, { default: () => i });
 			var l = t(5640),
 				s = t(8377),
-				a = t(6440),
-				n = t(5089),
-				o = t.n(n);
+				n = t(6440),
+				a = t(5089),
+				o = t.n(a);
 			let i = () =>
-				(0, l.jsx)(a.U, {
+				(0, l.jsx)(n.U, {
 					activeId: 'games',
 					children: (0, l.jsx)('div', {
 						className: 'flex flex-col p-4',
@@ -160,7 +160,7 @@
 									{ id: '5', title: 'Game 5', description: 'Lorem ipsum dolor sit amet.', category: 'Category' },
 									{ id: '6', title: 'Game 6', description: 'Lorem ipsum dolor sit amet.', category: 'Category' },
 								].map((e) => {
-									let { id: r = '', title: t = '', description: a = '', category: n = '' } = e;
+									let { id: r = '', title: t = '', description: n = '', category: a = '' } = e;
 									return (0, l.jsx)(
 										'div',
 										{
@@ -180,10 +180,10 @@
 																children: [
 																	(0, l.jsx)('div', {
 																		className: 'flex items-center gap-x-2',
-																		children: (0, l.jsx)(s.E, { children: n }),
+																		children: (0, l.jsx)(s.Ex, { children: a }),
 																	}),
 																	(0, l.jsx)('h2', { className: 'text-lg leading-none font-bold', children: t }),
-																	(0, l.jsx)('p', { className: 'truncate text-sm leading-none', children: a }),
+																	(0, l.jsx)('p', { className: 'truncate text-sm leading-none', children: n }),
 																],
 															}),
 														],
@@ -220,7 +220,7 @@
 		},
 		6440: (e, r, t) => {
 			'use strict';
-			t.d(r, { U: () => c });
+			t.d(r, { U: () => u });
 			var l = t(5640);
 			let s = (e) => {
 				let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
@@ -229,85 +229,92 @@
 					children: r,
 				});
 			};
-			var a = t(5089),
-				n = t.n(a),
+			var n = t(5089),
+				a = t.n(n),
 				o = t(9695);
 			let i = (e) => {
-					let { activeId: r } = e;
-					return (0, l.jsx)('nav', {
-						className: 'border-t border-neutral-900 bg-neutral-950',
-						children: (0, l.jsx)('div', {
-							className: 'grid grid-cols-5',
-							children: [
-								{ id: 'home', href: '/', icon: (0, l.jsx)(o.cEk, {}), activeIcon: (0, l.jsx)(o.ZVi, {}), text: 'Home' },
+				let { activeId: r } = e;
+				return (0, l.jsx)('nav', {
+					className: 'border-t border-neutral-900 bg-neutral-950',
+					children: (0, l.jsx)('div', {
+						className: 'grid grid-cols-5',
+						children: [
+							{ id: 'home', href: '/', icon: (0, l.jsx)(o.cEk, {}), activeIcon: (0, l.jsx)(o.ZVi, {}), text: 'Home' },
+							{
+								id: 'games',
+								href: '/games',
+								icon: (0, l.jsx)(o.SkF, {}),
+								activeIcon: (0, l.jsx)(o.rNT, {}),
+								text: 'Games',
+							},
+							{
+								id: 'store',
+								href: '/store',
+								icon: (0, l.jsx)(o.Qsx, {}),
+								activeIcon: (0, l.jsx)(o.XsE, {}),
+								text: 'Store',
+							},
+							{
+								id: 'news',
+								href: '/news',
+								icon: (0, l.jsx)(o.rRm, {}),
+								activeIcon: (0, l.jsx)(o.mKO, {}),
+								text: 'News',
+							},
+							{
+								id: 'profile',
+								href: '/profile',
+								icon: (0, l.jsx)(o.NMe, {}),
+								activeIcon: (0, l.jsx)(o.MrL, {}),
+								text: 'Profile',
+							},
+						].map((e) => {
+							let {
+									id: t = '',
+									href: s = '',
+									text: n = '',
+									icon: o = (0, l.jsx)(l.Fragment, {}),
+									activeIcon: i = (0, l.jsx)(l.Fragment, {}),
+								} = e,
+								c = t === r;
+							return (0, l.jsx)(
+								'div',
 								{
-									id: 'games',
-									href: '/games',
-									icon: (0, l.jsx)(o.SkF, {}),
-									activeIcon: (0, l.jsx)(o.rNT, {}),
-									text: 'Games',
-								},
-								{
-									id: 'store',
-									href: '/store',
-									icon: (0, l.jsx)(o.Qsx, {}),
-									activeIcon: (0, l.jsx)(o.XsE, {}),
-									text: 'Store',
-								},
-								{
-									id: 'news',
-									href: '/news',
-									icon: (0, l.jsx)(o.rRm, {}),
-									activeIcon: (0, l.jsx)(o.mKO, {}),
-									text: 'News',
-								},
-								{
-									id: 'profile',
-									href: '/profile',
-									icon: (0, l.jsx)(o.NMe, {}),
-									activeIcon: (0, l.jsx)(o.MrL, {}),
-									text: 'Profile',
-								},
-							].map((e) => {
-								let {
-										id: t = '',
-										href: s = '',
-										text: a = '',
-										icon: o = (0, l.jsx)(l.Fragment, {}),
-										activeIcon: i = (0, l.jsx)(l.Fragment, {}),
-									} = e,
-									c = t === r;
-								return (0, l.jsx)(
-									'div',
-									{
-										className: 'col-span-1',
-										children: (0, l.jsx)(n(), {
-											href: s,
-											children: (0, l.jsxs)('div', {
-												className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
-													c ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
-												),
-												children: [
-													(0, l.jsx)('span', {
-														className: 'text-3xl',
-														children: c
-															? (0, l.jsx)(l.Fragment, { children: i })
-															: (0, l.jsx)(l.Fragment, { children: o }),
-													}),
-													(0, l.jsx)('span', { className: 'text-xs', children: a }),
-												],
-											}),
+									className: 'col-span-1',
+									children: (0, l.jsx)(a(), {
+										href: s,
+										children: (0, l.jsxs)('div', {
+											className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
+												c ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
+											),
+											children: [
+												(0, l.jsx)('span', {
+													className: 'text-3xl',
+													children: c
+														? (0, l.jsx)(l.Fragment, { children: i })
+														: (0, l.jsx)(l.Fragment, { children: o }),
+												}),
+												(0, l.jsx)('span', { className: 'text-xs', children: n }),
+											],
 										}),
-									},
-									t,
-								);
-							}),
+									}),
+								},
+								t,
+							);
 						}),
-					});
-				},
-				c = (e) => {
-					let { activeId: r = '', children: t = (0, l.jsx)(l.Fragment, {}) } = e;
-					return (0, l.jsxs)(s, {
+					}),
+				});
+			};
+			var c = t(1211),
+				d = t(148);
+			let u = (e) => {
+				let { activeId: r = '', children: t = (0, l.jsx)(l.Fragment, {}) } = e,
+					{ requestFullscreen: n } = (0, c.j)();
+				return (
+					(0, d.useEffect)(() => {
+						n();
+					}, [n]),
+					(0, l.jsxs)(s, {
 						children: [
 							(0, l.jsx)('header', {
 								className: 'border-b border-neutral-900 pt-8 pb-4',
@@ -316,20 +323,35 @@
 							(0, l.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: t }),
 							(0, l.jsx)(i, { activeId: r }),
 						],
-					});
-				};
+					})
+				);
+			};
 		},
 		8377: (e, r, t) => {
 			'use strict';
-			t.d(r, { E: () => s });
+			t.d(r, { Ex: () => s, b: () => a, iE: () => n });
 			var l = t(5640);
 			let s = (e) => {
-				let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
-				return (0, l.jsx)('span', {
-					className: 'rounded-full bg-yellow-500 px-2 py-0.5 text-xs text-neutral-900',
-					children: r,
-				});
-			};
+					let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
+					return (0, l.jsx)('span', {
+						className: 'rounded-full bg-yellow-500 px-2 py-0.5 text-xs text-neutral-900',
+						children: r,
+					});
+				},
+				n = (e) => {
+					let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
+					return (0, l.jsx)('span', {
+						className: 'rounded-full bg-red-900 px-2 py-0.5 text-xs text-neutral-900',
+						children: r,
+					});
+				},
+				a = (e) => {
+					let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
+					return (0, l.jsx)('span', {
+						className: 'rounded-full bg-green-900 px-2 py-0.5 text-xs text-neutral-900',
+						children: r,
+					});
+				};
 		},
 	},
 	(e) => {

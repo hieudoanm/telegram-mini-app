@@ -1,6 +1,14 @@
 import { trpcClient } from '@telegram/utils/trpc';
 import { tryCatch } from '@telegram/utils/try-catch';
-import { createContext, ReactNode, useContext, useEffect, useMemo, useState } from 'react';
+import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+
+enum TelegramPlatform {
+	Android = 'android',
+	IOS = 'ios',
+	MacOS = 'macos',
+	TDesktop = 'tdesktop',
+	Web = 'web',
+}
 
 const getTelegramUser = async (): Promise<{ initData: string; user: TelegramUser | null }> => {
 	if (window?.Telegram?.WebApp?.initData) {
@@ -25,12 +33,16 @@ const getTelegramUser = async (): Promise<{ initData: string; user: TelegramUser
 const UserContext = createContext<{
 	isAuthenticated: boolean;
 	user: TelegramUser | null;
+	getPlatform: () => TelegramPlatform;
+	requestFullscreen: () => void;
 }>({
 	isAuthenticated: false,
 	user: null,
+	getPlatform: () => TelegramPlatform.Web,
+	requestFullscreen: () => {},
 });
 
-export const TelegramUserProvider: React.FC<{ children: ReactNode }> = ({ children = <></> }) => {
+export const TelegramProvider: React.FC<{ children: ReactNode }> = ({ children = <></> }) => {
 	const [{ loading = true, isAuthenticated = false, user = null }, setState] = useState<{
 		loading: boolean;
 		isAuthenticated: boolean;
@@ -58,8 +70,37 @@ export const TelegramUserProvider: React.FC<{ children: ReactNode }> = ({ childr
 		};
 		getTelegramUserAsync();
 	}, []);
+	const tg = typeof window !== 'undefined' && window.Telegram?.WebApp;
 
-	const value = useMemo(() => ({ isAuthenticated, user }), [isAuthenticated, user]);
+	const getPlatform = useCallback((): TelegramPlatform => {
+		try {
+			if (tg) {
+				tg.ready();
+				return tg.platform;
+			}
+		} catch (error) {
+			console.error(error);
+			return TelegramPlatform.Web;
+		}
+		return TelegramPlatform.Web;
+	}, [tg]);
+
+	const requestFullscreen = useCallback(() => {
+		try {
+			if (tg) {
+				if (getPlatform() === TelegramPlatform.Web) return;
+				tg.ready();
+				tg.requestFullscreen();
+			}
+		} catch (error) {
+			console.error(error);
+		}
+	}, [tg]);
+
+	const value = useMemo(
+		() => ({ isAuthenticated, user, getPlatform, requestFullscreen }),
+		[isAuthenticated, user, getPlatform, requestFullscreen],
+	);
 
 	return (
 		<UserContext.Provider value={value}>
@@ -74,6 +115,6 @@ export const TelegramUserProvider: React.FC<{ children: ReactNode }> = ({ childr
 	);
 };
 
-export const useTelegramUser = () => {
+export const useTelegram = () => {
 	return useContext(UserContext);
 };
