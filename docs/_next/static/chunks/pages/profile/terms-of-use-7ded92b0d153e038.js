@@ -1,5 +1,5 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-	[669],
+	[581],
 	{
 		812: (e, r, t) => {
 			'use strict';
@@ -7,9 +7,9 @@
 			var s = t(148),
 				n = { color: void 0, size: void 0, className: void 0, style: void 0, attr: void 0 },
 				o = s.createContext && s.createContext(n),
-				i = ['attr', 'size', 'title'];
-			function l() {
-				return (l = Object.assign
+				l = ['attr', 'size', 'title'];
+			function i() {
+				return (i = Object.assign
 					? Object.assign.bind()
 					: function (e) {
 							for (var r = 1; r < arguments.length; r++) {
@@ -68,7 +68,7 @@
 				return (r) =>
 					s.createElement(
 						d,
-						l({ attr: c({}, e.attr) }, r),
+						i({ attr: c({}, e.attr) }, r),
 						(function e(r) {
 							return r && r.map((r, t) => s.createElement(r.tag, c({ key: t }, r.attr), e(r.child)));
 						})(e.child),
@@ -98,14 +98,14 @@
 									(t = o[s]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (n[t] = e[t]);
 							}
 							return n;
-						})(e, i),
+						})(e, l),
 						d = o || r.size || '1em';
 					return (
 						r.className && (t = r.className),
 						e.className && (t = (t ? t + ' ' : '') + e.className),
 						s.createElement(
 							'svg',
-							l({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, r.attr, n, u, {
+							i({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, r.attr, n, u, {
 								className: t,
 								style: c(c({ color: e.color || r.color }, r.style), e.style),
 								height: d,
@@ -120,7 +120,7 @@
 				return void 0 !== o ? s.createElement(o.Consumer, null, (e) => r(e)) : r(n);
 			}
 		},
-		1409: (e, r, t) => {
+		1637: (e, r, t) => {
 			'use strict';
 			t.r(r), t.d(r, { default: () => o });
 			var s = t(5640),
@@ -186,8 +186,8 @@
 				});
 			};
 			var o = t(5089),
-				i = t.n(o),
-				l = t(9695);
+				l = t.n(o),
+				i = t(9695);
 			let a = (e) => {
 				let { activeId: r } = e;
 				return (0, s.jsx)('nav', {
@@ -195,33 +195,33 @@
 					children: (0, s.jsx)('div', {
 						className: 'grid grid-cols-5',
 						children: [
-							{ id: 'home', href: '/', icon: (0, s.jsx)(l.cEk, {}), activeIcon: (0, s.jsx)(l.ZVi, {}), text: 'Home' },
+							{ id: 'home', href: '/', icon: (0, s.jsx)(i.cEk, {}), activeIcon: (0, s.jsx)(i.ZVi, {}), text: 'Home' },
 							{
 								id: 'games',
 								href: '/games',
-								icon: (0, s.jsx)(l.SkF, {}),
-								activeIcon: (0, s.jsx)(l.rNT, {}),
+								icon: (0, s.jsx)(i.SkF, {}),
+								activeIcon: (0, s.jsx)(i.rNT, {}),
 								text: 'Games',
 							},
 							{
 								id: 'store',
 								href: '/store',
-								icon: (0, s.jsx)(l.Qsx, {}),
-								activeIcon: (0, s.jsx)(l.XsE, {}),
+								icon: (0, s.jsx)(i.Qsx, {}),
+								activeIcon: (0, s.jsx)(i.XsE, {}),
 								text: 'Store',
 							},
 							{
 								id: 'news',
 								href: '/news',
-								icon: (0, s.jsx)(l.rRm, {}),
-								activeIcon: (0, s.jsx)(l.mKO, {}),
+								icon: (0, s.jsx)(i.rRm, {}),
+								activeIcon: (0, s.jsx)(i.mKO, {}),
 								text: 'News',
 							},
 							{
 								id: 'profile',
 								href: '/profile',
-								icon: (0, s.jsx)(l.NMe, {}),
-								activeIcon: (0, s.jsx)(l.MrL, {}),
+								icon: (0, s.jsx)(i.NMe, {}),
+								activeIcon: (0, s.jsx)(i.MrL, {}),
 								text: 'Profile',
 							},
 						].map((e) => {
@@ -229,7 +229,7 @@
 									id: t = '',
 									href: n = '',
 									text: o = '',
-									icon: l = (0, s.jsx)(s.Fragment, {}),
+									icon: i = (0, s.jsx)(s.Fragment, {}),
 									activeIcon: a = (0, s.jsx)(s.Fragment, {}),
 								} = e,
 								c = t === r;
@@ -237,7 +237,7 @@
 								'div',
 								{
 									className: 'col-span-1',
-									children: (0, s.jsx)(i(), {
+									children: (0, s.jsx)(l(), {
 										href: n,
 										children: (0, s.jsxs)('div', {
 											className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
@@ -248,7 +248,7 @@
 													className: 'text-3xl',
 													children: c
 														? (0, s.jsx)(s.Fragment, { children: a })
-														: (0, s.jsx)(s.Fragment, { children: l }),
+														: (0, s.jsx)(s.Fragment, { children: i }),
 												}),
 												(0, s.jsx)('span', { className: 'text-xs', children: o }),
 											],
@@ -283,17 +283,17 @@
 				);
 			};
 		},
-		6854: (e, r, t) => {
+		9522: (e, r, t) => {
 			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/profile/terms-of-service',
+				'/profile/terms-of-use',
 				function () {
-					return t(1409);
+					return t(1637);
 				},
 			]);
 		},
 	},
 	(e) => {
 		var r = (r) => e((e.s = r));
-		e.O(0, [72, 89, 636, 593, 792], () => r(6854)), (_N_E = e.O());
+		e.O(0, [72, 89, 636, 593, 792], () => r(9522)), (_N_E = e.O());
 	},
 ]);

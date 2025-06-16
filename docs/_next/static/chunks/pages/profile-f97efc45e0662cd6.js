@@ -214,7 +214,7 @@
 								}),
 							}),
 							(0, r.jsx)(h(), {
-								href: '/profile/terms-of-service',
+								href: '/profile/terms-of-use',
 								children: (0, r.jsx)('div', {
 									className:
 										'flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900',
@@ -222,7 +222,7 @@
 										className: 'flex items-center gap-x-2',
 										children: [
 											(0, r.jsx)(j.eF3, { className: 'text-xl text-yellow-500' }),
-											(0, r.jsx)('span', { children: 'Terms of Service' }),
+											(0, r.jsx)('span', { children: 'Terms of Use' }),
 										],
 									}),
 								}),

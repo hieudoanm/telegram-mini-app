@@ -105,11 +105,11 @@ const ProfilePage: NextPage = () => {
 						</div>
 					</div>
 				</Link>
-				<Link href="/profile/terms-of-service">
+				<Link href="/profile/terms-of-use">
 					<div className="flex items-center justify-between rounded-full border border-neutral-900 bg-neutral-950 px-4 py-2 shadow shadow-neutral-900">
 						<div className="flex items-center gap-x-2">
 							<PiFileDoc className="text-xl text-yellow-500" />
-							<span>Terms of Service</span>
+							<span>Terms of Use</span>
 						</div>
 					</div>
 				</Link>
