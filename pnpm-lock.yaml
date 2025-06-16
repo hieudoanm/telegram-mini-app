@@ -57,8 +57,8 @@ importers:
         specifier: 9.0.10
         version: 9.0.10
       '@types/node':
-        specifier: 24.0.1
-        version: 24.0.1
+        specifier: 24.0.2
+        version: 24.0.2
       '@types/react':
         specifier: 19.1.8
         version: 19.1.8
@@ -721,9 +721,9 @@ packages:
     resolution:
       { integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA== }
 
-  '@types/node@24.0.1':
+  '@types/node@24.0.2':
     resolution:
-      { integrity: sha512-MX4Zioh39chHlDJbKmEgydJDS3tspMP/lnQC67G3SWsTnb9NeYVWOjkxpOSy4oMfPs4StcWHwBrvUb4ybfnuaw== }
+      { integrity: sha512-Kv1shWMfCUnzbQTosAHrF2p8AzccoLODqJ0XqGPRA/mGVZR86KCk8I+fyh6B5+kcLtAKS9BquXUxVO79jU9UGg== }
 
   '@types/react-dom@19.1.6':
     resolution:
@@ -2362,9 +2362,9 @@ packages:
     resolution:
       { integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg== }
 
-  pump@3.0.2:
+  pump@3.0.3:
     resolution:
-      { integrity: sha512-tUPXtzlGM8FE3P0ZL6DVs/3P58k9nk8/jZeQCurTJylQA8qFYzHFfhBJkuqyE0FifOsQ0uKWekiZ5g8wtr28cw== }
+      { integrity: sha512-todwxLMY7/heScKmntwQG8CXVkWUOdYxIvY2s0VWAAMh/nd8SoYiRaKjlr7+iCs984f2P8zvrfWcDDYVb73NfA== }
 
   punycode@2.3.1:
     resolution:
@@ -3231,7 +3231,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 24.0.1
+      '@types/node': 24.0.2
       '@types/responselike': 1.0.3
 
   '@types/estree@1.0.8': {}
@@ -3245,15 +3245,15 @@ snapshots:
   '@types/jsonwebtoken@9.0.10':
     dependencies:
       '@types/ms': 2.1.0
-      '@types/node': 24.0.1
+      '@types/node': 24.0.2
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 24.0.1
+      '@types/node': 24.0.2
 
   '@types/ms@2.1.0': {}
 
-  '@types/node@24.0.1':
+  '@types/node@24.0.2':
     dependencies:
       undici-types: 7.8.0
 
@@ -3267,11 +3267,11 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 24.0.1
+      '@types/node': 24.0.2
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 24.0.1
+      '@types/node': 24.0.2
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.34.0(@typescript-eslint/parser@8.34.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)':
@@ -4115,7 +4115,7 @@ snapshots:
 
   get-stream@5.2.0:
     dependencies:
-      pump: 3.0.2
+      pump: 3.0.3
 
   get-symbol-description@1.1.0:
     dependencies:
@@ -4718,7 +4718,7 @@ snapshots:
       object-assign: 4.1.1
       react-is: 16.13.1
 
-  pump@3.0.2:
+  pump@3.0.3:
     dependencies:
       end-of-stream: 1.4.4
       once: 1.4.0
