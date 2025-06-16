@@ -24,11 +24,11 @@ export const useWallet = () => {
 	}, [address]);
 
 	const connect = () => {
-		if (wallet) tonConnectUI.openModal();
+		if (!wallet) tonConnectUI.openModal();
 	};
 
 	const disconnect = () => {
-		if (!wallet) tonConnectUI.disconnect();
+		if (wallet) tonConnectUI.disconnect();
 	};
 
 	return { balance, address, shortAddress, wallet, connect, disconnect };

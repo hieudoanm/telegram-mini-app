@@ -12898,10 +12898,10 @@
 							? (0, r.jsx)('div', {
 									className: 'flex h-screen w-screen items-center justify-center',
 									children: (0, r.jsxs)('div', {
-										className: 'flex flex-col gap-y-4 text-4xl',
+										className: 'flex flex-col gap-y-4',
 										children: [
-											(0, r.jsx)('span', { className: 'text-center font-semibold', children: 'Mini App' }),
-											(0, r.jsx)(s.PeZ, { className: 'mx-auto animate-spin' }),
+											(0, r.jsx)('span', { className: 'text-center text-2xl font-semibold', children: 'Mini App' }),
+											(0, r.jsx)(s.PeZ, { className: 'mx-auto animate-spin text-4xl' }),
 										],
 									}),
 								})

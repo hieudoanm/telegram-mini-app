@@ -11,7 +11,7 @@ import { PiBinary, PiCurrencyCircleDollar, PiDetective, PiFileDoc, PiTranslate }
 
 const ProfilePage: NextPage = () => {
 	const { isAuthenticated, user } = useTelegram();
-	const { address, shortAddress, wallet, connect, disconnect } = useWallet();
+	const { balance = 0, address = '', shortAddress, wallet, connect, disconnect } = useWallet();
 	const fullName = `${user?.first_name ?? ''} ${user?.last_name}`.trim();
 
 	return (
@@ -39,6 +39,7 @@ const ProfilePage: NextPage = () => {
 						</div>
 						{wallet ? (
 							<div className="flex flex-col gap-y-4">
+								<p className="text-center text-4xl">{balance}</p>
 								<Button onClick={() => copy(address)}>🔗 {shortAddress}</Button>
 								<OutlineButton onClick={disconnect}>Disconnect</OutlineButton>
 							</div>
