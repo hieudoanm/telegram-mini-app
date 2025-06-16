@@ -5,12 +5,14 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+  schemas  = ["public", "telegram"]
 }
 
 model User {
@@ -24,4 +26,5 @@ model User {
 
   @@index([id, username])
   @@map("users")
+  @@schema("telegram")
 }
