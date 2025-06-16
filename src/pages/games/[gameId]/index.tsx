@@ -11,7 +11,7 @@ const StoreItemPage = () => {
 	return (
 		<PageTemplate activeId="store">
 			<div className="flex flex-col gap-y-6 p-4">
-				<Link href="/store">
+				<Link href="/games">
 					<div className="flex items-center gap-x-2 text-yellow-500">
 						<PiCaretLeftBold />
 						<span className="font-medium">Games</span>

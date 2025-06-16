@@ -8,7 +8,7 @@
 		'/500': [e, 'static/chunks/pages/500-93a546476c43a235.js'],
 		'/_error': [e, 'static/chunks/pages/_error-45877a579d8eb27c.js'],
 		'/games': [e, 'static/chunks/pages/games-ec121466059f9816.js'],
-		'/games/[gameId]': [e, 'static/chunks/pages/games/[gameId]-bbd8a8e08c845feb.js'],
+		'/games/[gameId]': [e, 'static/chunks/pages/games/[gameId]-a4e23c7ec352882e.js'],
 		'/news': [e, 'static/chunks/pages/news-ef47f5099577b1a1.js'],
 		'/news/[articleId]': [e, 'static/chunks/pages/news/[articleId]-1cdb87e92316f702.js'],
 		'/profile': [e, 'static/chunks/210-89ee212001c2e2e5.js', 'static/chunks/pages/profile-d995b4efc8c6c490.js'],

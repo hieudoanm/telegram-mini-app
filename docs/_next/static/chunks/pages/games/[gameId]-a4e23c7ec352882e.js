@@ -20,7 +20,7 @@
 						className: 'flex flex-col gap-y-6 p-4',
 						children: [
 							(0, t.jsx)(d(), {
-								href: '/store',
+								href: '/games',
 								children: (0, t.jsxs)('div', {
 									className: 'flex items-center gap-x-2 text-yellow-500',
 									children: [
