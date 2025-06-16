@@ -9,22 +9,23 @@
 				},
 			]);
 		},
-		4850: (e, r, s) => {
+		2351: (e, r, s) => {
 			'use strict';
-			s.r(r), s.d(r, { default: () => c });
-			var l = s(5640),
-				t = s(6826),
-				n = s.n(t);
-			let c = () =>
-				(0, l.jsx)('div', {
+			s.d(r, { L: () => c });
+			var t = s(5640),
+				l = s(6826),
+				n = s.n(l);
+			let c = (e) => {
+				let { code: r } = e;
+				return (0, t.jsx)('div', {
 					className: 'mx-auto flex h-screen w-full max-w-lg items-center justify-center border border-neutral-800 p-8',
-					children: (0, l.jsxs)('div', {
+					children: (0, t.jsxs)('div', {
 						className: 'flex flex-col items-center justify-center gap-y-8',
 						children: [
-							(0, l.jsx)('h1', { className: 'text-9xl', children: '404' }),
-							(0, l.jsx)(n(), {
+							(0, t.jsx)('h1', { className: 'text-9xl', children: r }),
+							(0, t.jsx)(n(), {
 								href: '/',
-								children: (0, l.jsx)('button', {
+								children: (0, t.jsx)('button', {
 									className: 'cursor-pointer rounded-full border border-neutral-800 px-8 py-4 text-xl',
 									children: 'Go Home',
 								}),
@@ -32,6 +33,14 @@
 						],
 					}),
 				});
+			};
+		},
+		4850: (e, r, s) => {
+			'use strict';
+			s.r(r), s.d(r, { default: () => n });
+			var t = s(5640),
+				l = s(2351);
+			let n = () => (0, t.jsx)(l.L, { code: '404' });
 		},
 	},
 	(e) => {

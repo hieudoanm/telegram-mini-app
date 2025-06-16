@@ -12,10 +12,8 @@ const compareLex = (a: string, b: string): number => {
 };
 
 export const authenticate = async (initData: string): Promise<{ user: User }> => {
-	console.info('initData', initData);
 	const secretKey: Buffer<ArrayBufferLike> = createHmac('sha256', 'WebAppData').update(TELEGRAM_BOT_TOKEN).digest();
 	const params = new URLSearchParams(initData);
-	console.info('params', params);
 	const hash = params.get('hash');
 	if (!hash) throw new Error('Invalid Hash');
 	params.delete('hash');

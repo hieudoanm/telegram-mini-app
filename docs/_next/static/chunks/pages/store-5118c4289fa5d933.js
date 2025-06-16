@@ -220,10 +220,12 @@
 		},
 		9032: (e, t, r) => {
 			'use strict';
-			r.r(t), r.d(t, { default: () => n });
+			r.r(t), r.d(t, { default: () => i });
 			var l = r(5640),
-				s = r(2461);
-			let n = () =>
+				s = r(2461),
+				n = r(6826),
+				o = r.n(n);
+			let i = () =>
 				(0, l.jsx)(s.U, {
 					activeId: 'store',
 					children: (0, l.jsx)('div', {
@@ -273,7 +275,13 @@
 															(0, l.jsxs)('div', {
 																className: 'flex grow flex-col gap-y-2 truncate',
 																children: [
-																	(0, l.jsx)('h2', { className: 'text-lg leading-none font-bold', children: r }),
+																	(0, l.jsx)(o(), {
+																		href: '/store/'.concat(t),
+																		children: (0, l.jsx)('h2', {
+																			className: 'text-lg leading-none font-bold',
+																			children: r,
+																		}),
+																	}),
 																	(0, l.jsx)('p', { className: 'truncate text-sm leading-none', children: s }),
 																],
 															}),

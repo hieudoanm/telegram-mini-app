@@ -3530,16 +3530,14 @@
 						let e = window.Telegram.WebApp.initData,
 							{ user: t } = Object.fromEntries(new URLSearchParams(e)),
 							{ data: r, error: s } = await n(JSON.parse(t));
-						return s
-							? (console.error(s), { user: null, initData: '' })
-							: (console.info('user', r), { user: r, initData: e });
+						return s ? (console.error(s), { user: null, initData: '' }) : { user: r, initData: e };
 					}
 					return { user: null, initData: '' };
 				},
 				o = (0, a.createContext)({ isAuthenticated: !1, user: null }),
 				l = (e) => {
 					let { children: t = (0, s.jsx)(s.Fragment, {}) } = e,
-						[{ loading: r = !1, isAuthenticated: l = !1, user: c = null }, h] = (0, a.useState)({
+						[{ loading: r = !0, isAuthenticated: l = !1, user: c = null }, h] = (0, a.useState)({
 							loading: !1,
 							isAuthenticated: !1,
 							user: null,

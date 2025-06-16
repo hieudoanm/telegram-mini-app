@@ -12,9 +12,10 @@ const getTelegramUser = async (): Promise<{ initData: string; user: TelegramUser
 			console.error(error);
 			return { user: null, initData: '' };
 		}
-		console.info('user', user);
+
 		return { user, initData: telegramWebAppInitData };
 	}
+
 	return {
 		user: null,
 		initData: '',
@@ -30,7 +31,7 @@ const UserContext = createContext<{
 });
 
 export const TelegramUserProvider: React.FC<{ children: ReactNode }> = ({ children = <></> }) => {
-	const [{ loading = false, isAuthenticated = false, user = null }, setState] = useState<{
+	const [{ loading = true, isAuthenticated = false, user = null }, setState] = useState<{
 		loading: boolean;
 		isAuthenticated: boolean;
 		user: TelegramUser | null;

@@ -54,6 +54,7 @@
 		--color-yellow-500: oklch(79.5% 0.184 86.047);
 		--color-green-900: oklch(39.3% 0.095 152.535);
 		--color-neutral-100: oklch(97% 0 0);
+		--color-neutral-500: oklch(55.6% 0 0);
 		--color-neutral-800: oklch(26.9% 0 0);
 		--color-neutral-900: oklch(20.5% 0 0);
 		--color-neutral-950: oklch(14.5% 0 0);
@@ -75,6 +76,7 @@
 		--text-3xl--line-height: calc(2.25 / 1.875);
 		--text-9xl: 8rem;
 		--text-9xl--line-height: 1;
+		--font-weight-medium: 500;
 		--font-weight-semibold: 600;
 		--font-weight-bold: 700;
 		--font-weight-black: 900;
@@ -427,8 +429,14 @@
 	.gap-y-2 {
 		row-gap: calc(var(--spacing) * 2);
 	}
+	.gap-y-3 {
+		row-gap: calc(var(--spacing) * 3);
+	}
 	.gap-y-4 {
 		row-gap: calc(var(--spacing) * 4);
+	}
+	.gap-y-6 {
+		row-gap: calc(var(--spacing) * 6);
 	}
 	.gap-y-8 {
 		row-gap: calc(var(--spacing) * 8);
@@ -479,9 +487,6 @@
 	}
 	.bg-green-900 {
 		background-color: var(--color-green-900);
-	}
-	.bg-neutral-900 {
-		background-color: var(--color-neutral-900);
 	}
 	.bg-neutral-950 {
 		background-color: var(--color-neutral-950);
@@ -589,6 +594,10 @@
 		--tw-font-weight: var(--font-weight-bold);
 		font-weight: var(--font-weight-bold);
 	}
+	.font-medium {
+		--tw-font-weight: var(--font-weight-medium);
+		font-weight: var(--font-weight-medium);
+	}
 	.font-semibold {
 		--tw-font-weight: var(--font-weight-semibold);
 		font-weight: var(--font-weight-semibold);
@@ -596,11 +605,17 @@
 	.text-neutral-100 {
 		color: var(--color-neutral-100);
 	}
+	.text-neutral-500 {
+		color: var(--color-neutral-500);
+	}
 	.text-neutral-900 {
 		color: var(--color-neutral-900);
 	}
 	.text-yellow-500 {
 		color: var(--color-yellow-500);
+	}
+	.line-through {
+		text-decoration-line: line-through;
 	}
 	.antialiased {
 		-webkit-font-smoothing: antialiased;

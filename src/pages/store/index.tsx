@@ -1,5 +1,6 @@
 import { PageTemplate } from '@telegram/templates/PageTemplate';
 import { NextPage } from 'next';
+import Link from 'next/link';
 
 const StorePage: NextPage = () => {
 	return (
@@ -31,7 +32,9 @@ const StorePage: NextPage = () => {
 									<div className="flex grow items-center gap-x-4 truncate">
 										<div className="aspect-square h-12 rounded-lg border border-neutral-900"></div>
 										<div className="flex grow flex-col gap-y-2 truncate">
-											<h2 className="text-lg leading-none font-bold">{title}</h2>
+											<Link href={`/store/${id}`}>
+												<h2 className="text-lg leading-none font-bold">{title}</h2>
+											</Link>
 											<p className="truncate text-sm leading-none">{description}</p>
 										</div>
 									</div>
