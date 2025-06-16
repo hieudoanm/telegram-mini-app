@@ -1,9 +1,9 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-	[103],
+	[900],
 	{
 		812: (e, t, r) => {
 			'use strict';
-			r.d(t, { k5: () => u });
+			r.d(t, { k5: () => d });
 			var n = r(148),
 				l = { color: void 0, size: void 0, className: void 0, style: void 0, attr: void 0 },
 				s = n.createContext && n.createContext(l),
@@ -19,7 +19,7 @@
 							return e;
 						}).apply(this, arguments);
 			}
-			function o(e, t) {
+			function i(e, t) {
 				var r = Object.keys(e);
 				if (Object.getOwnPropertySymbols) {
 					var n = Object.getOwnPropertySymbols(e);
@@ -31,11 +31,11 @@
 				}
 				return r;
 			}
-			function i(e) {
+			function o(e) {
 				for (var t = 1; t < arguments.length; t++) {
 					var r = null != arguments[t] ? arguments[t] : {};
 					t % 2
-						? o(Object(r), !0).forEach(function (t) {
+						? i(Object(r), !0).forEach(function (t) {
 								var n, l, s;
 								(n = e),
 									(l = t),
@@ -58,27 +58,27 @@
 							})
 						: Object.getOwnPropertyDescriptors
 							? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-							: o(Object(r)).forEach(function (t) {
+							: i(Object(r)).forEach(function (t) {
 									Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
 								});
 				}
 				return e;
 			}
-			function u(e) {
+			function d(e) {
 				return (t) =>
 					n.createElement(
-						d,
-						c({ attr: i({}, e.attr) }, t),
+						u,
+						c({ attr: o({}, e.attr) }, t),
 						(function e(t) {
-							return t && t.map((t, r) => n.createElement(t.tag, i({ key: r }, t.attr), e(t.child)));
+							return t && t.map((t, r) => n.createElement(t.tag, o({ key: r }, t.attr), e(t.child)));
 						})(e.child),
 					);
 			}
-			function d(e) {
+			function u(e) {
 				var t = (t) => {
 					var r,
-						{ attr: l, size: s, title: o } = e,
-						u = (function (e, t) {
+						{ attr: l, size: s, title: i } = e,
+						d = (function (e, t) {
 							if (null == e) return {};
 							var r,
 								n,
@@ -99,20 +99,20 @@
 							}
 							return l;
 						})(e, a),
-						d = s || t.size || '1em';
+						u = s || t.size || '1em';
 					return (
 						t.className && (r = t.className),
 						e.className && (r = (r ? r + ' ' : '') + e.className),
 						n.createElement(
 							'svg',
-							c({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, t.attr, l, u, {
+							c({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, t.attr, l, d, {
 								className: r,
-								style: i(i({ color: e.color || t.color }, t.style), e.style),
-								height: d,
-								width: d,
+								style: o(o({ color: e.color || t.color }, t.style), e.style),
+								height: u,
+								width: u,
 								xmlns: 'http://www.w3.org/2000/svg',
 							}),
-							o && n.createElement('title', null, o),
+							i && n.createElement('title', null, i),
 							e.children,
 						)
 					);
@@ -120,31 +120,31 @@
 				return void 0 !== s ? n.createElement(s.Consumer, null, (e) => t(e)) : t(l);
 			}
 		},
-		2103: (e, t, r) => {
+		2732: (e, t, r) => {
 			'use strict';
-			r.r(t), r.d(t, { default: () => d });
+			r.r(t), r.d(t, { default: () => u });
 			var n = r(5640),
 				l = r(8377),
 				s = r(5549),
 				a = r(5437),
 				c = r(6440),
-				o = r(5089),
-				i = r.n(o),
-				u = r(9695);
-			let d = () => {
-				let e = (0, a.I)('gameId');
+				i = r(5089),
+				o = r.n(i),
+				d = r(9695);
+			let u = () => {
+				let e = (0, a.I)('itemId');
 				return (0, n.jsx)(c.U, {
 					activeId: 'store',
 					children: (0, n.jsxs)('div', {
 						className: 'flex flex-col gap-y-6 p-4',
 						children: [
-							(0, n.jsx)(i(), {
+							(0, n.jsx)(o(), {
 								href: '/store',
 								children: (0, n.jsxs)('div', {
 									className: 'flex items-center gap-x-2 text-yellow-500',
 									children: [
-										(0, n.jsx)(u.FZc, {}),
-										(0, n.jsx)('span', { className: 'font-medium', children: 'Games' }),
+										(0, n.jsx)(d.FZc, {}),
+										(0, n.jsx)('span', { className: 'font-medium', children: 'Store' }),
 									],
 								}),
 							}),
@@ -155,18 +155,33 @@
 								className: 'flex flex-col gap-y-3',
 								children: [
 									(0, n.jsx)('div', { children: (0, n.jsx)(l.E, { type: 'primary', children: 'Category' }) }),
-									(0, n.jsxs)('h1', { className: 'text-xl leading-none font-semibold', children: ['Game ', e] }),
+									(0, n.jsxs)('h1', { className: 'text-xl leading-none font-semibold', children: ['Item ', e] }),
 									(0, n.jsx)('p', {
 										className: 'text-sm leading-none text-neutral-500',
 										children: 'Lorem ipsum dolor sit amet.',
 									}),
+									(0, n.jsxs)('div', {
+										className: 'flex items-center gap-x-2 leading-none',
+										children: [
+											(0, n.jsx)('span', { className: 'text-xl font-black', children: '$1.00' }),
+											(0, n.jsx)('span', { className: 'text-base text-neutral-500 line-through', children: '$2.00' }),
+										],
+									}),
 								],
 							}),
-							(0, n.jsx)(s.$, { children: 'Play Now' }),
+							(0, n.jsx)(s.$, { children: 'Buy Now' }),
 						],
 					}),
 				});
 			};
+		},
+		5044: (e, t, r) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/store/[itemId]',
+				function () {
+					return r(2732);
+				},
+			]);
 		},
 		5437: (e, t, r) => {
 			'use strict';
@@ -202,7 +217,7 @@
 		},
 		6440: (e, t, r) => {
 			'use strict';
-			r.d(t, { U: () => d });
+			r.d(t, { U: () => u });
 			var n = r(5640);
 			let l = (e) => {
 				let { children: t = (0, n.jsx)(n.Fragment, {}) } = e;
@@ -214,7 +229,7 @@
 			var s = r(5089),
 				a = r.n(s),
 				c = r(9695);
-			let o = (e) => {
+			let i = (e) => {
 				let { activeId: t } = e;
 				return (0, n.jsx)('nav', {
 					className: 'border-t border-neutral-900 bg-neutral-950',
@@ -256,9 +271,9 @@
 									href: l = '',
 									text: s = '',
 									icon: c = (0, n.jsx)(n.Fragment, {}),
-									activeIcon: o = (0, n.jsx)(n.Fragment, {}),
+									activeIcon: i = (0, n.jsx)(n.Fragment, {}),
 								} = e,
-								i = r === t;
+								o = r === t;
 							return (0, n.jsx)(
 								'div',
 								{
@@ -267,13 +282,13 @@
 										href: l,
 										children: (0, n.jsxs)('div', {
 											className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
-												i ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
+												o ? 'text-yellow-500 border-t-4 border-yellow-500 pt-2' : 'pt-3',
 											),
 											children: [
 												(0, n.jsx)('span', {
 													className: 'text-3xl',
-													children: i
-														? (0, n.jsx)(n.Fragment, { children: o })
+													children: o
+														? (0, n.jsx)(n.Fragment, { children: i })
 														: (0, n.jsx)(n.Fragment, { children: c }),
 												}),
 												(0, n.jsx)('span', { className: 'text-xs', children: s }),
@@ -287,35 +302,27 @@
 					}),
 				});
 			};
-			var i = r(1211),
-				u = r(148);
-			let d = (e) => {
+			var o = r(1211),
+				d = r(148);
+			let u = (e) => {
 				let { activeId: t = '', children: r = (0, n.jsx)(n.Fragment, {}) } = e,
-					{ requestFullscreen: s } = (0, i.j)();
+					{ requestFullscreen: s } = (0, o.j)();
 				return (
-					(0, u.useEffect)(() => {
+					(0, d.useEffect)(() => {
 						s();
 					}, [s]),
 					(0, n.jsxs)(l, {
 						children: [
 							(0, n.jsx)('header', {
-								className: 'border-b border-neutral-900 pt-8 pb-4',
+								className: 'border-b border-neutral-900 pt-6 pb-4',
 								children: (0, n.jsx)('h1', { className: 'text-center text-2xl font-black', children: 'Mini App' }),
 							}),
 							(0, n.jsx)('main', { className: 'scrollbar-none grow overflow-y-auto', children: r }),
-							(0, n.jsx)(o, { activeId: t }),
+							(0, n.jsx)(i, { activeId: t }),
 						],
 					})
 				);
 			};
-		},
-		6474: (e, t, r) => {
-			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/games/[gameId]',
-				function () {
-					return r(2103);
-				},
-			]);
 		},
 		8377: (e, t, r) => {
 			'use strict';
@@ -345,6 +352,6 @@
 	},
 	(e) => {
 		var t = (t) => e((e.s = t));
-		e.O(0, [72, 89, 636, 593, 792], () => t(6474)), (_N_E = e.O());
+		e.O(0, [72, 89, 636, 593, 792], () => t(5044)), (_N_E = e.O());
 	},
 ]);

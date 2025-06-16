@@ -9,7 +9,7 @@ import { mnemonicToPrivateKey, KeyPair } from '@ton/crypto';
 // --- CONFIG TYPES ---
 const TON_ENDPOINT: string = process.env.TON_ENDPOINT as string;
 const USDT_JETTON_ADDRESS: string = process.env.USDT_JETTON_ADDRESS as string;
-const MNEMONIC: string[] = process.env.TON_WALLET_MNEMONIC!.split(' ');
+const MNEMONIC: string[] = (process.env.TON_WALLET_MNEMONIC ?? '').split(' ');
 
 // --- CLIENT SINGLETON ---
 const client: TonClient = new TonClient({ endpoint: TON_ENDPOINT });
