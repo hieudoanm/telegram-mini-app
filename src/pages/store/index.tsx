@@ -1,4 +1,5 @@
 import { Badge } from '@telegram/components/Badge';
+import { Button } from '@telegram/components/Button';
 import { PageTemplate } from '@telegram/templates/PageTemplate';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -11,9 +12,7 @@ const StorePage: NextPage = () => {
 					<div className="aspect-video w-full rounded-2xl border border-neutral-900 bg-neutral-950 shadow shadow-neutral-900">
 						<div className="flex h-full w-full flex-col p-4">
 							<div className="grow"></div>
-							<button className="w-full cursor-pointer rounded-full border border-neutral-800 bg-yellow-500 px-4 py-2 text-base font-semibold text-neutral-900">
-								Buy Now
-							</button>
+							<Button>Buy Now</Button>
 						</div>
 					</div>
 					<h1 className="text-2xl font-black">Store</h1>
@@ -34,7 +33,7 @@ const StorePage: NextPage = () => {
 										<div className="aspect-square h-20 rounded-lg border border-neutral-900"></div>
 										<div className="flex grow flex-col gap-y-2 truncate">
 											<div>
-												<Badge>{category}</Badge>
+												<Badge type="primary">{category}</Badge>
 											</div>
 											<h2 className="leading-none font-semibold">{name}</h2>
 											<p className="truncate text-lg leading-none font-black">{price}</p>
@@ -42,9 +41,7 @@ const StorePage: NextPage = () => {
 									</div>
 									<div className="shrink-0">
 										<Link href={`/store/${id}`}>
-											<button className="cursor-pointer rounded-full bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900">
-												Buy
-											</button>
+											<Button size="sm">Buy</Button>
 										</Link>
 									</div>
 								</div>

@@ -1,4 +1,4 @@
-import { ErrorBadge, SuccessBadge } from '@telegram/components/Badge';
+import { Badge } from '@telegram/components/Badge';
 import { Button } from '@telegram/components/Button';
 import { useTelegram } from '@telegram/contexts/TelegramContext';
 import { PageTemplate } from '@telegram/templates/PageTemplate';
@@ -34,9 +34,9 @@ const ProfilePage: NextPage = () => {
 								<p className="truncate text-sm leading-none">@{user.username}</p>
 								<div className="flex items-center gap-x-2">
 									{isAuthenticated ? (
-										<SuccessBadge>Authenticated</SuccessBadge>
+										<Badge type="success">Authenticated</Badge>
 									) : (
-										<ErrorBadge>Authenticated</ErrorBadge>
+										<Badge type="error">Unauthenticated</Badge>
 									)}
 								</div>
 							</div>

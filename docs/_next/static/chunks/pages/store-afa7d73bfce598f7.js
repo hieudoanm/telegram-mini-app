@@ -128,16 +128,38 @@
 				},
 			]);
 		},
+		5549: (e, r, t) => {
+			'use strict';
+			t.d(r, { $: () => n });
+			var l = t(5640);
+			let n = (e) => {
+				let { size: r = 'md', type: t = 'button', onClick: n = () => {}, children: s = (0, l.jsx)(l.Fragment, {}) } = e;
+				return 'sm' === r
+					? (0, l.jsx)('button', {
+							type: t,
+							className: 'w-full rounded-full bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900',
+							onClick: n,
+							children: s,
+						})
+					: (0, l.jsx)('button', {
+							type: t,
+							className: 'w-full rounded-full bg-yellow-500 px-4 py-2 font-semibold text-neutral-900',
+							onClick: n,
+							children: s,
+						});
+			};
+		},
 		6201: (e, r, t) => {
 			'use strict';
-			t.r(r), t.d(r, { default: () => o });
+			t.r(r), t.d(r, { default: () => i });
 			var l = t(5640),
 				n = t(8377),
-				s = t(6440),
-				a = t(5089),
-				c = t.n(a);
-			let o = () =>
-				(0, l.jsx)(s.U, {
+				s = t(5549),
+				a = t(6440),
+				c = t(5089),
+				o = t.n(c);
+			let i = () =>
+				(0, l.jsx)(a.U, {
 					activeId: 'store',
 					children: (0, l.jsx)('div', {
 						className: 'flex flex-col p-4',
@@ -149,14 +171,7 @@
 										'aspect-video w-full rounded-2xl border border-neutral-900 bg-neutral-950 shadow shadow-neutral-900',
 									children: (0, l.jsxs)('div', {
 										className: 'flex h-full w-full flex-col p-4',
-										children: [
-											(0, l.jsx)('div', { className: 'grow' }),
-											(0, l.jsx)('button', {
-												className:
-													'w-full cursor-pointer rounded-full border border-neutral-800 bg-yellow-500 px-4 py-2 text-base font-semibold text-neutral-900',
-												children: 'Buy Now',
-											}),
-										],
+										children: [(0, l.jsx)('div', { className: 'grow' }), (0, l.jsx)(s.$, { children: 'Buy Now' })],
 									}),
 								}),
 								(0, l.jsx)('h1', { className: 'text-2xl font-black', children: 'Store' }),
@@ -168,7 +183,7 @@
 									{ id: '5', name: 'Item 5', price: '$1.00', category: 'Category' },
 									{ id: '6', name: 'Item 6', price: '$1.00', category: 'Category' },
 								].map((e) => {
-									let { id: r = '', name: t = '', price: s = '', category: a = '' } = e;
+									let { id: r = '', name: t = '', price: a = '', category: c = '' } = e;
 									return (0, l.jsx)(
 										'div',
 										{
@@ -186,11 +201,11 @@
 															(0, l.jsxs)('div', {
 																className: 'flex grow flex-col gap-y-2 truncate',
 																children: [
-																	(0, l.jsx)('div', { children: (0, l.jsx)(n.Ex, { children: a }) }),
+																	(0, l.jsx)('div', { children: (0, l.jsx)(n.E, { type: 'primary', children: c }) }),
 																	(0, l.jsx)('h2', { className: 'leading-none font-semibold', children: t }),
 																	(0, l.jsx)('p', {
 																		className: 'truncate text-lg leading-none font-black',
-																		children: s,
+																		children: a,
 																	}),
 																],
 															}),
@@ -198,13 +213,9 @@
 													}),
 													(0, l.jsx)('div', {
 														className: 'shrink-0',
-														children: (0, l.jsx)(c(), {
+														children: (0, l.jsx)(o(), {
 															href: '/store/'.concat(r),
-															children: (0, l.jsx)('button', {
-																className:
-																	'cursor-pointer rounded-full bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900',
-																children: 'Buy',
-															}),
+															children: (0, l.jsx)(s.$, { size: 'sm', children: 'Buy' }),
 														}),
 													}),
 												],
@@ -329,29 +340,25 @@
 		},
 		8377: (e, r, t) => {
 			'use strict';
-			t.d(r, { Ex: () => n, b: () => a, iE: () => s });
+			t.d(r, { E: () => n });
 			var l = t(5640);
 			let n = (e) => {
-					let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
-					return (0, l.jsx)('span', {
-						className: 'rounded-full bg-yellow-500 px-2 py-0.5 text-xs text-neutral-900',
-						children: r,
-					});
-				},
-				s = (e) => {
-					let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
-					return (0, l.jsx)('span', {
-						className: 'rounded-full bg-red-900 px-2 py-0.5 text-xs text-neutral-900',
-						children: r,
-					});
-				},
-				a = (e) => {
-					let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
-					return (0, l.jsx)('span', {
-						className: 'rounded-full bg-green-900 px-2 py-0.5 text-xs text-neutral-900',
-						children: r,
-					});
-				};
+				let { type: r = 'primary', children: t = (0, l.jsx)(l.Fragment, {}) } = e;
+				return 'success' === r
+					? (0, l.jsx)('span', {
+							className: 'rounded-full bg-green-900 px-2 py-0.5 text-xs text-neutral-900',
+							children: t,
+						})
+					: 'error' === r
+						? (0, l.jsx)('span', {
+								className: 'rounded-full bg-red-900 px-2 py-0.5 text-xs text-neutral-900',
+								children: t,
+							})
+						: (0, l.jsx)('span', {
+								className: 'rounded-full bg-yellow-500 px-2 py-0.5 text-xs text-neutral-900',
+								children: t,
+							});
+			};
 		},
 	},
 	(e) => {

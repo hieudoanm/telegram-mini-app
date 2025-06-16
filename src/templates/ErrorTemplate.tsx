@@ -1,3 +1,4 @@
+import { Button } from '@telegram/components/Button';
 import { useTelegram } from '@telegram/contexts/TelegramContext';
 import Link from 'next/link';
 import { FC, useEffect } from 'react';
@@ -14,7 +15,7 @@ export const ErrorTemplate: FC<{ code: string }> = ({ code }) => {
 			<div className="flex flex-col items-center justify-center gap-y-8">
 				<h1 className="text-9xl">{code}</h1>
 				<Link href="/">
-					<button className="cursor-pointer rounded-full border border-neutral-800 px-8 py-4 text-xl">Go Home</button>
+					<Button>Go Home</Button>
 				</Link>
 			</div>
 		</div>

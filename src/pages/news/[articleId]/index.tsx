@@ -25,8 +25,8 @@ const ArticlePage = () => {
 					<p className="text-xs text-neutral-500">{formatDate(new Date())}</p>
 					<h1 className="text-xl leading-none font-semibold">Article {articleId}</h1>
 					<div className="flex items-center gap-x-2">
-						<Badge>Tag 1</Badge>
-						<Badge>Tag 2</Badge>
+						<Badge type="primary">Tag 1</Badge>
+						<Badge type="primary">Tag 2</Badge>
 					</div>
 					<p className="text-sm text-neutral-300">{CONTENT}</p>
 				</div>

@@ -1,10 +1,24 @@
 import { FC, ReactNode } from 'react';
 
-export const Button: FC<{ type?: 'button' | 'submit' | 'reset'; onClick?: () => void; children: ReactNode }> = ({
-	type = 'button',
-	onClick = () => {},
-	children = <></>,
-}) => {
+type ButtonSize = 'sm' | 'md';
+
+export const Button: FC<{
+	size?: ButtonSize;
+	type?: 'button' | 'submit' | 'reset';
+	onClick?: () => void;
+	children: ReactNode;
+}> = ({ size = 'md', type = 'button', onClick = () => {}, children = <></> }) => {
+	if (size === 'sm') {
+		return (
+			<button
+				type={type}
+				className="w-full rounded-full bg-yellow-500 px-3 py-1 text-sm font-semibold text-neutral-900"
+				onClick={onClick}>
+				{children}
+			</button>
+		);
+	}
+
 	return (
 		<button
 			type={type}
