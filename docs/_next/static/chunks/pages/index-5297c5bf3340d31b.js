@@ -13,35 +13,42 @@
 				});
 			};
 			var o = t(6826),
-				a = t.n(o),
-				s = t(1238);
+				s = t.n(o),
+				a = t(1238);
 			let i = (e) => {
 					let { activeId: r } = e;
 					return (0, n.jsx)('nav', {
 						className: 'border-t border-neutral-900 bg-neutral-950',
 						children: (0, n.jsx)('div', {
-							className: 'grid grid-cols-4',
+							className: 'grid grid-cols-5',
 							children: [
-								{ id: 'home', href: '/', icon: (0, n.jsx)(s.cEk, {}), activeIcon: (0, n.jsx)(s.ZVi, {}), text: 'Home' },
+								{ id: 'home', href: '/', icon: (0, n.jsx)(a.cEk, {}), activeIcon: (0, n.jsx)(a.ZVi, {}), text: 'Home' },
 								{
 									id: 'games',
 									href: '/games',
-									icon: (0, n.jsx)(s.SkF, {}),
-									activeIcon: (0, n.jsx)(s.rNT, {}),
+									icon: (0, n.jsx)(a.SkF, {}),
+									activeIcon: (0, n.jsx)(a.rNT, {}),
 									text: 'Games',
 								},
 								{
 									id: 'store',
 									href: '/store',
-									icon: (0, n.jsx)(s.Qsx, {}),
-									activeIcon: (0, n.jsx)(s.XsE, {}),
+									icon: (0, n.jsx)(a.Qsx, {}),
+									activeIcon: (0, n.jsx)(a.XsE, {}),
 									text: 'Store',
+								},
+								{
+									id: 'news',
+									href: '/news',
+									icon: (0, n.jsx)(a.rRm, {}),
+									activeIcon: (0, n.jsx)(a.mKO, {}),
+									text: 'News',
 								},
 								{
 									id: 'profile',
 									href: '/profile',
-									icon: (0, n.jsx)(s.NMe, {}),
-									activeIcon: (0, n.jsx)(s.MrL, {}),
+									icon: (0, n.jsx)(a.NMe, {}),
+									activeIcon: (0, n.jsx)(a.MrL, {}),
 									text: 'Profile',
 								},
 							].map((e) => {
@@ -49,7 +56,7 @@
 										id: t = '',
 										href: l = '',
 										text: o = '',
-										icon: s = (0, n.jsx)(n.Fragment, {}),
+										icon: a = (0, n.jsx)(n.Fragment, {}),
 										activeIcon: i = (0, n.jsx)(n.Fragment, {}),
 									} = e,
 									c = t === r;
@@ -57,7 +64,7 @@
 									'div',
 									{
 										className: 'col-span-1',
-										children: (0, n.jsx)(a(), {
+										children: (0, n.jsx)(s(), {
 											href: l,
 											children: (0, n.jsxs)('div', {
 												className: 'flex flex-col items-center justify-center gap-y-0.5 pb-2 '.concat(
@@ -68,7 +75,7 @@
 														className: 'text-3xl',
 														children: c
 															? (0, n.jsx)(n.Fragment, { children: i })
-															: (0, n.jsx)(n.Fragment, { children: s }),
+															: (0, n.jsx)(n.Fragment, { children: a }),
 													}),
 													(0, n.jsx)('span', { className: 'text-xs', children: o }),
 												],
@@ -148,9 +155,9 @@
 			var n = t(148),
 				l = { color: void 0, size: void 0, className: void 0, style: void 0, attr: void 0 },
 				o = n.createContext && n.createContext(l),
-				a = ['attr', 'size', 'title'];
-			function s() {
-				return (s = Object.assign
+				s = ['attr', 'size', 'title'];
+			function a() {
+				return (a = Object.assign
 					? Object.assign.bind()
 					: function (e) {
 							for (var r = 1; r < arguments.length; r++) {
@@ -209,7 +216,7 @@
 				return (r) =>
 					n.createElement(
 						d,
-						s({ attr: c({}, e.attr) }, r),
+						a({ attr: c({}, e.attr) }, r),
 						(function e(r) {
 							return r && r.map((r, t) => n.createElement(r.tag, c({ key: t }, r.attr), e(r.child)));
 						})(e.child),
@@ -239,14 +246,14 @@
 									(t = o[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (l[t] = e[t]);
 							}
 							return l;
-						})(e, a),
+						})(e, s),
 						d = o || r.size || '1em';
 					return (
 						r.className && (t = r.className),
 						e.className && (t = (t ? t + ' ' : '') + e.className),
 						n.createElement(
 							'svg',
-							s({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, r.attr, l, u, {
+							a({ stroke: 'currentColor', fill: 'currentColor', strokeWidth: '0' }, r.attr, l, u, {
 								className: t,
 								style: c(c({ color: e.color || r.color }, r.style), e.style),
 								height: d,

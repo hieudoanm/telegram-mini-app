@@ -9,6 +9,9 @@
     - [Home](#home)
     - [Games](#games)
     - [Store](#store)
+      - [Product](#product)
+    - [News](#news)
+      - [News Article](#news-article)
     - [Profile](#profile)
 
 ## Demo
@@ -28,6 +31,18 @@
 ### Store
 
 ![store](./images/screenshots/store.png)
+
+#### Product
+
+![product](./images/screenshots/store-item.png)
+
+### News
+
+![news](./images/screenshots/news.png)
+
+#### News Article
+
+![article](./images/screenshots/news-article.png)
 
 ### Profile
 

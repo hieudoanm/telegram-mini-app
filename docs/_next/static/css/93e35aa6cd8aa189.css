@@ -54,6 +54,7 @@
 		--color-yellow-500: oklch(79.5% 0.184 86.047);
 		--color-green-900: oklch(39.3% 0.095 152.535);
 		--color-neutral-100: oklch(97% 0 0);
+		--color-neutral-300: oklch(87% 0 0);
 		--color-neutral-500: oklch(55.6% 0 0);
 		--color-neutral-800: oklch(26.9% 0 0);
 		--color-neutral-900: oklch(20.5% 0 0);
@@ -345,6 +346,12 @@
 	.mx-auto {
 		margin-inline: auto;
 	}
+	.line-clamp-3 {
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		overflow: hidden;
+	}
 	.flex {
 		display: flex;
 	}
@@ -404,6 +411,9 @@
 	}
 	.grid-cols-4 {
 		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+	.grid-cols-5 {
+		grid-template-columns: repeat(5, minmax(0, 1fr));
 	}
 	.flex-col {
 		flex-direction: column;
@@ -475,6 +485,10 @@
 	.border-t-4 {
 		border-top-style: var(--tw-border-style);
 		border-top-width: 4px;
+	}
+	.border-b {
+		border-bottom-style: var(--tw-border-style);
+		border-bottom-width: 1px;
 	}
 	.border-neutral-800 {
 		border-color: var(--color-neutral-800);
@@ -604,6 +618,9 @@
 	}
 	.text-neutral-100 {
 		color: var(--color-neutral-100);
+	}
+	.text-neutral-300 {
+		color: var(--color-neutral-300);
 	}
 	.text-neutral-500 {
 		color: var(--color-neutral-500);

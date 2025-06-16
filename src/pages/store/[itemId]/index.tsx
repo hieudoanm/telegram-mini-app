@@ -12,7 +12,7 @@ const StoreItemPage = () => {
 				<Link href="/store">
 					<div className="flex items-center gap-x-2 text-yellow-500">
 						<PiCaretLeftBold />
-						<span className="font-medium">Back</span>
+						<span className="font-medium">Store</span>
 					</div>
 				</Link>
 				<div className="aspect-square w-full rounded-xl border border-neutral-900 shadow shadow-neutral-900"></div>

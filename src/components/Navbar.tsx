@@ -5,6 +5,8 @@ import {
 	PiGameControllerFill,
 	PiHouse,
 	PiHouseFill,
+	PiNewspaper,
+	PiNewspaperFill,
 	PiStorefront,
 	PiStorefrontFill,
 	PiUserCircle,
@@ -14,7 +16,7 @@ import {
 export const Navbar: FC<{ activeId: string }> = ({ activeId }) => {
 	return (
 		<nav className="border-t border-neutral-900 bg-neutral-950">
-			<div className="grid grid-cols-4">
+			<div className="grid grid-cols-5">
 				{[
 					{ id: 'home', href: '/', icon: <PiHouse />, activeIcon: <PiHouseFill />, text: 'Home' },
 					{
@@ -30,6 +32,13 @@ export const Navbar: FC<{ activeId: string }> = ({ activeId }) => {
 						icon: <PiStorefront />,
 						activeIcon: <PiStorefrontFill />,
 						text: 'Store',
+					},
+					{
+						id: 'news',
+						href: '/news',
+						icon: <PiNewspaper />,
+						activeIcon: <PiNewspaperFill />,
+						text: 'News',
 					},
 					{
 						id: 'profile',

@@ -20,7 +20,7 @@
 					return (0, l.jsx)('nav', {
 						className: 'border-t border-neutral-900 bg-neutral-950',
 						children: (0, l.jsx)('div', {
-							className: 'grid grid-cols-4',
+							className: 'grid grid-cols-5',
 							children: [
 								{ id: 'home', href: '/', icon: (0, l.jsx)(i.cEk, {}), activeIcon: (0, l.jsx)(i.ZVi, {}), text: 'Home' },
 								{
@@ -36,6 +36,13 @@
 									icon: (0, l.jsx)(i.Qsx, {}),
 									activeIcon: (0, l.jsx)(i.XsE, {}),
 									text: 'Store',
+								},
+								{
+									id: 'news',
+									href: '/news',
+									icon: (0, l.jsx)(i.rRm, {}),
+									activeIcon: (0, l.jsx)(i.mKO, {}),
+									text: 'News',
 								},
 								{
 									id: 'profile',
