@@ -21,6 +21,14 @@ const post = async <T, D>(url: string, requestBody?: D): Promise<T> => {
 	return data as T;
 };
 
+const splitMessage = (text: string, limit = 4096) => {
+	const chunks = [];
+	for (let i = 0; i < text.length; i += limit) {
+		chunks.push(text.slice(i, i + limit));
+	}
+	return chunks;
+};
+
 const sendMessage = async ({
 	token = '',
 	chatId = 0,
@@ -38,7 +46,24 @@ const sendMessage = async ({
 	if (!chatId) throw new Error('Invalid chatId');
 	if (!message) throw new Error('Invalid message');
 	const sendMessageUrl = `${BASE_URL}${token}/sendMessage`;
-	await post(sendMessageUrl, { chat_id: chatId, text: message, parse_mode: parseMode, reply_to_message_id: messageId });
+	if (message.length < 4096) {
+		await post(sendMessageUrl, {
+			chat_id: chatId,
+			text: message,
+			parse_mode: parseMode,
+			reply_to_message_id: messageId,
+		});
+	} else {
+		const parts: string[] = splitMessage(message);
+		for (const part in parts) {
+			await post(sendMessageUrl, {
+				chat_id: chatId,
+				text: part,
+				parse_mode: parseMode,
+				reply_to_message_id: messageId,
+			});
+		}
+	}
 };
 
 export const Telegram = () => {
