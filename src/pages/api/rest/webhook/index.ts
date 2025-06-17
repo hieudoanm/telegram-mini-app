@@ -39,20 +39,28 @@ interface TelegramUpdate {
 
 const handler = async (request: NextApiRequest, response: NextApiResponse<{ error: string | null }>) => {
 	const { method } = request;
+
+	if (method === 'OPTIONS') {
+		return response.status(200).end();
+	}
 	if (method !== 'POST') {
 		return response.status(405).json({ error: 'Method Not Allowed' });
 	}
 
 	const update: TelegramUpdate = request.body;
 	const chatId: number = update.message?.chat.id ?? 0;
+	console.info('chatId', chatId);
 	const text = update.message?.text ?? '';
+	console.info('text', text);
 	const { data, error } = await tryCatch(generateContent({ prompt: text }));
 	if (error) {
+		console.error('error', error);
 		return response.status(500).json({ error: 'Internal Server Error' });
 	}
 	const message: string = data.candidates.at(0)?.content.parts.at(0)?.text ?? 'No Response';
+	console.info('message', message);
 	await Telegram().messages.send(TELEGRAM_BOT_TOKEN, { chatId, message, parseMode: ParseMode.MARKDOWN });
-	return response.status(200).json({ error: null });
+	return response.status(200).end();
 };
 
 export default handler;
