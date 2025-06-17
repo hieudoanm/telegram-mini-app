@@ -57,18 +57,46 @@ const handler = async (request: NextApiRequest, response: NextApiResponse<{ erro
 	const { data, error } = await tryCatch(generateContent({ prompt: text }));
 	if (error) {
 		console.error('error', error);
+		const { error: sendError } = await tryCatch(
+			Telegram().messages.send({
+				chatId,
+				message: 'No Response',
+				parseMode: ParseMode.MARKDOWN,
+				messageId,
+				token: TELEGRAM_BOT_TOKEN,
+			}),
+		);
+		if (sendError) {
+			console.error('sendError', sendError);
+			return response.status(500).json({ error: 'Internal Server Error' });
+		}
 		return response.status(500).json({ error: 'Internal Server Error' });
 	}
 	const encoded: string = data.candidates.at(0)?.content.parts.at(0)?.text ?? 'No Response';
 	const message: string = decodeURIComponent(encoded);
 	console.info('message', message);
-	await Telegram().messages.send({
-		chatId,
-		message,
-		parseMode: ParseMode.MARKDOWN,
-		messageId,
-		token: TELEGRAM_BOT_TOKEN,
-	});
+	const { error: sendError } = await tryCatch(
+		Telegram().messages.send({
+			chatId,
+			message,
+			parseMode: ParseMode.MARKDOWN,
+			messageId,
+			token: TELEGRAM_BOT_TOKEN,
+		}),
+	);
+	if (sendError) {
+		console.error(sendError);
+		await tryCatch(
+			Telegram().messages.send({
+				chatId,
+				message: sendError.message,
+				parseMode: ParseMode.MARKDOWN,
+				messageId,
+				token: TELEGRAM_BOT_TOKEN,
+			}),
+		);
+		return response.status(200).end();
+	}
 	return response.status(200).end();
 };
 
