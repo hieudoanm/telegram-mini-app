@@ -47,21 +47,35 @@ const sendMessage = async ({
 	if (!message) throw new Error('Invalid message');
 	const sendMessageUrl = `${BASE_URL}${token}/sendMessage`;
 	if (message.length < 4096) {
-		await post(sendMessageUrl, {
-			chat_id: chatId,
-			text: message,
-			parse_mode: parseMode,
-			reply_to_message_id: messageId,
-		});
+		const { data, error } = await tryCatch(
+			post(sendMessageUrl, {
+				chat_id: chatId,
+				text: message,
+				parse_mode: parseMode,
+				reply_to_message_id: messageId,
+			}),
+		);
+		if (error) {
+			console.error(error);
+		} else {
+			console.log(data);
+		}
 	} else {
 		const parts: string[] = splitMessage(message);
 		for (const part of parts) {
-			await post(sendMessageUrl, {
-				chat_id: chatId,
-				text: part,
-				parse_mode: parseMode,
-				reply_to_message_id: messageId,
-			});
+			const { data, error } = await tryCatch(
+				post(sendMessageUrl, {
+					chat_id: chatId,
+					text: part,
+					parse_mode: parseMode,
+					reply_to_message_id: messageId,
+				}),
+			);
+			if (error) {
+				console.error(error);
+			} else {
+				console.log(data);
+			}
 		}
 	}
 };
