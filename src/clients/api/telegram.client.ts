@@ -1,3 +1,5 @@
+import { tryCatch } from '@telegram/utils/try-catch';
+
 export enum ParseMode {
 	HTML = 'html',
 	MARKDOWN = 'markdown',
@@ -8,18 +10,15 @@ const BASE_URL = 'https://api.telegram.org/bot';
 const INVALID_TOKEN: string = 'Invalid token';
 
 const post = async <T, D>(url: string, requestBody?: D): Promise<T> => {
-	try {
-		const encodedUrl = encodeURI(url);
-		const headers = { 'Content-Type': 'application/json' };
-		const method = 'POST';
-		const body = JSON.stringify(requestBody);
-		const response = await fetch(encodedUrl, { method, headers, body });
-		const data: T = await response.json();
-		return data;
-	} catch (error) {
-		const message: string = (error as Error).message;
-		throw new Error(message);
-	}
+	const encodedUrl = encodeURI(url);
+	const headers = { 'Content-Type': 'application/json' };
+	const method = 'POST';
+	const body = JSON.stringify(requestBody);
+	const { data: response, error: fetchError } = await tryCatch(fetch(encodedUrl, { method, headers, body }));
+	if (fetchError) throw new Error(fetchError.message);
+	const { data, error } = await tryCatch(response.json());
+	if (error) throw new Error(error.message);
+	return data as T;
 };
 
 const sendMessage = async ({
