@@ -38,7 +38,7 @@ const sendMessage = async ({
 	if (!token) throw new Error(INVALID_TOKEN);
 	if (!chatId) throw new Error('Invalid chatId');
 	if (!message) throw new Error('Invalid message');
-	const sendMessageUrl = `${BASE_URL}${token}/sendMessage}`;
+	const sendMessageUrl = `${BASE_URL}${token}/sendMessage`;
 	await post(sendMessageUrl, { chat_id: chatId, text: message, parse_mode: parseMode, reply_to_message_id: messageId });
 };
 
