@@ -57,7 +57,8 @@ const handler = async (request: NextApiRequest, response: NextApiResponse<{ erro
 		console.error('error', error);
 		return response.status(500).json({ error: 'Internal Server Error' });
 	}
-	const message: string = data.candidates.at(0)?.content.parts.at(0)?.text ?? 'No Response';
+	const encoded: string = data.candidates.at(0)?.content.parts.at(0)?.text ?? 'No Response';
+	const message: string = decodeURIComponent(encoded);
 	console.info('message', message);
 	await Telegram().messages.send(TELEGRAM_BOT_TOKEN, { chatId, message, parseMode: ParseMode.MARKDOWN });
 	return response.status(200).end();
