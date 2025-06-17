@@ -52,6 +52,8 @@ const handler = async (request: NextApiRequest, response: NextApiResponse<{ erro
 	console.info('chatId', chatId);
 	const text = update.message?.text ?? '';
 	console.info('text', text);
+	const messageId: number = update.message?.message_id ?? 0;
+	console.info('messageId', messageId);
 	const { data, error } = await tryCatch(generateContent({ prompt: text }));
 	if (error) {
 		console.error('error', error);
@@ -60,7 +62,13 @@ const handler = async (request: NextApiRequest, response: NextApiResponse<{ erro
 	const encoded: string = data.candidates.at(0)?.content.parts.at(0)?.text ?? 'No Response';
 	const message: string = decodeURIComponent(encoded);
 	console.info('message', message);
-	await Telegram().messages.send(TELEGRAM_BOT_TOKEN, { chatId, message, parseMode: ParseMode.MARKDOWN });
+	await Telegram().messages.send({
+		chatId,
+		message,
+		parseMode: ParseMode.MARKDOWN,
+		messageId,
+		token: TELEGRAM_BOT_TOKEN,
+	});
 	return response.status(200).end();
 };
 
