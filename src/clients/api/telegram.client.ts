@@ -55,7 +55,7 @@ const sendMessage = async ({
 		});
 	} else {
 		const parts: string[] = splitMessage(message);
-		for (const part in parts) {
+		for (const part of parts) {
 			await post(sendMessageUrl, {
 				chat_id: chatId,
 				text: part,
