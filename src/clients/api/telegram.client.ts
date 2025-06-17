@@ -50,7 +50,7 @@ const sendMessage = async ({
 		const { data, error } = await tryCatch(
 			post(sendMessageUrl, {
 				chat_id: chatId,
-				text: message,
+				text: `${message}`,
 				parse_mode: parseMode,
 				reply_to_message_id: messageId,
 			}),
@@ -66,7 +66,7 @@ const sendMessage = async ({
 			const { data, error } = await tryCatch(
 				post(sendMessageUrl, {
 					chat_id: chatId,
-					text: part,
+					text: `${part}`,
 					parse_mode: parseMode,
 					reply_to_message_id: messageId,
 				}),
