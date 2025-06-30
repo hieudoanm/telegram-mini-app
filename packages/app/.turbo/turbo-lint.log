@@ -8,11 +8,11 @@
 > prisma format && prisma generate
 
 [2mPrisma schema loaded from prisma/schema.prisma[22m
-Formatted [4mprisma/schema.prisma[24m in 11ms 🚀
+Formatted [4mprisma/schema.prisma[24m in 12ms 🚀
 [2mPrisma schema loaded from prisma/schema.prisma[22m
 
 
-✔ Generated [1mPrisma Client[22m (v6.10.1)[2m to ./../../node_modules/.pnpm/@prisma+client@6.10.1_prisma@6.10.1_typescript@5.8.3__typescript@5.8.3/node_modules/@prisma/client[22m in 30ms
+✔ Generated [1mPrisma Client[22m (v6.10.1)[2m to ./../../node_modules/.pnpm/@prisma+client@6.10.1_prisma@6.10.1_typescript@5.8.3__typescript@5.8.3/node_modules/@prisma/client[22m in 28ms
 
 Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
 

@@ -4,4 +4,3 @@
 > make format || true
 
 go fmt ./...
-main.go

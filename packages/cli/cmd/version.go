@@ -13,7 +13,7 @@ var versionCmd = &cobra.Command{
 	Long:  "All software has versions. This is GAS's",
 	Run: func(cmd *cobra.Command, args []string) {
 		var version = "v0.0.1"
-		fmt.Printf("GAS CLI version: %s\n", version)
+		fmt.Printf("Telegram CLI version: %s\n", version)
 	},
 }
 
