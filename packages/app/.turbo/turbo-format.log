@@ -4,7 +4,7 @@
 > prisma format && prettier --cache --write .
 
 [2mPrisma schema loaded from prisma/schema.prisma[22m
-Formatted [4mprisma/schema.prisma[24m in 11ms 🚀
+Formatted [4mprisma/schema.prisma[24m in 10ms 🚀
 .gitignore[2K[1G.node-version[2K[1G.npmrc[2K[1G.nvmrc[2K[1G.prettierignore[2K[1G.prettierrc.json[2K[1G[90m.prettierrc.json[39m 0ms (unchanged) (cached)
 .turbo/turbo-build.log[2K[1G.turbo/turbo-format.log[2K[1G.turbo/turbo-lint.log[2K[1Gdocker-compose.yaml[2K[1G[90mdocker-compose.yaml[39m 0ms (unchanged) (cached)
 Dockerfile[2K[1Geslint.config.mjs[2K[1G[90meslint.config.mjs[39m 0ms (unchanged) (cached)
