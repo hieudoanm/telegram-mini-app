@@ -4,23 +4,36 @@
 
 - [Telegram Mini App](#telegram-mini-app)
   - [Table of Contents](#table-of-contents)
-  - [Demo](#demo)
-  - [Techstack](#techstack)
-  - [Screenshots](#screenshots)
-    - [Home](#home)
-    - [Games](#games)
-      - [Game](#game)
-    - [Store](#store)
-      - [Product](#product)
-    - [News](#news)
-      - [News Article](#news-article)
-    - [Profile](#profile)
+  - [Command Line Interface (CLI)](#command-line-interface-cli)
+  - [Mini App](#mini-app)
+    - [Demo](#demo)
+    - [Techstack](#techstack)
+    - [Screenshots](#screenshots)
+      - [Home](#home)
+      - [Games](#games)
+        - [Game](#game)
+      - [Store](#store)
+        - [Product](#product)
+      - [News](#news)
+        - [News Article](#news-article)
+      - [Profile](#profile)
 
-## Demo
+## Command Line Interface (CLI)
+
+| No  | CLI  | Category  | Action   |
+| --- | ---- | --------- | -------- |
+| 01  | `tg` | `message` | `send`   |
+| 02  | `tg` | `webhook` | `set`    |
+| 03  | `tg` | `webhook` | `info`   |
+| 04  | `tg` | `webhook` | `delete` |
+
+## Mini App
+
+### Demo
 
 [Hieu Doan Bot - Telegram Mini App](https://t.me/hieu_doan_bot/telegram_mini_app)
 
-## Techstack
+### Techstack
 
 1. [TypeScript](https://www.typescriptlang.org/)
 2. [Node.js](https://nodejs.org/en)
@@ -39,36 +52,36 @@
 15. [GitHub Actions](https://github.com/features/actions)
 16. [Vercel](https://vercel.com)
 
-## Screenshots
+### Screenshots
 
-### Home
+#### Home
 
 ![home](./images/screenshots/home.png)
 
-### Games
+#### Games
 
 ![games](./images/screenshots/games.png)
 
-#### Game
+##### Game
 
 ![game](./images/screenshots/games-game.png)
 
-### Store
+#### Store
 
 ![store](./images/screenshots/store.png)
 
-#### Product
+##### Product
 
 ![item](./images/screenshots/store-item.png)
 
-### News
+#### News
 
 ![news](./images/screenshots/news.png)
 
-#### News Article
+##### News Article
 
 ![article](./images/screenshots/news-article.png)
 
-### Profile
+#### Profile
 
 ![profile](./images/screenshots/profile.png)

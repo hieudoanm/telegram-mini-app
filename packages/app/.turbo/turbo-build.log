@@ -1,0 +1,65 @@
+
+
+> @telegram/mini-app@0.0.1 prebuild /Users/hieudoan/git/github.com/hieudoanm/telegram-mini-app/packages/app
+> pnpm prisma:generate && rimraf .next
+
+
+> @telegram/mini-app@0.0.1 prisma:generate /Users/hieudoan/git/github.com/hieudoanm/telegram-mini-app/packages/app
+> prisma format && prisma generate
+
+[2mPrisma schema loaded from prisma/schema.prisma[22m
+Formatted [4mprisma/schema.prisma[24m in 11ms 🚀
+[2mPrisma schema loaded from prisma/schema.prisma[22m
+
+
+✔ Generated [1mPrisma Client[22m (v6.10.1)[2m to ./../../node_modules/.pnpm/@prisma+client@6.10.1_prisma@6.10.1_typescript@5.8.3__typescript@5.8.3/node_modules/@prisma/client[22m in 28ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Want to turn off tips and other hints? https://pris.ly/tip-4-nohints
+
+
+> @telegram/mini-app@0.0.1 build /Users/hieudoan/git/github.com/hieudoanm/telegram-mini-app/packages/app
+> next build
+
+   [1m[38;2;173;127;168m▲ Next.js 15.3.4[39m[22m
+
+[?25l [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Linting and checking validity of types     [32m[1m✓[22m[39m Linting and checking validity of types 
+ [37m[1m [22m[39m Creating an optimized production build ...
+ [32m[1m✓[22m[39m Compiled successfully in 4.0s
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/12)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/12)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/12)  [36m[==  ][39m[2K[1G[?25h [32m[1m✓[22m[39m Generating static pages (12/12)
+[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
+[2K[1G[?25h [33m[1m⚠[22m[39m [33mStatically exporting a Next.js application via `next export` disables API routes and middleware.[39m
+[33mThis command is meant for static-only hosts, and is [1mnot necessary to make your application static.[22m[39m
+[33mPages in your application without server-side data dependencies will be automatically statically exported by `next build`, including pages powered by `getStaticProps`.[39m
+[33mLearn more: https://nextjs.org/docs/messages/api-routes-static-export[39m
+[?25l [36m.[39m [?25l [37m[1m [22m[39m Exporting (0/13)  [36m[    ][39m[2K[1G [36m..[39m [2K[1G [37m[1m [22m[39m Exporting (0/13)  [36m[=   ][39m[2K[1G [36m...[39m [2K[1G [37m[1m [22m[39m Exporting (0/13)  [36m[==  ][39m[2K[1G[?25h[2K[1G[?25h [32m[1m✓[22m[39m Exporting (13/13)
+[?25l [36m.[39m [2K[1G [36m..[39m [2K[1G[?25h    [32m[1m✓[22m[39m Finalizing page optimization 
+
+[4mRoute (pages)[24m                                 [4mSize[24m  [4mFirst Load JS[24m  [4m[24m  [4m[24m
+┌ ○ /                                      1.21 kB         [37m[1m230 kB[22m[39m
+├   /_app                                      0 B         [37m[1m226 kB[22m[39m
+├ ○ /404                                     710 B         [37m[1m229 kB[22m[39m
+├ ○ /500                                     706 B         [37m[1m229 kB[22m[39m
+├ ƒ /api/rest/webhook                          0 B         [37m[1m226 kB[22m[39m
+├ ƒ /api/trpc/[trpc]                           0 B         [37m[1m226 kB[22m[39m
+├ ○ /games                                 1.55 kB         [37m[1m230 kB[22m[39m
+├ ○ /games/[gameId]                        1.54 kB         [37m[1m230 kB[22m[39m
+├ ○ /news                                  1.67 kB         [37m[1m230 kB[22m[39m
+├ ○ /news/[articleId]                      1.78 kB         [37m[1m230 kB[22m[39m
+├ ○ /profile                                139 kB         [37m[1m367 kB[22m[39m
+├ ○ /profile/privacy-policy                1.41 kB         [37m[1m230 kB[22m[39m
+├ ○ /profile/terms-of-use                  1.53 kB         [37m[1m230 kB[22m[39m
+├ ○ /store                                 1.52 kB         [37m[1m230 kB[22m[39m
+└ ○ /store/[itemId]                        1.58 kB         [37m[1m230 kB[22m[39m
++ First Load JS shared by all               [37m[1m230 kB[22m[39m
+  ├ chunks/framework-8d16e4a3ad64be4e.js   57.6 kB
+  ├ chunks/main-b422f5d0a28ff810.js        33.9 kB
+  ├ chunks/pages/_app-742e9b2522b18051.js   134 kB
+  └ other shared chunks (total)            4.98 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+[?25h

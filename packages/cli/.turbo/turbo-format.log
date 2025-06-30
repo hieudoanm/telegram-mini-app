@@ -1,0 +1,7 @@
+
+
+> @telegram/cli@0.0.1 format /Users/hieudoan/git/github.com/hieudoanm/telegram-mini-app/packages/cli
+> make format || true
+
+go fmt ./...
+main.go
