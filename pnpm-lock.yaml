@@ -72,8 +72,8 @@ importers:
         specifier: 5.5.0
         version: 5.5.0(react@19.1.0)
       zod:
-        specifier: 3.25.69
-        version: 3.25.69
+        specifier: 3.25.71
+        version: 3.25.71
     devDependencies:
       '@eslint/eslintrc':
         specifier: 3.3.1
@@ -3378,8 +3378,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zod@3.25.69:
-    resolution: {integrity: sha512-cjUx+boz8dfYGssYKLGNTF5VUF6NETpcZCDTN3knhUUXQTAAvErzRhV3pgeCZm2YsL4HOwtEHPonlsshPu2I0A==}
+  zod@3.25.71:
+    resolution: {integrity: sha512-BsBc/NPk7h8WsUWYWYL+BajcJPY8YhjelaWu2NMLuzgraKAz4Lb4/6K11g9jpuDetjMiqhZ6YaexFLOC0Ogi3Q==}
 
 snapshots:
 
@@ -4174,7 +4174,7 @@ snapshots:
       dataloader: 2.2.3
       symbol.inspect: 1.0.1
       teslabot: 1.5.0
-      zod: 3.25.69
+      zod: 3.25.71
     transitivePeerDependencies:
       - debug
 
@@ -7109,4 +7109,4 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod@3.25.69: {}
+  zod@3.25.71: {}
