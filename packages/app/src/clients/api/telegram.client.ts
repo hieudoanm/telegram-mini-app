@@ -4,6 +4,28 @@ export enum ParseMode {
 	HTML = 'html',
 	MARKDOWN = 'markdown',
 }
+export type SetWebhookResponse = {
+	ok: boolean;
+	result: boolean;
+	description: string;
+};
+
+export type DeleteWebhookResponse = {
+	ok: boolean;
+	result: boolean;
+	description: string;
+};
+
+export type WebhookResult = {
+	url: string;
+	has_custom_certificate: boolean;
+	pending_update_count: number;
+};
+
+export type WebhookInfo = {
+	ok: boolean;
+	result: WebhookResult;
+};
 
 const BASE_URL = 'https://api.telegram.org/bot';
 
@@ -80,6 +102,26 @@ const sendMessage = async ({
 	}
 };
 
+export const setWebhook = async (token: string, url: string): Promise<SetWebhookResponse> => {
+	if (!token) throw new Error(INVALID_TOKEN);
+	if (!url) throw new Error('Invalid url');
+	const setWebhookUrl = `${BASE_URL}${token}/setWebhook`;
+	return post<SetWebhookResponse, { url: string }>(setWebhookUrl, { url });
+};
+
+export const deleteWebhook = async (token: string, url: string): Promise<DeleteWebhookResponse> => {
+	if (!token) throw new Error(INVALID_TOKEN);
+	if (!url) throw new Error('Invalid url');
+	const deleteWebhookUrl = `${BASE_URL}${token}/deleteWebhook`;
+	return post<DeleteWebhookResponse, { url: string }>(deleteWebhookUrl, { url });
+};
+
+export const getWebhookInfo = async (token: string): Promise<WebhookInfo> => {
+	if (!token) throw new Error(INVALID_TOKEN);
+	const getWebhookInfoUrl = `${BASE_URL}${token}/getWebhookInfo`;
+	return post<WebhookInfo, undefined>(getWebhookInfoUrl);
+};
+
 export const Telegram = () => {
-	return { messages: { send: sendMessage } };
+	return { messages: { send: sendMessage }, webhook: { info: getWebhookInfo, set: setWebhook, delete: deleteWebhook } };
 };

@@ -4,18 +4,18 @@
 > prisma format && prettier --cache --write .
 
 [2mPrisma schema loaded from prisma/schema.prisma[22m
-Formatted [4mprisma/schema.prisma[24m in 10ms 🚀
+Formatted [4mprisma/schema.prisma[24m in 11ms 🚀
 .gitignore[2K[1G.node-version[2K[1G.npmrc[2K[1G.nvmrc[2K[1G.prettierignore[2K[1G.prettierrc.json[2K[1G[90m.prettierrc.json[39m 0ms (unchanged) (cached)
 .turbo/turbo-build.log[2K[1G.turbo/turbo-format.log[2K[1G.turbo/turbo-lint.log[2K[1Gdocker-compose.yaml[2K[1G[90mdocker-compose.yaml[39m 0ms (unchanged) (cached)
 Dockerfile[2K[1Geslint.config.mjs[2K[1G[90meslint.config.mjs[39m 0ms (unchanged) (cached)
 jest.config.ts[2K[1G[90mjest.config.ts[39m 0ms (unchanged) (cached)
 next.config.ts[2K[1G[90mnext.config.ts[39m 0ms (unchanged) (cached)
-package.json[2K[1G[90mpackage.json[39m 0ms (unchanged) (cached)
+package.json[2K[1G[90mpackage.json[39m 11ms (unchanged)
 postcss.config.mjs[2K[1G[90mpostcss.config.mjs[39m 0ms (unchanged) (cached)
 prisma/schema.prisma[2K[1Gpublic/favicon.ico[2K[1Gpublic/file.svg[2K[1Gpublic/globe.svg[2K[1Gpublic/next.svg[2K[1Gpublic/tonconnect-manifest.json[2K[1G[90mpublic/tonconnect-manifest.json[39m 0ms (unchanged) (cached)
 public/vercel.svg[2K[1Gpublic/window.svg[2K[1GREADME.md[2K[1G[90mREADME.md[39m 0ms (unchanged) (cached)
 src/clients/api/gemini.client.ts[2K[1G[90msrc/clients/api/gemini.client.ts[39m 0ms (unchanged) (cached)
-src/clients/api/telegram.client.ts[2K[1G[90msrc/clients/api/telegram.client.ts[39m 0ms (unchanged) (cached)
+src/clients/api/telegram.client.ts[2K[1G[90msrc/clients/api/telegram.client.ts[39m 48ms (unchanged)
 src/clients/ton.client.ts[2K[1G[90msrc/clients/ton.client.ts[39m 0ms (unchanged) (cached)
 src/components/Badge.tsx[2K[1G[90msrc/components/Badge.tsx[39m 0ms (unchanged) (cached)
 src/components/Button.tsx[2K[1G[90msrc/components/Button.tsx[39m 0ms (unchanged) (cached)
