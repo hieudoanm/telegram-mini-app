@@ -18,7 +18,7 @@
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "scripts": {
     "lint": "turbo run lint",
-		"prebuild": "rimraf docs",
+    "prebuild": "rimraf docs",
     "build": "turbo run build",
     "postbuild": "touch docs/.nojekyll",
     "format": "turbo run format",
